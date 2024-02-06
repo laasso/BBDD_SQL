@@ -1,1 +1,1 @@
-SQL Script for DataBase Subject
+SQL Scripts for DataBase Subject
