@@ -1,0 +1,125 @@
+
+n una empresa multinacional, es vol crear una BBDD per gestionar les diferents reunions que fa cadascuna de les persones de l'empresa.
+
+L'empresa consta de diverses filials repartides en diferents països del món que interactuen entre elles de formes diferents: com venen o compran productes, assessorant, transportant mercaderies, etc..
+
+Cadascun dels contactes que es crearan en aquesta BBDD que denominarem `agenda` podrà fer reunions o cursos amb un altre contacte en una data i hora determinada, amb una durada en hores (valors enters) i un camp `estat` que indicarà si la reunió està: 
+Pendent, Realitzada o No realitzada. Només es podrà crear una reunió si existeix un relació creada entre dos contactes.
+
+De cada contacte volem saber: El seu número de mòbil, que utilitzarem com a clau primària, el nom, el primer i el segon cognom, la data de naixement i el seu correu electrònic.
+
+Entre els diferents contactes, podem establir un únic tipus de vincle, que podrà ser: 
+
+Comercial (Compra-venda de productes)
+Departament (Treballen al mateix departament)
+Transport (relació amb enviament de mercaderies)
+Assessorament (De formació) 
+Altres (Relació genèrica o encara no definida)
+
+Però en un futur podriem afegir de noves.
+
+Crea la BBDD `agenda` per tenir constància dels contactes i les seves reunions.
+
+Les taules que com a mínim haurem de fer servir són:
+
+contacte
+tipusvincle
+relacio
+reunions
+
+Si fas servir d'altres, hauràs de justificar el per què.
+
+
+A partir de la BBDD agenda, es demana.
+
+1.- (30%) BBDD i estructura de les taules.
+
+2.- (10%) Crea 100 registres nous a la taula `contacte` a partir d'un arxiu.csv.
+Per obtenir les dades, pots fer servir dades obertes que es troben en bancs de dades com: https://data.world
+Generar-les a partir de webs com www.generatedata.com 
+O bé obtenirles a partir d'algun sistema d'intel·ligència artificial (hauràs d'indicar la font)
+
+
+L'arxiu tindrà un número de mòbil de contacte que començarà per 6 amb longitud 9.
+
+La data de naixement serà de tipus AnyMesDia i estarà compresa entre l'1 de gener de 1940 i el 31 de desembre de 2002.
+
+L'arxiu .csv haurà d'estar separat per tabulacions
+
+
+Fes captures de la web abans de l'exportació i mostra captura dels 15 primers registres o línies obtingudes en cada arxiu.
+
+
+3.- (10%) INSERT, INSERT IGNORE, REPLACE .. tots tres serveixen per inserir regisres en una taula. Explica que fa específicament cadascún i fes un exemple pràctic a la taula `tipusvincle`.
+
+
+4.- (10%) Agafa l'arxiu.csv de l'exercici 2 i carrègal en un full de càlcul (Google sheet o LibreOffice calc, preferentment). 
+
+Entra a la pàgina de l'ajuntament de Barcelona d'OpenData següent:
+
+https://opendata-ajuntament.barcelona.cat/data/es/dataset/carrecs-electes-comissionats-i-gerents
+
+a) Extreu un parell de centenars de registres en format .csv i elimina noms duplicats, quedat només amb els camps: nom, cognom1 i cognom2 i ordenals per cognom2.
+
+Substitueix els tres camps obtinguts d'OpenData pels corresponents del teu arxiu.csv extret de www.generatedata.com i renombra'l com agenda.contacte.csv
+
+Ara només et queda modificar els correus electrònics per a que siguin més realistes.
+
+b) Busca la fòrmula per concatenar l'inicial del nom amb '.' i amb el primer cognom seguit del símbol '@' i un domini aleatori entre els 7 següents.
+
+bcn.cat / educacio.edu / govern.cat /institut.edu /gencat.cat / educacio.eu / educacio.com
+
+Indica com ho has fet
+
+El resultat serà un nou arxiu agenda.contacte.csv i separat per tabulacions amb les dades modificades dels 100 contactes i mantenint la capçalera.
+
+
+5.- (10%) Insereix l'arxiu agenda.contacte.csv dins la taula contacte fent servir LOAD DATA i indica també quina comanda faries servir utilitzant: mysqlimport
+
+Quina ordre has fet servir i quina és la resposta del servidor, tenint en compte que farem servir -v 
+
+Fes un select que mostri els cinc primers registres junt als cinc últims de la taula contacte on l'ordenació es faci amb el camp `data_naix`.
+
+(Select * From contacte order by data_naix asc limit 5) UNION (Select * From contacte order by data_naix desc limit 5);
+
+
+6.- (30%)  Genera 100 inserts aleatoris en la taula reunions, on es compleixi què:
+
+Omplirem dades aleatories en reunions, un cop afegits les dades en contacte.
+
+
+La data de la reunió pot ser 2 mesos abans o després de la data i hora actual amb un interval de 8 hores sobre l'hora del sistema. 
+
+La durada pot ser entre 1 i 8 hores.
+
+I el tipus potser 'Presencial' o 'Telemàtica'
+
+Si la data de reunió és anterior (menor) que la data actual, vol dir que ja ha passat i per tant, el valor d'estat podria ser '0' NO o '1' SI realitzat.
+
+Si la data de reunió és posterior a la data actual, el valor d'estat només podrà ser 0.
+
+
+*** Podem fer servir un camp descripció (en la taula reunions, després d'estat, on indicar realment el que ha passat.
+El camp `descripcio` haurà de contenir la clàusula GENERATED ALWAYS AS ... consulta informació al respecte, pots trobar-la als apunts o en: https://dev.mysql.com/doc/refman/8.0/en/create-table-generated-columns.html 
+
+Escriurem 'Realitzat' quan la data de la reunió sigui anterior a l'actual i el valor d'estat sigui = 1
+
+Escriurem 'No realitzat' quan la data de la reunió sigui anterior a l'actual i el valor d'estat sigui = 0
+
+Escriurem 'Pendent' quan la data de la reunió sigui posterior a l'actual. En aquest cas el valor d'estat només hauria de ser 0
+
+
+Per obtenir un valor aleatori podem fer servir rand()
+
+Per exemple, per obtenir un número mòbil aleatori de la taula contacte:
+
+Select mobil From contacte order by rand() limit 1;
++-----------+
+| mobil     |
++-----------+
+| 643153695 |
++-----------+
+1 row in set (0.00 sec)
+
+
+
