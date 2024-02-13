@@ -1,0 +1,357 @@
+id	nom	grup	subgrup	pais	color_pelatge	altura	color_ulls	longevitat	caracter	salut	short_url	short_image	short_pdf_es
+1	English Pointer	Pointing Dogs	British and Irish Pointers and Setters	Great Britain							http://tinyurl.com/24ljo3y8	http://tinyurl.com/2arhk3zh	http://tinyurl.com/22h8ju5v
+2	English Setter	Pointing Dogs	British and Irish Pointers and Setters	Great Britain	Black, White, Liver	23-27	Brown	12-15	Intelligent, energetic, affectionate, good-natured	Hip dysplasia, eye problems, cancer	http://tinyurl.com/2b5vr83r	http://tinyurl.com/2cb542pl	http://tinyurl.com/23d3lgtr
+3	Kerry Blue Terrier	Terriers	Large and medium sized Terriers	Ireland	Blue	17-19	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2aqvnex8		http://tinyurl.com/28c99fj8
+4	Cairn Terrier	Terriers	Small sized Terriers	Great Britain	Black, Wheaten, Red	10-12	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye problems, skin allergies	http://tinyurl.com/22wxuzhd	http://tinyurl.com/223b9mej	http://tinyurl.com/26trmb2f
+5	English Cocker Spaniel	Retrievers	Flushing Dogs	Great Britain							http://tinyurl.com/245ferfx	http://tinyurl.com/2b84pkeu	http://tinyurl.com/26d3v54z
+6	Gordon Setter	Pointing Dogs	British and Irish Pointers and Setters	Great Britain	Black, Tan	23-27	Brown	12-15	Intelligent, energetic, good-natured, affectionate	Hip dysplasia, eye problems, cancer	http://tinyurl.com/256z4fez	http://tinyurl.com/2dcet4qe	http://tinyurl.com/22shkkqv
+7	Airedale Terrier	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/2458cddp	http://tinyurl.com/2y3p4xno	http://tinyurl.com/28zng7nh
+8	Australian Terrier	Terriers	Small sized Terriers	Australia	Red, Black & Tan	10-11	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, skin allergies, hip dysplasia	http://tinyurl.com/2cc693x6	http://tinyurl.com/2ypkkdzf	http://tinyurl.com/2698kgf6
+9	Bedlington Terrier	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/269pzbqh	http://tinyurl.com/2cvo5ucu	http://tinyurl.com/2298xbe4
+10	Border Terrier	Terriers	Large and medium sized Terriers	Great Britain	Red, Wheaten, Black	10-16	Brown	12-16	Intelligent, energetic, playful, good-natured	Dental problems, skin allergies, hip dysplasia	http://tinyurl.com/28uc87xf	http://tinyurl.com/2bb4qzwa	http://tinyurl.com/28v4ottj
+11	Bull Terrier	Terriers	Bull type Terriers	Great Britain	White, Red	20-22	Brown	10-12	Loyal, intelligent, good-natured, energetic	Dental problems, eye issues, skin allergies	http://tinyurl.com/26en84m3	http://tinyurl.com/2xnydqa7	http://tinyurl.com/2ac9ug5u
+12	Fox Terrier (Smooth)	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/2d8zbc5d	http://tinyurl.com/27y84wyr	http://tinyurl.com/29hx7b6u
+13	English Toy Terrier (Black &Tan)	Terriers	Toy Terriers	Great Britain							http://tinyurl.com/2chz3nv8	http://tinyurl.com/2agnd459	http://tinyurl.com/2bpjqca9
+14	Swedish Vallhund	Spitz and primitive types	Nordic Watchdogs and Herders	Sweden							http://tinyurl.com/2ap84xna	http://tinyurl.com/2b9scxos	http://tinyurl.com/227utuyd
+15	Belgian Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Belgium							http://tinyurl.com/2yyj5lcl		http://tinyurl.com/2dnugsp9
+16	Old English Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Great Britain	Blue, Grey	22-26	Brown	10-12	Gentle, intelligent, good-natured, protective	Hip dysplasia, eye problems, skin allergies	http://tinyurl.com/28glhwjv	http://tinyurl.com/29kwz43q	http://tinyurl.com/2xz6qa8c
+17	Griffon Nivernais	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/28zc4ctt	http://tinyurl.com/266qoh7q	http://tinyurl.com/24nqwdex
+18	Briquet Griffon Vendeen	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2952thc6	http://tinyurl.com/272vocbp	http://tinyurl.com/28jzpusg
+19	Ariegeois	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/287x7ruy	http://tinyurl.com/22upn48k	http://tinyurl.com/22om9w4j
+20	Gascon Saintongeois	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2dh49cm3	http://tinyurl.com/23qumwcj	http://tinyurl.com/22p3er72
+21	Great Gascony Blue	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2clrj7n3	http://tinyurl.com/29j8vnqs	http://tinyurl.com/2899ud74
+22	Poitevin	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2y87erz5	http://tinyurl.com/24tgtjkr	http://tinyurl.com/272sd49h
+23	Billy	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/26j6q2f6	http://tinyurl.com/22hywts3	http://tinyurl.com/2dn8kng9
+24	Artois Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/22ajjxp5	http://tinyurl.com/26nvkz86	http://tinyurl.com/27dwzc2s
+25	Porcelaine	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2aj823lh	http://tinyurl.com/232gag2v	http://tinyurl.com/2b764m7n
+26	Small Blue Gascony	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/24caqelp	http://tinyurl.com/23p73j2l	http://tinyurl.com/28kstc87
+27	Blue Gascony Griffon	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/25cp8qhj	http://tinyurl.com/25e2ufnn	http://tinyurl.com/239mfn9v
+28	Grand Basset Griffon Vendeen	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/26slxq3s	NULL	http://tinyurl.com/29gjoc9n
+29	Norman Artesien Basset	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/27zpvo6y	http://tinyurl.com/25ccb2dp	http://tinyurl.com/278sfyba
+30	Blue Gascony Basset	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2b9dxynn	http://tinyurl.com/2ymkjfy2	http://tinyurl.com/22xebxnu
+31	Basset Fauve De Bretagne	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/296qfum4	NULL	http://tinyurl.com/28eemk3v
+32	Portuguese Water Dog	Retrievers	Water Dogs	Portugal							http://tinyurl.com/2beamrj9	http://tinyurl.com/27smzdss	http://tinyurl.com/2bop5zaj
+33	Welsh Corgi (Cardigan)	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Great Britain							http://tinyurl.com/23htcwro	http://tinyurl.com/239sfgx9	http://tinyurl.com/2brohkmn
+34	Welsh Corgi (Pembroke)	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Great Britain							http://tinyurl.com/2cfketk2	http://tinyurl.com/2dmr2385	http://tinyurl.com/25v3qcgj
+35	Irish Soft Coated Wheaten Terrier	Terriers	Large and medium sized Terriers	Ireland							http://tinyurl.com/23m5sgjj	NULL	http://tinyurl.com/25sarsxe
+36	Yugoslavian Shepherd Dog - Sharplanina	Pinscher and Schnauzer	Molossian type	North Macedonia, Serbia							http://tinyurl.com/263pgeoo	NULL	http://tinyurl.com/29cur8ga
+37	Jämthund	Spitz and primitive types	Nordic Hunting Dogs	Sweden							http://tinyurl.com/24t8kyku	http://tinyurl.com/2d93bsrl	http://tinyurl.com/28qs9d4o
+38	Basenji	Spitz and primitive types	Primitive type	Central Africa	Red, Black & White	16-17	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2ynsqt9s	NULL	http://tinyurl.com/2dbyefbf
+39	Beauce Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	France							http://tinyurl.com/2dorunxr	http://tinyurl.com/2ambvnpm	http://tinyurl.com/234v6fab
+40	Bernese Mountain Dog	Pinscher and Schnauzer	Swiss Mountain- and Cattledogs	Switzerland							http://tinyurl.com/29xqexkb	http://tinyurl.com/23nj5ndq	http://tinyurl.com/2agkyt3y
+41	Appenzell Cattle Dog	Pinscher and Schnauzer	Swiss Mountain- and Cattledogs	Switzerland							http://tinyurl.com/2yvjf6lj	http://tinyurl.com/28yyrl8e	http://tinyurl.com/2ax9qm2b
+42	Entlebuch Cattle Dog	Pinscher and Schnauzer	Swiss Mountain- and Cattledogs	Switzerland							http://tinyurl.com/24qtqc78	http://tinyurl.com/28pubwkz	http://tinyurl.com/2anxjp2y
+43	Karelian Bear Dog	Spitz and primitive types	Nordic Hunting Dogs	Finland							http://tinyurl.com/29mxn4bb	http://tinyurl.com/23msog3g	http://tinyurl.com/2xpg9phk
+44	Finnish Spitz	Spitz and primitive types	Nordic Hunting Dogs	Finland	Red, Golden	15-20	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/29uqnzt9	http://tinyurl.com/27vfvhqh	http://tinyurl.com/28gzowb3
+45	Newfoundland	Pinscher and Schnauzer	Molossian type	Canada	Black, Brown, Grey	26-28	Brown	9-11	Loyal, intelligent, gentle, good-natured	Hip dysplasia, heart conditions, cancer	http://tinyurl.com/2y5sl54g	NULL	http://tinyurl.com/28zgdqm9
+46	Finnish Hound	Scent hounds and related breeds	Scent hounds	Finland							http://tinyurl.com/27s76ern	NULL	http://tinyurl.com/2c6agjnq
+47	Polish Hound	Scent hounds and related breeds	Scent hounds	Poland							http://tinyurl.com/2amm7u8d	http://tinyurl.com/25f5o6be	http://tinyurl.com/26erhzeg
+48	Komondor	Sheepdogs and Cattledogs	Sheepdogs	Hungary							http://tinyurl.com/2a5hbt8x	http://tinyurl.com/29kbpeej	http://tinyurl.com/26xnbc3p
+49	Kuvasz	Sheepdogs and Cattledogs	Sheepdogs	Hungary	White	25-29	Brown	10-12	Loyal, intelligent, good-natured, energetic	Dental problems, eye issues, skin allergies	http://tinyurl.com/29eh48xs	http://tinyurl.com/28j2xcdq	http://tinyurl.com/2975glly
+50	Puli	Sheepdogs and Cattledogs	Sheepdogs	Hungary							http://tinyurl.com/29axja7p	http://tinyurl.com/23rah24h	http://tinyurl.com/26g3w3lv
+51	Pumi	Sheepdogs and Cattledogs	Sheepdogs	Hungary							http://tinyurl.com/2xrnry5t	http://tinyurl.com/23vcu4s4	http://tinyurl.com/27zn5nu6
+52	Hungarian Short-Haired Pointer (Vizsla)	Pointing Dogs	Continental Pointing Dogs	Hungary							http://tinyurl.com/2asm9ra6	http://tinyurl.com/29nkl5p9	http://tinyurl.com/2yd3xga5
+53	Great Swiss Mountain Dog	Pinscher and Schnauzer	Swiss Mountain- and Cattledogs	Switzerland							http://tinyurl.com/2bzr7pcc	http://tinyurl.com/29pep9jb	http://tinyurl.com/28lnh67u
+54	Swiss Hound	Scent hounds and related breeds	Scent hounds	Switzerland							http://tinyurl.com/23ohm6x8	http://tinyurl.com/23djqrox	http://tinyurl.com/288spz4l
+55	Small Swiss Hound	Scent hounds and related breeds	Scent hounds	Switzerland							http://tinyurl.com/25uzc3ln	http://tinyurl.com/22j5dctw	http://tinyurl.com/22g2n2fk
+56	St. Bernard	Pinscher and Schnauzer	Molossian type	Switzerland							http://tinyurl.com/23e84p6k	http://tinyurl.com/24lougvz	http://tinyurl.com/284wqxax
+57	Coarse-Haired Styrian Hound	Scent hounds and related breeds	Scent hounds	Austria							http://tinyurl.com/27tnne3d	http://tinyurl.com/27524sdl	http://tinyurl.com/27azczfw
+58	Austrian Black And Tan Hound	Scent hounds and related breeds	Scent hounds	Austria							http://tinyurl.com/2ya53ltb	http://tinyurl.com/26vsxhak	http://tinyurl.com/2bs6bbuf
+59	Austrian  Pinscher	Pinscher and Schnauzer	Pinscher and Schnauzer type	Austria							http://tinyurl.com/29s7rfec	NULL	http://tinyurl.com/26onjxau
+60	Maltese	Companion and Toy Dogs	Bichons and related breeds	Central Mediterranean Basin	White	8-10	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/282urp6e	NULL	http://tinyurl.com/248cmpnz
+61	Fawn Brittany Griffon	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2bqht2o3	http://tinyurl.com/2y4q5cjd	http://tinyurl.com/29zaapjl
+62	Petit Basset Griffon Vendeen	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2a8vhmrt	NULL	http://tinyurl.com/2dq2844n
+63	Tyrolean Hound	Scent hounds and related breeds	Scent hounds	Austria							http://tinyurl.com/24p66vua	NULL	http://tinyurl.com/22tqd9t4
+64	Lakeland Terrier	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/2cv8qvbp	http://tinyurl.com/24gmqrmr	http://tinyurl.com/25ahohta
+65	Manchester Terrier	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/239aewby	http://tinyurl.com/2cqkofql	http://tinyurl.com/273nmreg
+66	Norwich Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/25bymd7l	http://tinyurl.com/222haok5	http://tinyurl.com/2betpwje
+67	Scottish Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/25efs6rh	http://tinyurl.com/23xgenz6	http://tinyurl.com/2a4jvywf
+68	Sealyham Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/26ng8j7y	http://tinyurl.com/288j9nev	http://tinyurl.com/27hdo5mo
+69	Skye Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/238f5962	http://tinyurl.com/23m4smbm	http://tinyurl.com/28jwupuw
+70	Staffordshire Bull Terrier	Terriers	Bull type Terriers	Great Britain	White, Black, Red	14-16	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/27l4pdjn	http://tinyurl.com/29xeryr2	http://tinyurl.com/2ceyqq7q
+71	Continental Toy Spaniel	Companion and Toy Dogs	Continental Toy Spaniel and others	Belgium, France							http://tinyurl.com/267rthfb	NULL	http://tinyurl.com/2c5f6tzr
+72	Welsh Terrier	Terriers	Large and medium sized Terriers	Great Britain	Black, Tan	10-12	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/266bcz6l	http://tinyurl.com/28e56pe8	http://tinyurl.com/2c9b6edf
+73	Griffon Bruxellois	Companion and Toy Dogs	Small Belgian Dogs	Belgium							http://tinyurl.com/2cwpaukf	NULL	http://tinyurl.com/25sw2445
+74	Griffon Belge	Companion and Toy Dogs	Small Belgian Dogs	Belgium							http://tinyurl.com/2cjykn6v	http://tinyurl.com/276vugsq	http://tinyurl.com/2yll9klj
+75	Petit Brabançon	Companion and Toy Dogs	Small Belgian Dogs	Belgium							http://tinyurl.com/24v68sw3	http://tinyurl.com/27ratuer	http://tinyurl.com/23llul88
+76	Schipperke	Sheepdogs and Cattledogs	Sheepdogs	Belgium							http://tinyurl.com/27g72ko4	NULL	http://tinyurl.com/27gwjak8
+77	Bloodhound	Scent hounds and related breeds	Scent hounds	Belgium	Red, Black	22-27	Brown	10-12	Loyal, intelligent, good-natured, energetic	Dental problems, eye issues, skin allergies	http://tinyurl.com/2ba89osm	NULL	http://tinyurl.com/24vvpzs7
+78	West Highland White Terrier	Terriers	Small sized Terriers	Great Britain	White	11-12	Brown	12-16	Intelligent, energetic, playful, good-natured	Dental problems, skin allergies, hip dysplasia	http://tinyurl.com/265g2sym	http://tinyurl.com/24tp9pwk	http://tinyurl.com/2aa5s3vp
+79	Yorkshire Terrier	Terriers	Toy Terriers	Great Britain	Blue & Tan	7-8	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2c83tx9j	http://tinyurl.com/22qvn7tq	http://tinyurl.com/2yhpvvw7
+80	Catalan Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Spain							http://tinyurl.com/2ajt9cp8	NULL	http://tinyurl.com/23xlnvzg
+81	Shetland Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Great Britain	Sable, Black	13-16	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/29a7lo9x	http://tinyurl.com/2c9jd5ac	http://tinyurl.com/2adkxuzl
+82	Ibizan Podenco	Spitz and primitive types	Primitive type - Hunting Dogs	Spain							http://tinyurl.com/235pof7y	NULL	http://tinyurl.com/2xrlmu2a
+83	Burgos Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Spain							http://tinyurl.com/28kdaup6	NULL	http://tinyurl.com/25dwj7lf
+84	Spanish Mastiff	Pinscher and Schnauzer	Molossian type	Spain							http://tinyurl.com/2db3b9o9	NULL	http://tinyurl.com/2y5cc5ve
+85	Pyrenean Mastiff	Pinscher and Schnauzer	Molossian type	Spain							http://tinyurl.com/23nszoxg	NULL	http://tinyurl.com/2cfb8bf8
+86	Portuguese Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Portugal							http://tinyurl.com/29qugoat	http://tinyurl.com/22rqwvyp	http://tinyurl.com/2a69sj44
+87	Portuguese Warren Hound-Portuguese Podengo	Spitz and primitive types	Primitive type - Hunting Dogs	Portugal							http://tinyurl.com/25lofg7o	http://tinyurl.com/2ax4he2y	http://tinyurl.com/2y36wydo
+88	Brittany Spaniel	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/23f6w5sn	http://tinyurl.com/2cfjf2c5	http://tinyurl.com/2a5xextm
+89	Rafeiro Of Alentejo	Pinscher and Schnauzer	Molossian type	Portugal							http://tinyurl.com/22azmrt4	http://tinyurl.com/2dpt9ww4	http://tinyurl.com/265d9rpr
+90	German Spitz	Spitz and primitive types	European Spitz	Germany							http://tinyurl.com/25fodj5v	http://tinyurl.com/2av3ldx2	http://tinyurl.com/28wsba6h
+91	German Wire- Haired Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/27wtukqx	http://tinyurl.com/27y2dab4	http://tinyurl.com/27746ot3
+92	Weimaraner	Pointing Dogs	Continental Pointing Dogs	Germany	Silver, Grey	25-29	Blue, Grey	10-12	Energetic, intelligent, good-natured, loyal	Hip dysplasia, eye problems, cancer	http://tinyurl.com/2bz9z6pp	http://tinyurl.com/2yon3p6u	http://tinyurl.com/26sztmx9
+93	Westphalian Dachsbracke	Scent hounds and related breeds	Scent hounds	Germany							http://tinyurl.com/2d3o69qv	NULL	http://tinyurl.com/23ed3249
+94	French Bulldog	Companion and Toy Dogs	Small Molossian type Dogs	France	White, Black, Brindle	11-12	Brown	10-12	Affectionate, playful, good-natured	Breathing problems, eye problems, hip dysplasia	http://tinyurl.com/229kok32	http://tinyurl.com/25lh9drk	http://tinyurl.com/2apk4om7
+95	Kleiner Münsterländer	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/222dtmeu	NULL	http://tinyurl.com/2ygh69uy
+96	German Hunting Terrier	Terriers	Large and medium sized Terriers	Germany							http://tinyurl.com/257jkdoo	http://tinyurl.com/24vuyycy	http://tinyurl.com/263tpsh4
+97	German Spaniel	Retrievers	Flushing Dogs	Germany							http://tinyurl.com/25vvbcd9	http://tinyurl.com/29l4djvf	http://tinyurl.com/24zm76h6
+98	French Water Dog	Retrievers	Water Dogs	France							http://tinyurl.com/26qfdbsd	http://tinyurl.com/2bbk96cb	http://tinyurl.com/23wqop6s
+99	Blue Picardy Spaniel	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/2b77ckf8	http://tinyurl.com/25q7tplv	http://tinyurl.com/286ncdjv
+100	Wire-Haired Pointing Griffon Korthals	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/26kfbeqk	http://tinyurl.com/27t8zoqx	http://tinyurl.com/29kxu5tj
+101	Picardy Spaniel	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/24gut2vw	http://tinyurl.com/2xoyzw9s	http://tinyurl.com/22duvr36
+102	Clumber Spaniel	Retrievers	Flushing Dogs	Great Britain							http://tinyurl.com/2c3ccfj7	http://tinyurl.com/2365tgyk	http://tinyurl.com/2y3l3tg7
+103	Curly Coated Retriever	Retrievers	Retrievers	Great Britain							http://tinyurl.com/2bj4rtuo	http://tinyurl.com/2yryuekj	http://tinyurl.com/26lnzyqh
+104	Golden Retriever	Retrievers	Retrievers	Great Britain	Golden	21-24	Brown	10-12	Intelligent, friendly, kind, loyal, good-natured	Hip dysplasia, cancer, skin allergies	http://tinyurl.com/253ll7e9	http://tinyurl.com/28usuvc5	http://tinyurl.com/245danbe
+105	Briard	Sheepdogs and Cattledogs	Sheepdogs	France							http://tinyurl.com/28ed9xnd	http://tinyurl.com/24jykh3g	http://tinyurl.com/2bv5ne9j
+106	Pont-Audemer Spaniel	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/22hphph9	http://tinyurl.com/2bwoxjj7	http://tinyurl.com/2auap3gz
+107	Saint Germain Pointer	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/27nr67zo	http://tinyurl.com/2593xolz	http://tinyurl.com/2b57qvo8
+108	Dogue De Bordeaux	Pinscher and Schnauzer	Molossian type	France							http://tinyurl.com/2d6qspwe	http://tinyurl.com/29tueygd	http://tinyurl.com/2c2ymw47
+109	Deutsch Langhaar	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/2atgnbj4	http://tinyurl.com/23tare3q	http://tinyurl.com/2cr3ksca
+110	Large Munsterlander	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/24o7cz87	http://tinyurl.com/2c7xhysf	http://tinyurl.com/2bexrd96
+111	German Short- Haired Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/2al98lgr	http://tinyurl.com/2yuu839v	http://tinyurl.com/24x7tk9b
+112	Irish Red Setter	Pointing Dogs	British and Irish Pointers and Setters	Ireland							http://tinyurl.com/23qeerfd	NULL	http://tinyurl.com/23jvb7va
+113	Flat Coated Retriever	Retrievers	Retrievers	Great Britain							http://tinyurl.com/24y2ek6y	http://tinyurl.com/2djpncd7	http://tinyurl.com/2czpe524
+114	Labrador Retriever	Retrievers	Retrievers	Great Britain	Yellow, Black, Chocolate	21-24	Brown	10-12	Loyal, friendly, intelligent, energetic, good-natured	Hip dysplasia, obesity, ear infections	http://tinyurl.com/2cx9mwdo	http://tinyurl.com/2cvetz53	http://tinyurl.com/23kcg3xq
+115	Field Spaniel	Retrievers	Flushing Dogs	Great Britain	Black, Liver	15-18	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/24f79mmy	http://tinyurl.com/2y658fev	http://tinyurl.com/24rma23c
+116	Irish Water Spaniel	Retrievers	Water Dogs	Ireland	Brown	21-24	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/28oba42l	NULL	http://tinyurl.com/29exs8rq
+117	English Springer Spaniel	Retrievers	Flushing Dogs	Great Britain	Black, White, Liver	20-24	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2bp4tqwh	http://tinyurl.com/27lhuee9	http://tinyurl.com/2dy6ytka
+118	Welsh Springer Spaniel	Retrievers	Flushing Dogs	Great Britain	Liver, White	20-25	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2xkrj833	http://tinyurl.com/28nmw6ky	http://tinyurl.com/27c8vvpu
+119	Sussex Spaniel	Retrievers	Flushing Dogs	Great Britain							http://tinyurl.com/2637qt54	http://tinyurl.com/25ays5al	http://tinyurl.com/257whajm
+120	King Charles Spaniel	Companion and Toy Dogs	English Toy Spaniels	Great Britain							http://tinyurl.com/2aswtvsz	http://tinyurl.com/2dywk293	http://tinyurl.com/2cconbs2
+121	Smålandsstövare	Scent hounds and related breeds	Scent hounds	Sweden							http://tinyurl.com/2akgkfwv	http://tinyurl.com/2y6catg6	http://tinyurl.com/2cqyukbc
+122	Drever	Scent hounds and related breeds	Scent hounds	Sweden							http://tinyurl.com/28byoook	http://tinyurl.com/2xuqcswg	http://tinyurl.com/225qrhr8
+123	Schillerstövare	Scent hounds and related breeds	Scent hounds	Sweden							http://tinyurl.com/295uayl4	http://tinyurl.com/2yha2jdz	http://tinyurl.com/26nrkexm
+124	Hamiltonstövare	Scent hounds and related breeds	Scent hounds	Sweden							http://tinyurl.com/28vkqjbt	http://tinyurl.com/2dafxc8m	http://tinyurl.com/22svpfte
+125	French Pointing Dog - Gascogne Type	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/252es6ru	http://tinyurl.com/2xuyktbl	http://tinyurl.com/24xmyfbr
+126	French Pointing Dog - Pyrenean Type	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/2a693sss	http://tinyurl.com/28qjfeka	http://tinyurl.com/24uf8jjh
+127	Swedish Lapphund	Spitz and primitive types	Nordic Watchdogs and Herders	Sweden							http://tinyurl.com/2yd48ehn	http://tinyurl.com/25pck2gw	http://tinyurl.com/22ceerrg
+128	Cavalier King Charles Spaniel	Companion and Toy Dogs	English Toy Spaniels	Great Britain							http://tinyurl.com/2bq2sypj	http://tinyurl.com/2amhncgc	http://tinyurl.com/25wdtqta
+129	Pyrenean Mountain Dog	Pinscher and Schnauzer	Molossian type	France							http://tinyurl.com/2876e328	http://tinyurl.com/2dhdtmwz	http://tinyurl.com/2xl7g4vy
+130	Pyrenean Sheepdog - Smooth Faced	Sheepdogs and Cattledogs	Sheepdogs	France							http://tinyurl.com/29cnx46q	http://tinyurl.com/26hzozef	http://tinyurl.com/2xjucnza
+131	Irish Terrier	Terriers	Large and medium sized Terriers	Ireland	Red	14-16	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2dnt39bo	NULL	http://tinyurl.com/29u2n9gn
+132	Boston Terrier	Companion and Toy Dogs	Small Molossian type Dogs	United States Of America	Black, White	15-17	Brown	11-13	Intelligent, energetic, affectionate, good-natured	Eye problems, respiratory issues, skin allergies	http://tinyurl.com/2bd7ehhy	NULL	http://tinyurl.com/2bxo9xv5
+133	Long-Haired Pyrenean Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	France							http://tinyurl.com/2d2hd97j	http://tinyurl.com/29maaelq	http://tinyurl.com/2y5ps4sl
+134	Slovakian Chuvach	Sheepdogs and Cattledogs	Sheepdogs	Slovakia							http://tinyurl.com/27z895je	NULL	http://tinyurl.com/24mvmn9y
+135	Dobermann	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany							http://tinyurl.com/2detxdpz	http://tinyurl.com/25s93ah8	http://tinyurl.com/28mwvofc
+136	Boxer	Pinscher and Schnauzer	Molossian type	Germany	Fawn, Brindle	21-25	Brown	10-12	Loyal, energetic, intelligent, playful, protective	Hip dysplasia, cancer, heart conditions	http://tinyurl.com/255qcfqn	http://tinyurl.com/2djzkvbw	http://tinyurl.com/2d76pmrc
+137	Leonberger	Pinscher and Schnauzer	Molossian type	Germany							http://tinyurl.com/23mj45qy	NULL	http://tinyurl.com/2a7c7nab
+138	Rhodesian Ridgeback	Scent hounds and related breeds	Related breeds	South Africa	Light Wheaten	25-27	Brown	10-12	Intelligent, athletic, loyal, good-natured	Hip dysplasia, eye problems, cancer	http://tinyurl.com/283b3ect	NULL	http://tinyurl.com/22oezlv2
+139	Rottweiler	Pinscher and Schnauzer	Molossian type	Germany	Black, Tan	22-27	Brown	8-10	Loyal, protective, confident, strong	Hip dysplasia, cancer, elbow dysplasia	http://tinyurl.com/22kbdsw6	NULL	http://tinyurl.com/25n62l3k
+140	Dachshund	Dachshunds		Germany	Black, Tan	5-9	Brown, Blue	12-15	Loyal, energetic, playful, curious	Intervertebral disc disease, hip dysplasia, diabetes	http://tinyurl.com/2y3nxnty	http://tinyurl.com/2ys49zqq	http://tinyurl.com/25m4cd2m
+141	Bulldog	Pinscher and Schnauzer	Molossian type	Great Britain	White, Red	12-16	Brown	8-10	Loyal, calm, gentle, brave	Skin allergies, respiratory issues, obesity	http://tinyurl.com/29893oyq	http://tinyurl.com/2bgatz6m	http://tinyurl.com/2cqtzeb2
+142	Serbian Hound	Scent hounds and related breeds	Scent hounds	Serbia							http://tinyurl.com/2a8ds489	http://tinyurl.com/2altg3cl	http://tinyurl.com/2c885eyw
+143	Istrian Short-Haired Hound	Scent hounds and related breeds	Scent hounds	Croatia							http://tinyurl.com/2bbgs473	http://tinyurl.com/2csesjkn	http://tinyurl.com/29nee3b6
+144	Istrian Wire-Haired Hound	Scent hounds and related breeds	Scent hounds	Croatia							http://tinyurl.com/26mk2n6y	http://tinyurl.com/2ddbgk8v	http://tinyurl.com/22vhljbb
+145	Dalmatian	Scent hounds and related breeds	Related breeds	Croatia							http://tinyurl.com/22697b49	http://tinyurl.com/26q4mzv5	http://tinyurl.com/28wtx6bq
+146	Posavatz Hound	Scent hounds and related breeds	Scent hounds	Croatia							http://tinyurl.com/23ul8qj5	http://tinyurl.com/2aal48tu	http://tinyurl.com/29fnppwf
+147	Bosnian Broken-Haired Hound - Called Barak	Scent hounds and related breeds	Scent hounds	Bosnia And Herzegovina							http://tinyurl.com/25gjn9au	http://tinyurl.com/2bk676ty	http://tinyurl.com/27jzfe25
+148	Collie Rough	Sheepdogs and Cattledogs	Sheepdogs	Great Britain							http://tinyurl.com/24lax4bu	http://tinyurl.com/2asamsgu	http://tinyurl.com/23dh4fry
+149	Bullmastiff	Pinscher and Schnauzer	Molossian type	Great Britain							http://tinyurl.com/2yun9akj	NULL	http://tinyurl.com/27beb4q7
+150	Greyhound	Sighthounds	Short-haired Sighthounds	Great Britain	Black, White, Brindle	26-30	Brown	10-12	Intelligent, athletic, sensitive, good-natured	Hip dysplasia, eye problems, heart conditions	http://tinyurl.com/29jlx9yl	http://tinyurl.com/24fdc9fc	http://tinyurl.com/2242j8cy
+151	English Foxhound	Scent hounds and related breeds	Scent hounds	Great Britain							http://tinyurl.com/2xstnst7	http://tinyurl.com/24vyob72	http://tinyurl.com/2c8f7s37
+152	Irish Wolfhound	Sighthounds	Rough-haired Sighthounds	Ireland	Grey, Red, Black	30-35	Brown	6-8	Gentle, loyal, intelligent, good-natured	Hip dysplasia, heart conditions, cancer	http://tinyurl.com/2xkounfx	NULL	http://tinyurl.com/262d8t8e
+153	Beagle	Scent hounds and related breeds	Scent hounds	Great Britain	White, Tan, Red, Lemon	13-15	Brown	12-15	Curious, friendly, energetic, good-natured	Ear infections, hip dysplasia, epilepsy	http://tinyurl.com/2dg5ewxx	http://tinyurl.com/2xkvxa8b	http://tinyurl.com/2cnmfype
+154	Whippet	Sighthounds	Short-haired Sighthounds	Great Britain	White, Black, Red	18-22	Brown	12-15	Intelligent, energetic, good-natured, loyal	Dental problems, eye issues, skin allergies	http://tinyurl.com/28j3tcho	http://tinyurl.com/26qptsyt	http://tinyurl.com/26266f76
+155	Basset Hound	Scent hounds and related breeds	Scent hounds	Great Britain	Black, Tan	11-15	Brown	10-12	Affectionate, patient, gentle, good-natured	Dental problems, ear infections, obesity	http://tinyurl.com/226nc66p	http://tinyurl.com/2yno9bhr	http://tinyurl.com/22jvmka8
+156	Deerhound	Sighthounds	Rough-haired Sighthounds	Great Britain							http://tinyurl.com/23ggdo35	http://tinyurl.com/238e5ev5	http://tinyurl.com/2aky7mmu
+157	Italian Spinone	Pointing Dogs	Continental Pointing Dogs	Italy							http://tinyurl.com/2a7zze3a	NULL	http://tinyurl.com/25pwy5jp
+158	German Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Germany							http://tinyurl.com/25bqecsg	http://tinyurl.com/2ye6gucy	http://tinyurl.com/2cku5dez
+159	American Cocker Spaniel	Retrievers	Flushing Dogs	United States Of America							http://tinyurl.com/27posytu	NULL	http://tinyurl.com/2aby4r3o
+160	Dandie Dinmont Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/297ktev2	http://tinyurl.com/2chklk7f	http://tinyurl.com/256mdt6v
+161	Fox Terrier (Wire)	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/2dpjmmlm	http://tinyurl.com/225a993a	http://tinyurl.com/26jb2g7j
+162	Castro Laboreiro Dog	Pinscher and Schnauzer	Molossian type	Portugal							http://tinyurl.com/266lwmpx	http://tinyurl.com/2dx9xlw5	http://tinyurl.com/24shjp8b
+163	Bouvier Des Ardennes	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Belgium							http://tinyurl.com/26ktg9t3	NULL	http://tinyurl.com/2cwg4cfl
+164	Poodle	Companion and Toy Dogs	Poodle	France	White, Black, Brown, Apricot	10-15	Brown, Blue	12-15	Intelligent, active, affectionate, hypoallergenic	Hip dysplasia, epilepsy, bladder stones	http://tinyurl.com/2b3gfs6y	http://tinyurl.com/27t5yy8t	http://tinyurl.com/26umwy7e
+165	Estrela Mountain Dog	Pinscher and Schnauzer	Molossian type	Portugal							http://tinyurl.com/283mjor9	http://tinyurl.com/2cstxen6	http://tinyurl.com/2yzxydxf
+166	French Spaniel	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/24c78o4l	http://tinyurl.com/2dhabwfe	http://tinyurl.com/24v44osh
+167	Picardy Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	France							http://tinyurl.com/229nd4o5	http://tinyurl.com/26r7yn4c	http://tinyurl.com/2yeqjtk3
+168	Ariege Pointing Dog	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/24ygjf8h	http://tinyurl.com/2ahr3xmy	http://tinyurl.com/2avjhpzo
+169	Bourbonnais Pointing Dog	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/27kflvjv	http://tinyurl.com/2ywkrgjt	http://tinyurl.com/24bjq596
+170	Auvergne Pointer	Pointing Dogs	Continental Pointing Dogs	France							http://tinyurl.com/2cnekufu	http://tinyurl.com/2d39ykgz	http://tinyurl.com/2b4jjmkh
+171	Giant Schnauzer	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany	Black, Salt & Pepper	25-28	Brown	10-12	Loyal, intelligent, good-natured, energetic	Dental problems, eye issues, skin allergies	http://tinyurl.com/25xlk8tt	http://tinyurl.com/29f4bmtm	http://tinyurl.com/2c8fto8g
+172	Schnauzer	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany							http://tinyurl.com/25kccdc6	http://tinyurl.com/2yslw4dd	http://tinyurl.com/25cmfq8o
+173	Miniature Schnauzer	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany	Black, Salt & Pepper, White	12-14	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, pancreatitis, diabetes	http://tinyurl.com/23yg8vf6	http://tinyurl.com/27kj3xp6	http://tinyurl.com/22m3dsmm
+174	German Pinscher	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany							http://tinyurl.com/23nx9xsh	http://tinyurl.com/2ayyqpmr	http://tinyurl.com/2c9omdam
+175	Miniature Pinscher	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany	Red, Stag Red	10-12	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/27v3mmrw	http://tinyurl.com/235ookw4	http://tinyurl.com/2cloq7e8
+176	Affenpinscher	Pinscher and Schnauzer	Pinscher and Schnauzer type	Germany	Black, Brown, Red	9-11	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye problems, skin allergies	http://tinyurl.com/2c9ceclx	http://tinyurl.com/28qnx54e	http://tinyurl.com/26wdzehc
+177	Portuguese Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Portugal							http://tinyurl.com/27d3gvmk	http://tinyurl.com/29owo8kr	http://tinyurl.com/2xkpmdn9
+178	Sloughi	Sighthounds	Short-haired Sighthounds	Morocco							http://tinyurl.com/22f6lm2c	NULL	http://tinyurl.com/23s34dch
+179	Finnish Lapponian Dog	Spitz and primitive types	Nordic Watchdogs and Herders	Finland							http://tinyurl.com/2y68trav	http://tinyurl.com/263he6fj	http://tinyurl.com/24ltaj2r
+180	Hovawart	Pinscher and Schnauzer	Molossian type	Germany							http://tinyurl.com/22g4jtse	NULL	http://tinyurl.com/29xa5ye9
+181	Bouvier Des Flandres	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Belgium, France							http://tinyurl.com/23d4tf4c	NULL	http://tinyurl.com/23tqnqmf
+182	Kromfohrländer	Companion and Toy Dogs	Kromfohrländer	Germany							http://tinyurl.com/26d36et9	http://tinyurl.com/2aoy7bp2	http://tinyurl.com/23yhxlnf
+183	Borzoi - Russian Hunting Sighthound	Sighthounds	Long-haired or fringed Sighthounds	Russian Federation							http://tinyurl.com/2c45xl33	http://tinyurl.com/22jt96lq	http://tinyurl.com/24dvjrms
+184	Bergamasco Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Italy							http://tinyurl.com/2dqhkueo	http://tinyurl.com/29l7vafj	http://tinyurl.com/25gvvaxj
+185	Italian Volpino	Spitz and primitive types	European Spitz	Italy							http://tinyurl.com/26xaef8r	NULL	http://tinyurl.com/2xj23xdb
+186	Bolognese	Companion and Toy Dogs	Bichons and related breeds	Italy							http://tinyurl.com/22ne3c4m	NULL	http://tinyurl.com/2y6l4sxk
+187	Neapolitan Mastiff	Pinscher and Schnauzer	Molossian type	Italy							http://tinyurl.com/2xr8qx7c	NULL	http://tinyurl.com/2ydh5bcl
+188	Italian Rough-Haired Segugio	Scent hounds and related breeds	Scent hounds	Italy							http://tinyurl.com/24hemfmz	NULL	http://tinyurl.com/2av5cug8
+189	Cirneco Dell'Etna	Spitz and primitive types	Primitive type - Hunting Dogs	Italy							http://tinyurl.com/25pjq4u3	http://tinyurl.com/2xpez8ye	http://tinyurl.com/29nt7rzv
+190	Italian Sighthound	Sighthounds	Short-haired Sighthounds	Italy							http://tinyurl.com/22lngvro	NULL	http://tinyurl.com/2dp6vdwo
+191	Maremma And The Abruzzes Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Italy							http://tinyurl.com/25za9mks	NULL	http://tinyurl.com/2xkbhzkq
+192	Italian Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Italy							http://tinyurl.com/25laal58	http://tinyurl.com/2ak5tn2n	http://tinyurl.com/2844ga5y
+193	Norwegian Hound	Scent hounds and related breeds	Scent hounds	Norway							http://tinyurl.com/2846d4hs	http://tinyurl.com/29rt7gl3	http://tinyurl.com/24phzqnv
+194	Spanish Hound	Scent hounds and related breeds	Scent hounds	Spain							http://tinyurl.com/2da8yjja	NULL	http://tinyurl.com/23do6ts9
+195	Chow Chow	Spitz and primitive types	Asian Spitz and related breeds	China							http://tinyurl.com/2374rz2j	http://tinyurl.com/237fby92	http://tinyurl.com/2yqqnnnm
+196	Japanese Chin	Companion and Toy Dogs	Japan Chin and Pekingese	Japan	Black, Red	7-11	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2ymzg56c	http://tinyurl.com/25t4dxm7	http://tinyurl.com/22avjoo2
+197	Pekingese	Companion and Toy Dogs	Japan Chin and Pekingese	China	Black, White, Red	6-9	Brown	12-15	Independent, intelligent, affectionate, good-natured	Dental problems, respiratory issues, eye problems	http://tinyurl.com/24agmarn	http://tinyurl.com/26rl6z6s	http://tinyurl.com/2copg23u
+198	Shih Tzu	Companion and Toy Dogs	Tibetan breeds	Tibet (China)	Black, White, Brown	9-10	Brown	10-16	Affectionate, playful, confident, good-natured	Dental problems, respiratory issues, eye problems	http://tinyurl.com/28pkoma3	http://tinyurl.com/27vdax5e	http://tinyurl.com/27lnszjs
+199	Tibetan Terrier	Companion and Toy Dogs	Tibetan breeds	Tibet (China)							http://tinyurl.com/2chvcd4n	http://tinyurl.com/27xl8f8l	http://tinyurl.com/247zyvns
+200	Canadian Eskimo Dog	Spitz and primitive types	Nordic Sledge Dogs	Canada							http://tinyurl.com/28hu3bvc	http://tinyurl.com/2ceo5c76	http://tinyurl.com/2xtpp99f
+201	Samoyed	Spitz and primitive types	Nordic Sledge Dogs	Northern Russia, Siberia	White	21-23	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/22v234sa	http://tinyurl.com/24ayhlha	http://tinyurl.com/2ahxhsx8
+202	Hanoverian Scent Hound	Scent hounds and related breeds	Leash (scent) Hounds	Germany							http://tinyurl.com/23425yu3	http://tinyurl.com/2cnknh98	http://tinyurl.com/2brhf6lf
+203	Hellenic Hound	Scent hounds and related breeds	Scent hounds	Greece							http://tinyurl.com/2dzqwk3x	NULL	http://tinyurl.com/23bd23jt
+204	Bichon Frise	Companion and Toy Dogs	Bichons and related breeds	Belgium, France	White	9-11	Brown	12-15	Playful, affectionate, intelligent, social	Dental problems, eye problems, bladder stones	http://tinyurl.com/29p48qcs	http://tinyurl.com/2cg44kvp	http://tinyurl.com/23d2wkoz
+205	Pudelpointer	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/27lmew6a	NULL	http://tinyurl.com/2aexgtfs
+206	Bavarian Mountain Scent Hound	Scent hounds and related breeds	Leash (scent) Hounds	Germany							http://tinyurl.com/2a4wmald	http://tinyurl.com/24ez2jad	http://tinyurl.com/29kx89oa
+207	Chihuahua	Companion and Toy Dogs	Chihuahueno	Mexico	Black, Brown, Tan, White	6-9	Brown, Blue	12-20	Loyal, energetic, confident, sensitive	Dental problems, eye issues, respiratory issues	http://tinyurl.com/2c8v9hzh	http://tinyurl.com/2cmzbd3y	http://tinyurl.com/252r37hj
+208	French Tricolour Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/29r9xyp9	http://tinyurl.com/2xufpoe4	http://tinyurl.com/236ss9lh
+209	French White & Black Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2b2gp8ku	http://tinyurl.com/28emtbxs	http://tinyurl.com/26kdekdq
+210	Wetterhoun	Retrievers	Water Dogs	The Netherlands							http://tinyurl.com/26phf42b	http://tinyurl.com/223n7jag	http://tinyurl.com/26d4ky9r
+211	Stabijhoun	Pointing Dogs	Continental Pointing Dogs	The Netherlands							http://tinyurl.com/2xkapsch	http://tinyurl.com/24o2sxg6	http://tinyurl.com/24m4yt9b
+212	Dutch Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	The Netherlands							http://tinyurl.com/2bdljcjh	http://tinyurl.com/22c95jr6	http://tinyurl.com/283245vr
+213	Drentsche Partridge Dog	Pointing Dogs	Continental Pointing Dogs	The Netherlands							http://tinyurl.com/2c5xab82	http://tinyurl.com/22v85oll	http://tinyurl.com/2bv6caes
+214	Fila Brasileiro	Pinscher and Schnauzer	Molossian type	Brazil							http://tinyurl.com/2cloyh5w	http://tinyurl.com/2xt2qfmz	http://tinyurl.com/27ppjp56
+215	Landseer (European Continental Type)	Pinscher and Schnauzer	Molossian type	Germany, Switzerland							http://tinyurl.com/29tuhms9	NULL	http://tinyurl.com/24yvgxj9
+216	Lhasa Apso	Companion and Toy Dogs	Tibetan breeds	Tibet (China)	Black, White	10-11	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2cdlttcs	http://tinyurl.com/2cqrqtrt	http://tinyurl.com/29logj6h
+217	Afghan Hound	Sighthounds	Long-haired or fringed Sighthounds	Afghanistan							http://tinyurl.com/23hsgqvn	http://tinyurl.com/24dmpt5e	http://tinyurl.com/2xulywee
+218	Serbian Tricolour Hound	Scent hounds and related breeds	Scent hounds	Serbia							http://tinyurl.com/282d56jr	http://tinyurl.com/2d2krbcr	http://tinyurl.com/2cwyal7t
+219	Tibetan Mastiff	Pinscher and Schnauzer	Molossian type	Tibet (China)							http://tinyurl.com/29s6v9zb	NULL	http://tinyurl.com/268dwmfg
+220	Tibetan Spaniel	Companion and Toy Dogs	Tibetan breeds	Tibet (China)							http://tinyurl.com/29sbc5vg	http://tinyurl.com/22o5ondl	http://tinyurl.com/29djyhky
+221	Deutsch Stichelhaar	Pointing Dogs	Continental Pointing Dogs	Germany							http://tinyurl.com/23vgzgo4	http://tinyurl.com/2bkntpfl	http://tinyurl.com/295eu8b3
+222	Little Lion Dog	Companion and Toy Dogs	Bichons and related breeds	France							http://tinyurl.com/2dgm8bnj	http://tinyurl.com/2235zxnt	http://tinyurl.com/27vwo387
+223	Xoloitzcuintle	Spitz and primitive types	Primitive type	Mexico							http://tinyurl.com/28hrera9	http://tinyurl.com/2dybcq5c	http://tinyurl.com/24hqugc7
+224	Great Dane	Pinscher and Schnauzer	Molossian type	Germany	Black, Blue, Fawn, Harlequin	28-34	Brown	8-10	Gentle, loyal, intelligent, good-natured	Hip dysplasia, cancer, heart conditions	http://tinyurl.com/27dvqlrj	http://tinyurl.com/2ccuy8d4	http://tinyurl.com/29sc3t6p
+225	Australian Silky Terrier	Terriers	Toy Terriers	Australia							http://tinyurl.com/295g56zl	http://tinyurl.com/29tnbkf5	http://tinyurl.com/25ywfdht
+226	Norwegian Buhund	Spitz and primitive types	Nordic Watchdogs and Herders	Norway							http://tinyurl.com/2xomttpf	http://tinyurl.com/29hua7cr	http://tinyurl.com/2673t82p
+227	Mudi	Sheepdogs and Cattledogs	Sheepdogs	Hungary							http://tinyurl.com/22p2y7qh	http://tinyurl.com/2b6mjdgp	http://tinyurl.com/2643s9zc
+228	Hungarian Wire-Haired Pointer	Pointing Dogs	Continental Pointing Dogs	Hungary							http://tinyurl.com/25ajlc94	http://tinyurl.com/2ade2qd2	http://tinyurl.com/26vwdjet
+229	Hungarian Greyhound	Sighthounds	Short-haired Sighthounds	Hungary							http://tinyurl.com/2aoq2woq	http://tinyurl.com/257fwyso	http://tinyurl.com/29wslqws
+230	Hungarian Hound - Transylvanian Scent Hound	Scent hounds and related breeds	Scent hounds	Hungary							http://tinyurl.com/2brc9kxy	http://tinyurl.com/28rwenbt	http://tinyurl.com/25kd43kf
+231	Norwegian Elkhound Grey	Spitz and primitive types	Nordic Hunting Dogs	Norway							http://tinyurl.com/2y6nymde	http://tinyurl.com/28go2st5	http://tinyurl.com/2y49b5jv
+232	Alaskan Malamute	Spitz and primitive types	Nordic Sledge Dogs	United States Of America							http://tinyurl.com/2ak2fkuf	http://tinyurl.com/29cwkeh8	http://tinyurl.com/25gwk65s
+233	Slovakian Hound	Scent hounds and related breeds	Scent hounds	Slovakia							http://tinyurl.com/26oam3fw	NULL	http://tinyurl.com/22jhhp7p
+234	Bohemian Wire-Haired Pointing Griffon	Pointing Dogs	Continental Pointing Dogs	Czech Republic							http://tinyurl.com/2a392ubf	NULL	http://tinyurl.com/29radl5r
+235	Cesky Terrier	Terriers	Small sized Terriers	Czech Republic							http://tinyurl.com/29eklvhw	http://tinyurl.com/25w4dw6k	http://tinyurl.com/24a396xg
+236	Atlas Mountain Dog (Aidi)	Pinscher and Schnauzer	Molossian type	Morocco							http://tinyurl.com/2d2xjthx	NULL	http://tinyurl.com/26z9c86l
+237	Pharaoh Hound	Spitz and primitive types	Primitive type	Malta	Red	21-25	Brown	12-14	Intelligent, energetic, good-natured, loyal	Dental problems, eye issues, skin allergies	http://tinyurl.com/2bb2n94k	NULL	http://tinyurl.com/2y9lrmn9
+238	Majorca Mastiff	Pinscher and Schnauzer	Molossian type	Spain							http://tinyurl.com/26a35gbt	NULL	http://tinyurl.com/2attk8e2
+239	Havanese	Companion and Toy Dogs	Bichons and related breeds	Cuba							http://tinyurl.com/2bcnl4qf	NULL	http://tinyurl.com/2cyjt7tf
+240	Polish Lowland Sheepdog	Sheepdogs and Cattledogs	Sheepdogs	Poland							http://tinyurl.com/2yc8voco	http://tinyurl.com/2baowg7c	http://tinyurl.com/25j4bez9
+241	Tatra Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Poland							http://tinyurl.com/2yz9xleh	http://tinyurl.com/2bkgrbed	http://tinyurl.com/23zsw3p3
+242	Pug	Companion and Toy Dogs	Small Molossian type Dogs	China	Fawn, Black	10-14	Brown	12-15	Loyal, playful, affectionate, social, charming	Eye problems, respiratory issues, obesity	http://tinyurl.com/255tyxeq	http://tinyurl.com/29xltfsa	http://tinyurl.com/22qry7hx
+243	Alpine Dachsbracke	Scent hounds and related breeds	Leash (scent) Hounds	Austria							http://tinyurl.com/2amlbocc	NULL	http://tinyurl.com/26l9d6oy
+244	Akita	Spitz and primitive types	Asian Spitz and related breeds	Japan	Red, Fawn, Sesame	24-28	Brown	10-12	Loyal, intelligent, good-natured, energetic	Dental problems, eye issues, skin allergies	http://tinyurl.com/25qt7n4z	http://tinyurl.com/23v8g8ew	http://tinyurl.com/246m3cdk
+245	Shiba	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/22rkub8e	http://tinyurl.com/27tq8ack	http://tinyurl.com/237vtaxx
+246	Japanese Terrier	Terriers	Small sized Terriers	Japan							http://tinyurl.com/29fbhp9q	http://tinyurl.com/23c2dmj9	http://tinyurl.com/24fxvvt2
+247	Tosa	Pinscher and Schnauzer	Molossian type	Japan							http://tinyurl.com/2dcquny7	http://tinyurl.com/28mo4puv	http://tinyurl.com/25f8btnl
+248	Hokkaido	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/2bf9h88c	http://tinyurl.com/26pcujaa	http://tinyurl.com/2adjcydc
+249	Japanese Spitz	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/2xsye5o8	http://tinyurl.com/25bxmzwo	http://tinyurl.com/25d3klb7
+250	Chesapeake Bay Retriever	Retrievers	Retrievers	United States Of America	Brown, Tan	21-26	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/2cuo4cp5	NULL	http://tinyurl.com/27ln6mej
+251	Mastiff	Pinscher and Schnauzer	Molossian type	Great Britain	Apricot, Fawn	30-34	Brown	8-10	Loyal, gentle, protective, good-natured	Hip dysplasia, heart conditions, cancer	http://tinyurl.com/28drn97p	NULL	http://tinyurl.com/2dkgb25d
+252	Norwegian Lundehund	Spitz and primitive types	Nordic Hunting Dogs	Norway							http://tinyurl.com/29v6w82o	http://tinyurl.com/26m29g7z	http://tinyurl.com/25wrcpqh
+253	Hygen Hound	Scent hounds and related breeds	Scent hounds	Norway							http://tinyurl.com/278ctjs9	http://tinyurl.com/2yb6fvrl	http://tinyurl.com/23wcju4c
+254	Halden Hound	Scent hounds and related breeds	Scent hounds	Norway							http://tinyurl.com/28y3nlcc	http://tinyurl.com/254qz7tn	http://tinyurl.com/26397fzm
+255	Norwegian Elkhound Black	Spitz and primitive types	Nordic Hunting Dogs	Norway							http://tinyurl.com/234uep22	http://tinyurl.com/24pyme59	http://tinyurl.com/2bwtvnoq
+256	Saluki	Sighthounds	Long-haired or fringed Sighthounds	Middle East	Cream, Red	23-28	Brown	12-14	Intelligent, energetic, good-natured, loyal	Dental problems, eye issues, skin allergies	http://tinyurl.com/265tbh84	NULL	http://tinyurl.com/23y2sqkw
+257	Siberian Husky	Spitz and primitive types	Nordic Sledge Dogs	United States Of America	Black, White	21-24	Blue	12-15	Independent, energetic, intelligent, playful, strong	Hip dysplasia, eye problems, hereditary myopathy	http://tinyurl.com/258qdeb3	http://tinyurl.com/27po2hcp	http://tinyurl.com/2b6a62uf
+258	Bearded Collie	Sheepdogs and Cattledogs	Sheepdogs	Great Britain							http://tinyurl.com/2cjlvqel	http://tinyurl.com/2ypesorp	http://tinyurl.com/278x5b6b
+259	Norfolk Terrier	Terriers	Small sized Terriers	Great Britain							http://tinyurl.com/24z7al6e	http://tinyurl.com/2893w9yz	http://tinyurl.com/23olvjpl
+260	Canaan Dog	Spitz and primitive types	Primitive type	Israel							http://tinyurl.com/2ydzd9k6	NULL	http://tinyurl.com/2avk6lox
+261	Greenland Dog	Spitz and primitive types	Nordic Sledge Dogs	Greenland							http://tinyurl.com/2d62ww7k	http://tinyurl.com/24dfnf46	http://tinyurl.com/2dkyhaul
+262	Brazilian Tracker	Scent hounds and related breeds	Scent hounds	Brazil							http://tinyurl.com/2xzmrwnm	http://tinyurl.com/23gqyydk	http://tinyurl.com/27bx69no
+263	Norrbottenspitz	Spitz and primitive types	Nordic Hunting Dogs	Sweden							http://tinyurl.com/2acnalx4	http://tinyurl.com/23h75tg3	http://tinyurl.com/27x9hxrk
+264	Croatian Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Croatia							http://tinyurl.com/28ku4afp	http://tinyurl.com/2amxxqtp	http://tinyurl.com/28ns8ekb
+265	Karst Shepherd Dog	Pinscher and Schnauzer	Molossian type	Slovenia							http://tinyurl.com/2a44ckge	http://tinyurl.com/2bvsnte8	http://tinyurl.com/27sj75qk
+266	Montenegrin Mountain Hound	Scent hounds and related breeds	Scent hounds	Montenegro							http://tinyurl.com/22gyvc7b	http://tinyurl.com/27vres7u	http://tinyurl.com/2bxouu3e
+267	Old Danish Pointing Dog	Pointing Dogs	Continental Pointing Dogs	Denmark							http://tinyurl.com/26f7un8n	NULL	http://tinyurl.com/2ccazgpj
+268	Grand Griffon Vendeen	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2bhguy8t	http://tinyurl.com/25pn772b	http://tinyurl.com/22o7g7tr
+269	Coton De Tulear	Companion and Toy Dogs	Bichons and related breeds	Madagascar	White	9-11	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, skin allergies, hip dysplasia	http://tinyurl.com/2b5s9hjn	NULL	http://tinyurl.com/2237vecb
+270	Lapponian Herder	Spitz and primitive types	Nordic Watchdogs and Herders	Finland							http://tinyurl.com/2yqb597l	NULL	http://tinyurl.com/2xmg8rx7
+271	Spanish Greyhound	Sighthounds	Short-haired Sighthounds	Spain							http://tinyurl.com/2dca4aal	NULL	http://tinyurl.com/22yurwwk
+272	American Staffordshire Terrier	Terriers	Bull type Terriers	United States Of America							http://tinyurl.com/2bv4voya	NULL	http://tinyurl.com/28bdwpe9
+273	Australian Cattle Dog	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Australia	Blue, Red	17-20	Brown	12-16	Intelligent, energetic, playful, good-natured	Dental problems, skin allergies, hip dysplasia	http://tinyurl.com/28f8znsc	http://tinyurl.com/2aer224l	http://tinyurl.com/258rrxol
+274	Chinese Crested Dog	Companion and Toy Dogs	Hairless Dogs	China							http://tinyurl.com/2b5e4mh7	http://tinyurl.com/266s29zb	http://tinyurl.com/2ygvb4wh
+275	Icelandic Sheepdog	Spitz and primitive types	Nordic Watchdogs and Herders	Iceland							http://tinyurl.com/29kuer93	http://tinyurl.com/22rgcqgd	http://tinyurl.com/22wcv9ga
+276	Beagle Harrier	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/24nq7n5o	http://tinyurl.com/2bwgv5hw	http://tinyurl.com/26tkjuy7
+277	Eurasian	Spitz and primitive types	Asian Spitz and related breeds	Germany							http://tinyurl.com/2a6n8nvb	http://tinyurl.com/2d3u8tk9	http://tinyurl.com/275rp6ll
+278	Dogo Argentino	Pinscher and Schnauzer	Molossian type	Argentina							http://tinyurl.com/25d2sv2v	http://tinyurl.com/28njeg2u	http://tinyurl.com/2267wcto
+279	Australian Kelpie	Sheepdogs and Cattledogs	Sheepdogs	Australia	Red, Black	17-20	Brown	12-14	Intelligent, energetic, good-natured, loyal	Dental problems, eye issues, skin allergies	http://tinyurl.com/2atus6lk	http://tinyurl.com/2aenhbkh	http://tinyurl.com/2am5vv2b
+280	Otterhound	Scent hounds and related breeds	Scent hounds	Great Britain							http://tinyurl.com/27p3kpq6	http://tinyurl.com/2cwob3cz	http://tinyurl.com/23qczx2j
+281	Harrier	Scent hounds and related breeds	Scent hounds	Great Britain	Red, Black & Tan	18-21	Brown	12-14	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/29n262lh	NULL	http://tinyurl.com/24pvnlqe
+282	Collie Smooth	Sheepdogs and Cattledogs	Sheepdogs	Great Britain							http://tinyurl.com/2c5v8jy4	http://tinyurl.com/25xh2o4s	http://tinyurl.com/2alor2ws
+283	Border Collie	Sheepdogs and Cattledogs	Sheepdogs	Great Britain	Black, White, Red	18-22	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/28j6hu5r	http://tinyurl.com/29ozjdzb	http://tinyurl.com/2cqfdj8j
+284	Romagna Water Dog	Retrievers	Water Dogs	Italy							http://tinyurl.com/25p2wp6h	http://tinyurl.com/2b6yc4dy	http://tinyurl.com/28vjzl4b
+285	German Hound	Scent hounds and related breeds	Scent hounds	Germany							http://tinyurl.com/2xqdga2d	NULL	http://tinyurl.com/2644h5nl
+286	Black And Tan Coonhound	Scent hounds and related breeds	Scent hounds	United States Of America							http://tinyurl.com/23g28txm	http://tinyurl.com/29t96pcm	http://tinyurl.com/2xs25swh
+287	American Water Spaniel	Retrievers	Water Dogs	United States Of America							http://tinyurl.com/2xud7s4u	NULL	http://tinyurl.com/2befl4gv
+288	Irish Glen Of Imaal Terrier	Terriers	Large and medium sized Terriers	Ireland							http://tinyurl.com/232bzlk5	NULL	http://tinyurl.com/238cc8u7
+289	American Foxhound	Scent hounds and related breeds	Scent hounds	United States Of America							http://tinyurl.com/22tbgozc	NULL	http://tinyurl.com/2bracpk7
+290	Russian-European Laika	Spitz and primitive types	Nordic Hunting Dogs	Russian Federation							http://tinyurl.com/259obm45	NULL	http://tinyurl.com/28u9f6ok
+291	East Siberian Laika	Spitz and primitive types	Nordic Hunting Dogs	Russian Federation							http://tinyurl.com/27htps5y	http://tinyurl.com/24mfqanc	http://tinyurl.com/2yulcg7p
+292	West Siberian Laika	Spitz and primitive types	Nordic Hunting Dogs	Russian Federation							http://tinyurl.com/29g6rfep	http://tinyurl.com/2b52hnnv	http://tinyurl.com/2ajcbhdu
+293	Azawakh	Sighthounds	Short-haired Sighthounds	Mali							http://tinyurl.com/288fsl9n	http://tinyurl.com/28xsld37	http://tinyurl.com/29bt4xfc
+294	Dutch Smoushond	Pinscher and Schnauzer	Pinscher and Schnauzer type	The Netherlands							http://tinyurl.com/2djqn6l4	NULL	http://tinyurl.com/2d7rb2pr
+295	Shar Pei	Pinscher and Schnauzer	Molossian type	China	Cream, Fawn	18-20	Brown	8-12	Independent, loyal, intelligent, good-natured	Skin allergies, eye problems, hip dysplasia	http://tinyurl.com/2a5ukzef	NULL	http://tinyurl.com/2bsjrarm
+296	Peruvian Hairless Dog	Spitz and primitive types	Primitive type	Peru							http://tinyurl.com/2yrkjrf3	http://tinyurl.com/2dl97blu	http://tinyurl.com/28lay7an
+297	Saarloos Wolfhond	Sheepdogs and Cattledogs	Sheepdogs	The Netherlands							http://tinyurl.com/24qepb8o	http://tinyurl.com/28dv4bdx	http://tinyurl.com/2cef9p5x
+298	Nova Scotia Duck Tolling Retriever	Retrievers	Retrievers	Canada							http://tinyurl.com/2avwuucv	NULL	http://tinyurl.com/28fnf964
+299	Dutch Schapendoes	Sheepdogs and Cattledogs	Sheepdogs	The Netherlands							http://tinyurl.com/2a7l6vod	http://tinyurl.com/22t3eg97	http://tinyurl.com/288dvqtt
+300	Nederlandse Kooikerhondje	Retrievers	Flushing Dogs	The Netherlands							http://tinyurl.com/29kg9w6k	http://tinyurl.com/25vg6n2t	http://tinyurl.com/27rg65f4
+301	Broholmer	Pinscher and Schnauzer	Molossian type	Denmark							http://tinyurl.com/2d6a2d8s	http://tinyurl.com/23873xtu	http://tinyurl.com/28vztow2
+302	French White And Orange Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/28g3sexb	NULL	http://tinyurl.com/24zmt2mf
+303	Kai	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/2clcz6oj	http://tinyurl.com/2boyhszd	http://tinyurl.com/26m4yxno
+304	Kishu	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/27j67dcg	http://tinyurl.com/26acpqmb	http://tinyurl.com/25td6w6l
+305	Shikoku	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/2bnx5zk3	http://tinyurl.com/24ebx595	http://tinyurl.com/24dw8ns4
+306	Wirehaired Slovakian Pointer	Pointing Dogs	Continental Pointing Dogs	Slovakia							http://tinyurl.com/28cpb5yz	NULL	http://tinyurl.com/24fms452
+307	Majorca Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Spain							http://tinyurl.com/27ghmp9g	NULL	NULL
+308	Great Anglo-French Tricolour Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/277k8ebd	NULL	http://tinyurl.com/25fn5kvd
+309	Great Anglo-French White And Black Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/276ma6zb	http://tinyurl.com/24tz7bvc	http://tinyurl.com/22mvymmc
+310	Great Anglo-French White & Orange Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2c5h3nvl	http://tinyurl.com/22739uaj	http://tinyurl.com/26qrlcz2
+311	Medium-Sized Anglo-French Hound	Scent hounds and related breeds	Scent hounds	France							http://tinyurl.com/2773fykr	NULL	http://tinyurl.com/238jemvf
+312	South Russian Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Russian Federation							http://tinyurl.com/25oogep4	http://tinyurl.com/2b59k4p6	http://tinyurl.com/2xhplf5t
+313	Russian Black Terrier	Pinscher and Schnauzer	Pinscher and Schnauzer type	Russian Federation							http://tinyurl.com/27ztgen5	http://tinyurl.com/2xt6b66m	http://tinyurl.com/278kno4q
+314	Caucasian Shepherd Dog	Pinscher and Schnauzer	Molossian type	Russian Federation							http://tinyurl.com/26dvg5y8	http://tinyurl.com/2d6g5x26	http://tinyurl.com/2anfdg9q
+315	Canarian Warren Hound	Spitz and primitive types	Primitive type - Hunting Dogs	Spain							http://tinyurl.com/2bee7z3d	http://tinyurl.com/2azfa9pp	http://tinyurl.com/27f8wuaa
+316	Irish Red And White Setter	Pointing Dogs	British and Irish Pointers and Setters	Ireland							http://tinyurl.com/29lwqvfa	NULL	http://tinyurl.com/2ykqlqlt
+317	Kangal Shepherd Dog	Pinscher and Schnauzer	Molossian type	Turkey							http://tinyurl.com/25uadgoe	http://tinyurl.com/2y7pa57p	http://tinyurl.com/23dv9ath
+318	Czechoslovakian Wolfdog	Sheepdogs and Cattledogs	Sheepdogs	Slovakia							http://tinyurl.com/2ax9yvr2	NULL	http://tinyurl.com/222qqj9s
+319	Polish Greyhound	Sighthounds	Short-haired Sighthounds	Poland							http://tinyurl.com/27986ax8	NULL	http://tinyurl.com/2dbg86j7
+320	Korea Jindo Dog	Spitz and primitive types	Asian Spitz and related breeds	Korea (Republic Of)							http://tinyurl.com/2484sley	http://tinyurl.com/29uwq5mk	http://tinyurl.com/295sd78a
+321	Central Asia Shepherd Dog	Pinscher and Schnauzer	Molossian type	Russian Federation							http://tinyurl.com/295dgluz	http://tinyurl.com/26j9avod	http://tinyurl.com/227gpyvu
+322	Spanish Water Dog	Retrievers	Water Dogs	Spain							http://tinyurl.com/2a2dq76g	NULL	http://tinyurl.com/256y6k37
+323	Italian Short-Haired Segugio	Scent hounds and related breeds	Scent hounds	Italy							http://tinyurl.com/236nmnx3	http://tinyurl.com/25k7rsk5	http://tinyurl.com/2cobb7ye
+324	Thai Ridgeback Dog	Spitz and primitive types	Primitive type - Hunting Dogs	Thailand							http://tinyurl.com/258c8j8k	NULL	http://tinyurl.com/26pwbmd3
+325	Parson Russell Terrier	Terriers	Large and medium sized Terriers	Great Britain							http://tinyurl.com/2ans4ovo	http://tinyurl.com/26r3gwk8	http://tinyurl.com/2cbf8qkk
+326	Saint Miguel Cattle Dog	Pinscher and Schnauzer	Molossian type	Portugal							http://tinyurl.com/257gvt3l	NULL	http://tinyurl.com/2a6oxe6k
+327	Brazilian Terrier	Terriers	Large and medium sized Terriers	Brazil							http://tinyurl.com/26d5rwhc	http://tinyurl.com/296lvcu3	http://tinyurl.com/2yux574y
+328	Australian Shepherd	Sheepdogs and Cattledogs	Sheepdogs	United States Of America	Black, Red	18-23	Brown, Blue	12-15	Intelligent, energetic, loyal, trainable	Hip dysplasia, eye problems, epilepsy	http://tinyurl.com/2xmfh3ov	NULL	http://tinyurl.com/25ek4kju
+329	Italian Cane Corso	Pinscher and Schnauzer	Molossian type	Italy							http://tinyurl.com/2av4l77w	http://tinyurl.com/2yjlt8r7	http://tinyurl.com/2xm2ps3x
+330	American Akita	Spitz and primitive types	Asian Spitz and related breeds	Japan							http://tinyurl.com/24x9qem5	NULL	http://tinyurl.com/25er7yl5
+331	Jack Russell Terrier	Terriers	Small sized Terriers	Great Britain	White, Black & Tan	10-12	Brown	12-15	Intelligent, energetic, playful, good-natured	Dental problems, eye issues, skin allergies	http://tinyurl.com/22npjmj2	http://tinyurl.com/22uuzk39	http://tinyurl.com/2c3b4hbm
+332	Presa Canario	Pinscher and Schnauzer	Molossian type	Spain							http://tinyurl.com/2xnovlwd	http://tinyurl.com/235722ch	http://tinyurl.com/22wqe8dh
+333	White Swiss Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Switzerland							http://tinyurl.com/2y5p3ekc	http://tinyurl.com/2b4ouj5j	http://tinyurl.com/28pjgo2z
+334	Taiwan Dog	Spitz and primitive types	Primitive type - Hunting Dogs	Taiwan							http://tinyurl.com/282rayma	http://tinyurl.com/25zvdacn	http://tinyurl.com/2dngcxmq
+335	Romanian Mioritic Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Romania							http://tinyurl.com/2a52as9g	http://tinyurl.com/244mnxj8	http://tinyurl.com/24jhgtm5
+336	Romanian Carpathian Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Romania							http://tinyurl.com/2dp5hrj6	http://tinyurl.com/252lqwh9	http://tinyurl.com/2dh258zh
+337	Australian Stumpy Tail Cattle Dog	Sheepdogs and Cattledogs	Cattledogs (except Swiss Cattledogs)	Australia	Red, Black	17-20	Brown	12-14	Intelligent, energetic, good-natured, loyal	Dental problems, eye issues, skin allergies	http://tinyurl.com/2caj7d7c	NULL	http://tinyurl.com/2bj68gb9
+338	Russian Toy	Companion and Toy Dogs	Continental Toy Spaniel and others	Russian Federation							http://tinyurl.com/2bqsg79f	http://tinyurl.com/256kmbnp	http://tinyurl.com/29a4sox5
+339	Cimarrón Uruguayo	Pinscher and Schnauzer	Molossian type	Uruguay							http://tinyurl.com/2dza67ce	http://tinyurl.com/25545cf2	http://tinyurl.com/27g4vgkz
+340	Polish Hunting Dog	Scent hounds and related breeds	Scent hounds	Poland							http://tinyurl.com/268y2pkz	NULL	http://tinyurl.com/29et4vwp
+341	Bosnian And Herzegovinian - Croatian Shepherd Dog	Pinscher and Schnauzer	Molossian type	Bosnia And Herzegovina, Croatia							http://tinyurl.com/28g6gvle	http://tinyurl.com/2caz7zwf	http://tinyurl.com/23kr9r8z
+342	Danish-Swedish Farmdog	Pinscher and Schnauzer	Pinscher and Schnauzer type	Denmark, Sweden							http://tinyurl.com/2b99fb6j	http://tinyurl.com/2dqdwzzo	http://tinyurl.com/266nd95z
+343	Romanian Bucovina Shepherd	Pinscher and Schnauzer	Molossian type	Romania							http://tinyurl.com/22fnfypv	http://tinyurl.com/29sdu27n	http://tinyurl.com/2a5llaxd
+344	Thai Bangkaew Dog	Spitz and primitive types	Asian Spitz and related breeds	Thailand							http://tinyurl.com/23y4plxq	http://tinyurl.com/28g2sjpe	http://tinyurl.com/24nrl9j9
+345	Miniature Bull Terrier	Terriers	Bull type Terriers	Great Britain							http://tinyurl.com/2d8vkybs	http://tinyurl.com/24967vcb	http://tinyurl.com/2xjg7sfr
+346	Lancashire Heeler	Sheepdogs and Cattledogs	Sheepdogs	England							http://tinyurl.com/235x39n5	http://tinyurl.com/24xd7grd	http://tinyurl.com/26vzukhm
+347	Segugio Maremmano	Scent hounds and related breeds	Scent hounds	Italy							http://tinyurl.com/2dajhuxn	http://tinyurl.com/2aknj8ma	http://tinyurl.com/225cxqjg
+348	Kintamani-Bali Dog	Spitz and primitive types	Asian Spitz and related breeds	Indonesia							http://tinyurl.com/2bqv4ouz	http://tinyurl.com/2yocgklz	http://tinyurl.com/2xk4f4jz
+349	Prague Ratter	Companion and Toy Dogs	Continental Toy Spaniel and others	Czech Republic							http://tinyurl.com/22wbhn2p	http://tinyurl.com/23ok729f	http://tinyurl.com/2dg66m89
+350	Bohemian Shepherd Dog	Sheepdogs and Cattledogs	Sheepdogs	Czech Republic							http://tinyurl.com/28efuzbg	http://tinyurl.com/2dn6t6x3	http://tinyurl.com/2aefaknk
+351	Yakutian Laika	Spitz and primitive types	Nordic Sledge Dogs	Russian Federation							http://tinyurl.com/2ceh6jhr	http://tinyurl.com/27n8gro7	http://tinyurl.com/2c3okg8t
+352	Estonian Hound	Scent hounds and related breeds	Scent hounds	Estonia							http://tinyurl.com/2deeszn2	http://tinyurl.com/23e74uvn	http://tinyurl.com/2yf72sha
+353	Miniature American Shepherd	Sheepdogs and Cattledogs	Sheepdogs	United States Of America							http://tinyurl.com/2amppkph	NULL	http://tinyurl.com/29wxc3rt
+354	Transmontano Mastiff	Pinscher and Schnauzer	Molossian type	Portugal							http://tinyurl.com/29pwzghr	http://tinyurl.com/27y9focc	http://tinyurl.com/245qqm8l
+355	Continental Bulldog	Pinscher and Schnauzer	Molossian type	Switzerland							http://tinyurl.com/227u56q4	http://tinyurl.com/2coyscbo	http://tinyurl.com/2yf7oomj
+356	Valencian Terrier	Terriers	Large and medium sized Terriers	Spain							http://tinyurl.com/2xvfjwb4	http://tinyurl.com/29zewpwe	http://tinyurl.com/2ybce3x7
