@@ -82,8 +82,11 @@ b) Busca la fòrmula per concatenar l'inicial del nom amb '.' i amb el primer co
 bcn.cat / educacio.edu / govern.cat /institut.edu /gencat.cat / educacio.eu / educacio.com
 
 Indica com ho has fet
+Ho he fet amb aquesta formula a LibreOffice calc
 
-El resultat serà un nou arxiu agenda.contacte.csv i separat per tabulacions amb les dades modificades dels 100 contactes i mantenint la capçalera.
+=CONCATENAR(IZQUIERDA(B3;1); "."; C3; "@"; INDICE({"bcn.cat";"educacio.edu";"govern.cat";"institut.edu";"gencat.cat";"educacio.eu";"educacio.com"}; ENTERO(ALEATORIO()*7)+1))
+E
+l resultat serà un nou arxiu agenda.contacte.csv i separat per tabulacions amb les dades modificades dels 100 contactes i mantenint la capçalera.
 
 
 5.- (10%) Insereix l'arxiu agenda.contacte.csv dins la taula contacte fent servir LOAD DATA i indica també quina comanda faries servir utilitzant: mysqlimport
