@@ -97,6 +97,27 @@ Fes un select que mostri els cinc primers registres junt als cinc últims de la 
 
 (Select * From contacte order by data_naix asc limit 5) UNION (Select * From contacte order by data_naix desc limit 5);
 
+mysql:[root:agenda]> (Select * From contacte order by data_naixement asc limit 5) UNION (Select * From contacte order by data_naixement desc limit 5);
++-----------+----------+-----------+-----------+----------------+-------------------------+
+| mobil     | nom      | cognom1   | cognom2   | data_naixement | correu_electronic       |
++-----------+----------+-----------+-----------+----------------+-------------------------+
+| 657435689 | Elvira   | Tavera    | Roger     | 1940-02-24     | E.Tavera@bcn.cat        |
+| 639308293 | Dídac    | Vives     | Segura    | 1940-06-12     | D.Vives@educacio.edu    |
+| 617586432 | Gabriel  | Castells  | Torner    | 1940-09-11     | G.Castells@bcn.cat      |
+| 685268765 | Cristian | Ramos     | Mateos    | 1940-10-11     | C.Ramos@govern.cat      |
+| 645703282 | Albert   | Segura    | Dapena    | 1941-01-09     | A.Segura@bcn.cat        |
+| 674438816 | Gerard   | Viadé     | Saez      | 2002-07-10     | G.Viadé@bcn.cat         |
+| 640478434 | Álvaro   | Torelló   | Navarro   | 2002-06-22     | Á.Torelló@educacio.eu   |
+| 665718566 | Isabel   | Belzunce  | Sánchez   | 2002-01-18     | I.Belzunce@institut.edu |
+| 634381311 | Alfons   | Salmerón  | Gomila    | 2001-12-12     | A.Salmerón@bcn.cat      |
+| 616347774 | Arnau    |           | Bastardas | 2001-08-13     | A.@educacio.com         |
++-----------+----------+-----------+-----------+----------------+-------------------------+
+10 rows in set (0,00 sec)
+
+mysql:[root:agenda]> 
+
+
+
 
 6.- (30%)  Genera 100 inserts aleatoris en la taula reunions, on es compleixi què:
 
