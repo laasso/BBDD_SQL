@@ -1,5 +1,5 @@
 
-n una empresa multinacional, es vol crear una BBDD per gestionar les diferents reunions que fa cadascuna de les persones de l'empresa.
+En una empresa multinacional, es vol crear una BBDD per gestionar les diferents reunions que fa cadascuna de les persones de l'empresa.
 
 L'empresa consta de diverses filials repartides en diferents països del món que interactuen entre elles de formes diferents: com venen o compran productes, assessorant, transportant mercaderies, etc..
 
