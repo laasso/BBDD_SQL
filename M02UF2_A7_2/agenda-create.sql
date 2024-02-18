@@ -15,7 +15,7 @@ CREATE TABLE contacte (
 
     cognom2 VARCHAR(25),
 
-    data_naixament DATE,
+    data_naixement DATE,
 
     correu_electronic VARCHAR(50)
 
