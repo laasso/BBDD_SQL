@@ -9,6 +9,8 @@ CREATE TABLE contacte (
 
     mobil VARCHAR(15) PRIMARY KEY,
 
+    nom VARCHAR(25),
+
     cognom1 VARCHAR(25),
 
     cognom2 VARCHAR(25),
