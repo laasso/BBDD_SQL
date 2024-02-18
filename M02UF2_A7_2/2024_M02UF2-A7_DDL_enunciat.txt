@@ -52,6 +52,18 @@ Fes captures de la web abans de l'exportació i mostra captura dels 15 primers r
 
 3.- (10%) INSERT, INSERT IGNORE, REPLACE .. tots tres serveixen per inserir regisres en una taula. Explica que fa específicament cadascún i fes un exemple pràctic a la taula `tipusvincle`.
 
+INSERT: S'utilitza per a inserir nous registres en una taula. Si intentes inserir un registre que viola una restricció única (com una clau primària o un índex únic), es produirà un error i la inserció fallarà.
+INSERT INTO tipusvincle (nom) VALUES ('Joan');
+
+
+INSERT IGNORE: Intentarà inserir el registre però si troba cap error no detendrà l'execució, simplement ignorarà el registre i inserirà els altres.
+INSERT IGNORE INTO tipusvincle (nom) VALUES ('Familiar');
+
+
+REPLACE: Si hi ha un conflicte amb una restricció única, en lloc d'ignorar el registre com el fa *INSERT IGNORI, *MySQL eliminarà el registre existent que causa el conflicte i després inserirà el nou registre en el seu lloc.
+REPLACE INTO tipusvincle (nom) VALUES ('Profesional');
+
+
 
 4.- (10%) Agafa l'arxiu.csv de l'exercici 2 i carrègal en un full de càlcul (Google sheet o LibreOffice calc, preferentment). 
 
