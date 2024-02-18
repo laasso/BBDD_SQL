@@ -93,6 +93,15 @@ l resultat serà un nou arxiu agenda.contacte.csv i separat per tabulacions amb 
 
 Quina ordre has fet servir i quina és la resposta del servidor, tenint en compte que farem servir -v 
 
+usuari@debian12:~/Escritorio/BBDD_SQL$ mysqlimport -v --fields-terminated-by='\t' --local -u root -p agenda contacte /home/usuari/Escritorio/BBDD_SQL/M02UF2_A7_2/agenda.contacte.csv.tsv
+Connecting to localhost
+Enter password: 
+Selecting database agenda
+Loading data from LOCAL file: contacte into contacte
+mysqlimport: Error: 2068, LOAD DATA LOCAL INFILE file request rejected due to restrictions on access., when using table: contacte
+Disconnecting from localhost
+
+
 Fes un select que mostri els cinc primers registres junt als cinc últims de la taula contacte on l'ordenació es faci amb el camp `data_naix`.
 
 (Select * From contacte order by data_naix asc limit 5) UNION (Select * From contacte order by data_naix desc limit 5);
