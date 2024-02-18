@@ -4,4 +4,4 @@ FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (mobil, nom, cognom1, cognom2, @data_naixement, correu_electronic)
-SET data_naixament = STR_TO_DATE(@data_naixement, '%Y-%m-%d');
+SET data_naixement = STR_TO_DATE(@data_naixement, '%Y-%m-%d');
