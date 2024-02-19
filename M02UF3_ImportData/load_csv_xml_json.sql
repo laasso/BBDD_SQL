@@ -13,7 +13,7 @@ CREATE table data_csv (
     PRIMARY KEY (id)
 );
 
-LOAD DATA INFILE '/home/usuari/BBDD_SQL/M02UF3_ImportData/dades.csv' INTO TABLE data_csv
+LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF3_ImportData/dades.csv' INTO TABLE data_csv
 FIELDS TERMINATED BY ',' IGNORE 1 LINES
 (nom, cognom1, cognom2, dataNaixement, email) SET id=NULL;
 
@@ -27,3 +27,15 @@ CREATE TABLE IF NOT EXISTS data_json(
     dades_json
 );
 
+system mysqlsh root@localhost/data --import /home/usuari/BBDD_SQL/M02UF3_ImportData/dades.json data_json dades --schema=data
+
+SELECT json_pretty(json_arraygg(json_obecjt(id,dades))) FROM data_json\G
+
+SELECT dades->>'$.nom' FROM data_json;
+
+SELECT dades->>'$.nom' AS nom, dades->>'$.email' AS email FROM data_json;
+
+SELECT dades->>'$.nom' AS nom, dades->>'$.email' AS email FROM data_json
+WHERE dades->>'$.email' LIKE '%.cat';
+
+/*
