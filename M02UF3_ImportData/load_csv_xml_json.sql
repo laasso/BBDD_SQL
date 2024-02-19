@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS data;
 CREATE DATABASE IF NOT EXISTS data;
-USE data;
+USE data
 
 CREATE table data_csv (
     id INT auto_increment,
