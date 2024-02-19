@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dades>
+  <persona>
+    <nom>Marc</nom>
+    <cognom1>Rodríguez</cognom1>
+    <cognom2>Solé</cognom2>
+    <dataNaixement>1987-03-12</dataNaixement>
+    <email>marc.rodriguez@edu.cat</email>
+  </persona>
+  <persona>
+    <nom>Anna</nom>
+    <cognom1>Sánchez</cognom1>
+    <cognom2>Pérez</cognom2>
+    <dataNaixement>1992-06-25</dataNaixement>
+    <email>anna.sanchez@gmail.com</email>
+  </persona>
+  <persona>
+    <nom>Jordi</nom>
+    <cognom1>Garcia</cognom1>
+    <cognom2>Martínez</cognom2>
+    <dataNaixement>1984-10-07</dataNaixement>
+    <email>jordi.garcia@edu.com</email>
+  </persona>
+  <persona>
+    <nom>Laura</nom>
+    <cognom1>López</cognom1>
+    <cognom2>Ruiz</cognom2>
+    <dataNaixement>1999-01-18</dataNaixement>
+    <email>laura.lopez@cat.cat</email>
+  </persona>
+  <persona>
+    <nom>David</nom>
+    <cognom1>Martín</cognom1>
+    <cognom2>González</cognom2>
+    <dataNaixement>1990-04-04</dataNaixement>
+    <email>david.martin@gmail.com</email>
+  </persona>
+</dades>

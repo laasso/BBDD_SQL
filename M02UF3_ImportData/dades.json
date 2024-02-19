@@ -1,0 +1,37 @@
+  {
+    "nom": "Marc",
+    "cognom1": "Rodríguez",
+    "cognom2": "Solé",
+    "dataNaixement": "1987-03-12",
+    "email": "marc.rodriguez@edu.cat"
+  }
+  {
+    "nom": "Anna",
+    "cognom1": "Sánchez",
+    "cognom2": "Pérez",
+    "dataNaixement": "1992-06-25",
+    "email": "anna.sanchez@gmail.com"
+  }
+  {
+    "nom": "Jordi",
+    "cognom1": "Garcia",
+    "cognom2": "Martínez",
+    "dataNaixement": "1984-10-07",
+    "email": "jordi.garcia@edu.com"
+  }
+  {
+    "nom": "Laura",
+    "cognom1": "López",
+    "cognom2": "Ruiz",
+    "dataNaixement": "1999-01-18",
+    "email": "laura.lopez@cat.cat"
+  }
+  {
+    "nom": "David",
+    "cognom1": "Martín",
+    "cognom2": "González",
+    "dataNaixement": "1990-04-04",
+    "email": "david.martin@gmail.com"
+  }
+  
+
