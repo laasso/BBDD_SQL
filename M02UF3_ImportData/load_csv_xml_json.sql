@@ -8,7 +8,7 @@ CREATE table data_csv (
     cognom1 VARCHAR(24)
     cognom2 VARCHAR(24)
     dataNaixement DATE,
-    email VARCHAR(48).
+    email VARCHAR(48),
     KEY (id),
     PRIMARY KEY (id)
 );
@@ -27,4 +27,4 @@ CREATE TABLE IF NOT EXISTS data_json(
     dades_json
 );
 
-system mysqlsh root@localhost/data --import dades.json data_json dades --schema=data
+--system mysqlsh root@localhost/data --import dades.json data_json dades --schema=data
