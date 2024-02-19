@@ -93,14 +93,15 @@ l resultat serà un nou arxiu agenda.contacte.csv i separat per tabulacions amb 
 
 Quina ordre has fet servir i quina és la resposta del servidor, tenint en compte que farem servir -v 
 
-usuari@debian12:~/Escritorio/BBDD_SQL$ mysqlimport -v --fields-terminated-by='\t' --local -u root -p agenda contacte /home/usuari/Escritorio/BBDD_SQL/M02UF2_A7_2/agenda.contacte.csv.tsv
+mysqlimport -u root -p -L -v --fields-terminated-by='\t' --lines-terminated-by='\n' --verbose --ignore-lines=1 --columns='mobil,nom,cognom1,cognom2,data_naixement,correu_electronic' agenda '/home/usuari/BBDD_SQL/M02UF2_A7_2/contacte.tsv'
+
+usuari@debian12:~/BBDD_SQL$ mysqlimport -u root -p -L -v --fields-terminated-by='\t' --lines-terminated-by='\n' --verbose --ignore-lines=1 --columns='mobil,nom,cognom1,cognom2,data_naixement,correu_electronic' agenda '/home/usuari/BBDD_SQL/M02UF2_A7_2/contacte.tsv'
 Connecting to localhost
 Enter password: 
 Selecting database agenda
-Loading data from LOCAL file: contacte into contacte
-mysqlimport: Error: 2068, LOAD DATA LOCAL INFILE file request rejected due to restrictions on access., when using table: contacte
+Loading data from LOCAL file: /home/usuari/BBDD_SQL/M02UF2_A7_2/contacte.tsv into contacte
+agenda.contacte: Records: 100  Deleted: 0  Skipped: 0  Warnings: 0
 Disconnecting from localhost
-
 
 Fes un select que mostri els cinc primers registres junt als cinc últims de la taula contacte on l'ordenació es faci amb el camp `data_naix`.
 
@@ -124,8 +125,6 @@ mysql:[root:agenda]> (Select * From contacte order by data_naixement asc limit 5
 10 rows in set (0,00 sec)
 
 mysql:[root:agenda]> 
-
-
 
 
 6.- (30%)  Genera 100 inserts aleatoris en la taula reunions, on es compleixi què:
