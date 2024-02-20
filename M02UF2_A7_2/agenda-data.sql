@@ -28,7 +28,7 @@ FROM
     contacte c1
     JOIN contacte c2 ON c1.mobil < c2.mobil 
 ORDER BY RAND()
-LIMIT 200;
+LIMIT 400;
 
 /*INSERT REUNIONS ALEATORIES*/
 
