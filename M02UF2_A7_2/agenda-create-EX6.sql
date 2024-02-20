@@ -59,14 +59,16 @@ CREATE TABLE reunions (
     estat INT,
     data_reunio DATETIME,
     hores_reunio INT,
-    descripcio VARCHAR(50) GENERATED ALWAYS AS (
+    descripcio VARCHAR(20) GENERATED ALWAYS AS (
         CASE 
             WHEN estat = 1 THEN 'Realitzat'
             WHEN estat = 0 THEN 'No realitzat'
             ELSE 'Pendent'
         END
     ) STORED,
-    data_registre TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    data_registre TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (contacte1) REFERENCES relacio(contacte1),
+    FOREIGN KEY (contacte2) REFERENCES relacio(contacte2)
 );
 
 
