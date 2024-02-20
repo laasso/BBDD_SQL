@@ -13,12 +13,12 @@ SET data_naixement = STR_TO_DATE(@data_naixement, '%Y-%m-%d');
 
 /*INSERT REUNIONS ALEATORIES*/
 
-INSERT INTO tipusvincle (nom) VALUES
-    ('Comercial (Compra-venda de productes)'),
-    ('Departament (Treballen al mateix departament)'),
-    ('Transport (relació amb enviament de mercaderies)'),
-    ('Assessorament (De formació)'),
-    ('Altres (Relació genèrica o encara no definida)');
+INSERT INTO tipusvincle (nom,descripcio) VALUES
+    ('Comercial', '(Compra-venda de productes)'),
+    ('Departament', '(Treballen al mateix departament)'),
+    ('Transport', '(relació amb enviament de mercaderies)'),
+    ('Assessorament', '(De formació)'),
+    ('Altres', '(Relació genèrica o encara no definida)');
 
 
 INSERT INTO relacio (contacte1, contacte2, tipusvincle_id)

@@ -26,7 +26,9 @@ CREATE TABLE tipusvincle (
 
     id INT PRIMARY KEY AUTO_INCREMENT,
 
-    nom VARCHAR(50)
+    nom VARCHAR(50),
+
+    descripcio VARCHAR(100)
 
 );
 
