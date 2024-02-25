@@ -33,4 +33,4 @@ FIELDS TERMINATED BY '\t'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(titol, any, vots, estudis);
+(titol, any, vots, estudis); SET id_pelicula = NULL
