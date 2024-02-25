@@ -33,4 +33,5 @@ FIELDS TERMINATED BY '\t'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(titol, any, vots, estudis); SET id_pelicula = NULL
+(@id_movie, titol, any, vots, @genere, @pais, @director, estudis, @actor, @rol)
+SET id_pelicula = @id_movie;
