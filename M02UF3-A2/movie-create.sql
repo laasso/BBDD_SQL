@@ -9,12 +9,7 @@ CREATE TABLE pelicules (
     titol VARCHAR(255) NOT NULL,
     any INT,
     vots INT,
-    genere VARCHAR(255),
-    pais VARCHAR(255),
-    director VARCHAR(255),
-    estudis VARCHAR(255),
-    actor VARCHAR(255),
-    rol VARCHAR(255)
+    estudis VARCHAR(255)
 );
 
 CREATE TABLE genere (
@@ -22,7 +17,7 @@ CREATE TABLE genere (
     nom_genere VARCHAR(100) UNIQUE
 );
 
-CREATE TABLE paisos (
+CREATE TABLE pais (
     id_pais INT AUTO_INCREMENT PRIMARY KEY,
     nom_pais VARCHAR(255) UNIQUE
 );
@@ -37,18 +32,35 @@ CREATE TABLE actors (
     nom_actor VARCHAR(255) UNIQUE
 );
 
-
-CREATE TABLE estudis (
-    id_estudi INT AUTO_INCREMENT PRIMARY KEY,
-    nom_estudi VARCHAR(255) UNIQUE
+CREATE TABLE pelicules_genere (
+    id_pelicula INT,
+    id_genere INT,
+    PRIMARY KEY (id_pelicula, id_genere),
+    FOREIGN KEY (id_pelicula) REFERENCES pelicules(id_pelicula),
+    FOREIGN KEY (id_genere) REFERENCES genere(id_genere)
 );
 
+CREATE TABLE pelicules_pais (
+    id_pelicula INT,
+    id_pais INT,
+    PRIMARY KEY (id_pelicula, id_pais),
+    FOREIGN KEY (id_pelicula) REFERENCES pelicules(id_pelicula),
+    FOREIGN KEY (id_pais) REFERENCES pais(id_pais)
+);
 
-CREATE TABLE rols (
-    id_rol INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE pelicules_directors (
+    id_pelicula INT,
+    id_director INT,
+    PRIMARY KEY (id_pelicula, id_director),
+    FOREIGN KEY (id_pelicula) REFERENCES pelicules(id_pelicula),
+    FOREIGN KEY (id_director) REFERENCES directors(id_director)
+);
+
+CREATE TABLE pelicules_actors (
     id_pelicula INT,
     id_actor INT,
-    nom_rol VARCHAR(255),
+    rol VARCHAR(255),
+    PRIMARY KEY (id_pelicula, id_actor, rol),
     FOREIGN KEY (id_pelicula) REFERENCES pelicules(id_pelicula),
     FOREIGN KEY (id_actor) REFERENCES actors(id_actor)
 );
