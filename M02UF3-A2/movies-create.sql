@@ -31,6 +31,7 @@
         id_actor INT AUTO_INCREMENT PRIMARY KEY,
         nom_actor VARCHAR(255) UNIQUE
     );
+    
 
     CREATE TABLE pelicules_genere (
         id_pelicula INT,
@@ -64,3 +65,5 @@
         FOREIGN KEY (id_pelicula) REFERENCES pelicules(id_pelicula),
         FOREIGN KEY (id_actor) REFERENCES actors(id_actor)
     );
+
+CREATE TABLE movies-taules-dump.sql (id INT PRIMARY KEY);

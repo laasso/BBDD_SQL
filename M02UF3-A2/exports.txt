@@ -1,0 +1,8 @@
+
+#Copia de les dades:
+mysqldump -u root -p --no-create-info --no-create-db movies > /home/usuari/BBDD_SQL/M02UF3-A2/movies-dades-dump.sql
+
+#Copia de les taules:
+
+mysqldump -u root -p --no-data --skip-triggers --no-create-db --skip-opt movies > /home/usuari/BBDD_SQL/M02UF3-A2/movies-taules-dump.sql
+
