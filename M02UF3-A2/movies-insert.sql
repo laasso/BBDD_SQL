@@ -33,7 +33,7 @@ FIELDS TERMINATED BY '\t'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(id_pelicula, titol, any, vots, @dummy, @dummy, @dummy, nom_estudi);
+(id_pelicula, titol, any, vots, @dummy, @dummy, @dummy);
 
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF3-A2/raspi_json_movies.csv' INTO TABLE estudis
 FIELDS TERMINATED BY '\t'
