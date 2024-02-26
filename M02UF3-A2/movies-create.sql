@@ -6,7 +6,7 @@
 
     CREATE TABLE estudis (
         id_estudi INT AUTO_INCREMENT PRIMARY KEY,
-        nom_estudi VARCHAR(255),
+        nom_estudi VARCHAR(255)
     );
 
     CREATE TABLE pelicules (
