@@ -4,14 +4,19 @@
 
     USE movies;
 
+    CREATE TABLE estudis (
+        id_estudi INT AUTO_INCREMENT PRIMARY KEY,
+        nom_estudi VARCHAR(255),
+    );
+
     CREATE TABLE pelicules (
         id_pelicula INT AUTO_INCREMENT PRIMARY KEY,
         titol VARCHAR(255) NOT NULL,
         any INT,
         vots INT,
-        estudis VARCHAR(255)
+        id_estudi INT,
+        FOREIGN KEY(id_estudi) REFERENCES estudis(id_estudi)
     );
-
     CREATE TABLE genere (
         id_genere INT AUTO_INCREMENT PRIMARY KEY,
         nom_genere VARCHAR(100) UNIQUE
@@ -66,4 +71,3 @@
         FOREIGN KEY (id_actor) REFERENCES actors(id_actor)
     );
 
-CREATE TABLE movies-taules-dump.sql (id INT PRIMARY KEY);
