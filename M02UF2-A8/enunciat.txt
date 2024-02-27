@@ -1,0 +1,48 @@
+Crea una base de dades (roba) pel següent enunciat:
+
+Referència propietats: 
+https://stackoverflow.com/questions/17122656/database-design-for-multiple-product-types-with-variable-attributes
+
+NOTA: Més endavant, cadascú exposarà i defensarà a classe el seu treball (20% de la nota)
+
+Una botiga de roba, SARA, ens ha encarregat el disseny i implementació SQL d’una base de dades relacional amb MySQL per a gestionar la seva fabricació i vendes anuals.
+
+La botiga es dedica bàsicament a la fabricació i venda de: 
+
+.- ‘Roba de casa’ (llençols, estovalles i tovallons per a la taula, tovalloles de bany, etc..)
+.- ‘Complements’ com ara cinturons, gorres, bufandes, mocadors, etc.. 
+.- ‘Roba de vestir’ es classifica en: ‘roba de nadons’, ‘nens’, ‘home’ i ‘dona’ com ara samarretes, pantalons, vestits, bruses, etc..
+
+De la roba de casa, ens interessa saber les mides d’amplada i llargada en cm, així com si són llises o estampades, el material principal de que estan fabricats (cotó, lli, tergal,..), el model, el preu de cost o fabricació i el preu de venda.
+
+Dels complements, el tipus (cinturons, gorres, etc..) el material, el model, el preu de cost o fabricació, el preu de venda i si pertany a la 'gamma d'elements amb suport tecnològic'.
+
+De la roba de vestir, la categoria (home, dona, nens i nadons), el tipus o article (pantalons, camises, banyadors, etc..), el model, el preu de cost i el preu de venda, el color i la talla.
+
+Per exemple:    
+     .- Pels nadons, les talles serien: 0, 1, 3, 6, 12 i 24 mesos
+     .- Pels nens: 4, 6, 8, 10, 12 i 14
+     .- Per homes i per dones: S (petita), M (mitjana), L (gran), XL (super gran) i XXL (extra gran)
+
+Un mateix article de vestir (per exemple un pantaló) pot haver de diferents models, per exemple: (Jeans M, Caústic RL, etc..), tenir-ne diferent tallatge (tant d’home com de dona) i diferents colors.
+
+Ens interessa saber l’estoc que tenim de cada article de forma que augmentarà amb l'entrada de gènere o fabricació i disminuirà amb les vendes.
+
+Crea la bbdd en SQL que soluciona l’enunciat anterior i lliura els següents arxius.
+
+Implementació SQL
+
+A partir de l'enunciat crea el model ER de botiga de roba, transforma a model Relacional i presenta el següent:
+
+a) Solució de la transformació ER al model relacional.
+
+b) Implementa en SQL la solució per aquesta base de dades.  roba_create.sql
+
+c) Crea un mínim de 10 registres per a cada taula.   roba_inserts.sql
+
+   - Fes un DESCRIBE de cada taula
+   - Envia un -- Select * FROM nomtaula limit 3; -- per a cada taula creada.
+
+d) Crea l'esquema de la bbdd amb MySQL Workbench en format PNG. roba.png
+
+e) Crea quatre enunciats de consulta unitaula, tres multitaula i tres amb subconsultes, amb solució de sentències i respostes del servidor.
