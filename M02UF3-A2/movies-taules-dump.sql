@@ -39,6 +39,20 @@ CREATE TABLE `directors` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `estudis`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `estudis` (
+  `id_estudi` int NOT NULL AUTO_INCREMENT,
+  `nom_estudi` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_estudi`),
+  UNIQUE KEY `nom_estudi` (`nom_estudi`)
+) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `genere`
 --
 
@@ -77,8 +91,10 @@ CREATE TABLE `pelicules` (
   `titol` varchar(255) NOT NULL,
   `any` int DEFAULT NULL,
   `vots` int DEFAULT NULL,
-  `estudis` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_pelicula`)
+  `id_estudi` int DEFAULT NULL,
+  PRIMARY KEY (`id_pelicula`),
+  KEY `id_estudi` (`id_estudi`),
+  CONSTRAINT `pelicules_ibfk_1` FOREIGN KEY (`id_estudi`) REFERENCES `estudis` (`id_estudi`)
 ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -153,4 +169,4 @@ CREATE TABLE `pelicules_pais` (
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-26  8:53:30
+-- Dump completed on 2024-02-27  9:55:30

@@ -28,13 +28,6 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (@dummy,@dummy,@dummy,@dummy,@dummy,@dummy,@dummy,@dummy,nom_actor);
 
-LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF3-A2/raspi_json_movies.csv' INTO TABLE pelicules
-FIELDS TERMINATED BY '\t'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(id_pelicula, titol, any, vots, @dummy, @dummy, @dummy);
-
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF3-A2/raspi_json_movies.csv' INTO TABLE estudis
 FIELDS TERMINATED BY '\t'
 ENCLOSED BY '"'
@@ -51,7 +44,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS tabla_completa (
   nom_genere VARCHAR(255),
   nom_pais VARCHAR(255),
   nom_director VARCHAR(255),
-  estudis VARCHAR(255),
+  nom_estudi VARCHAR(255),
   nom_actor VARCHAR(255),
   rol VARCHAR(255)
 );
@@ -59,8 +52,11 @@ CREATE TEMPORARY TABLE IF NOT EXISTS tabla_completa (
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF3-A2/raspi_json_movies.csv' INTO TABLE tabla_completa 
 FIELDS TERMINATED BY '\t' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(id_pelicula, titol, any, vots, nom_genere, nom_pais, nom_director, estudis, nom_actor, rol);
+(id_pelicula, titol, any, vots, nom_genere, nom_pais, nom_director, nom_estudi, nom_actor, rol);
 
+INSERT INTO pelicules(id_pelicula,titol, any, vots, id_estudi) 
+SELECT DISTINCT id_pelicula, titol, any, vots, id_estudi FROM tabla_completa
+JOIN estudis e USING(nom_estudi) ORDER BY 1;
 
 INSERT INTO pelicules_pais(id_pelicula, id_pais) 
 SELECT DISTINCT id_pelicula, id_pais FROM tabla_completa tb
@@ -77,3 +73,4 @@ JOIN actors a USING(nom_actor);
 INSERT INTO pelicules_directors(id_pelicula, id_director) 
 SELECT DISTINCT id_pelicula, id_director FROM tabla_completa tb
 JOIN directors d USING(nom_director);
+
