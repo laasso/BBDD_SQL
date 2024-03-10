@@ -58,8 +58,8 @@ INSERT INTO ARTICLE (id_article, nom, id_categoria, id_clase, id_talla, id_color
 (3, 'Cinturó de cuir', 2, 3, NULL, NULL, 9, 1, 30, 12.5, 29.99),
 (4, 'Samarreta de nadó', 3, 4, 7, 8, 1, 5, 80, 7.99, 15.99),
 (5, 'Vestit de nena', 3, 5, 8, 8, 1, 3, 60, 14.99, 29.99),
-(6, 'Pantalons d\'home', 3, 6, 3, 1, 6, 1, 120, 22.5, 49.99),
+(6, 'Pantalons dhome', 3, 6, 2, 1, 6, 1, 120, 22.5, 49.99),
 (7, 'Vestit de dona', 3, 7, 4, 2, 1, 3, 70, 29.99, 59.99),
 (8, 'Bufanda de llana', 2, 3, NULL, NULL, 8, 8, 40, 9.99, 19.99),
-(9, 'Jeans', 3, 6, 3, 1, 10, 4, 90, 18.99, 39.99),
+(9, 'Jeans', 3, 6, 2, 1, 10, 4, 90, 18.99, 39.99),
 (10, 'Vestit casual', 3, 7, 4, 5, 1, 4, 50, 39.99, 79.99);
