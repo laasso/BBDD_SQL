@@ -17,9 +17,6 @@ INSERT INTO CLASE (id_clase, id_categoria, nom_clase, descripcio) VALUES
 -- Inserts para la tabla TALLA
 -- Inserts para la tabla TALLA
 INSERT INTO TALLA (id_talla, nom) VALUES
-(1, 'Pequeña'),
-(2, 'Mediana'),
-(3, 'Grande'),
 (4, '0 mesos'),        
 (5, '1 mes'),          
 (6, '3 mesos'),        
