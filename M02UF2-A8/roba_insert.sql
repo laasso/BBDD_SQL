@@ -15,9 +15,29 @@ INSERT INTO CLASE (id_clase, id_categoria, nom_clase, descripcio) VALUES
 (7, 3, 'Roba de dona', 'Vestits, faldilles, pantalons, etc.');
 
 -- Inserts para la tabla TALLA
+-- Inserts para la tabla TALLA
 INSERT INTO TALLA (id_talla, nom) VALUES
-(1, 'XS'), (2, 'S'), (3, 'M'), (4, 'L'), (5, 'XL'),
-(6, 'XXL'), (7, '0-3 mesos'), (8, '3-6 mesos'), (9, '6-12 mesos'), (10, '12-18 mesos');
+(1, 'Pequeña'),
+(2, 'Mediana'),
+(3, 'Grande'),
+(4, '0 mesos'),        
+(5, '1 mes'),          
+(6, '3 mesos'),        
+(7, '6 mesos'),        
+(8, '12 mesos'),       
+(9, '24 mesos'),       
+(10, '4'),             
+(11, '6'),             
+(12, '8'),             
+(13, '10'),            
+(14, '12'),            
+(15, '14'),            
+(16, 'S (petita)'),   
+(17, 'M (mitjana)'),  
+(18, 'L (gran)'),     
+(19, 'XL (super gran)'), 
+(20, 'XXL (extra gran)'); 
+
 
 -- Inserts para la tabla COLOR
 INSERT INTO COLOR (id_color, nom) VALUES
