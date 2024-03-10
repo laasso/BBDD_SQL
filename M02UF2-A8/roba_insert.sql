@@ -52,9 +52,10 @@ INSERT INTO MODELO (id_modelo, nom) VALUES
 (6, 'Floral'), (7, 'A ratlles'), (8, 'A quadres'), (9, 'Degradat'), (10, 'Llis');
 
 -- Inserts para la tabla ARTICLE
+-- Inserts para la tabla ARTICLE
 INSERT INTO ARTICLE (id_article, nom, id_categoria, id_clase, id_talla, id_color, id_material, id_modelo, stock, preu_cost, preu_venda) VALUES
-(1, 'Joc de llençols', 1, 1, 1, 1, 1, 1, 50, 15.99, 29.99),
-(2, 'Tovalloles de bany', 1, 2, 1, 3, 1, 1, 100, 8.99, 19.99),
+(1, 'Joc de llençols', 1, 1, NULL, 1, 1, 1, 50, 15.99, 29.99),
+(2, 'Tovalloles de bany', 1, 2, NULL, 3, 1, 1, 100, 8.99, 19.99),
 (3, 'Cinturó de cuir', 2, 3, NULL, NULL, 9, 1, 30, 12.5, 29.99),
 (4, 'Samarreta de nadó', 3, 4, 7, 8, 1, 5, 80, 7.99, 15.99),
 (5, 'Vestit de nena', 3, 5, 8, 8, 1, 3, 60, 14.99, 29.99),
