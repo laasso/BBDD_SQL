@@ -1,0 +1,17 @@
+CATEGORIA(*id_categoria*, nom_cat,descripcio)
+
+CLASE(*id_clase*, *id_categoria*, nom_clase, descripcio) on {id_categoria} referencia CATEGORIA
+
+ARTICLE(*id_article*,nom, id_categoria, id_clase, id_talla, id_color, id_material, id_modelo, stock, preu_cost, preu_venda)
+on {id_categoria} referencia CATEGORIA,
+{id_clase} referencia CLASE,
+{id_talla} referencia TALLA,
+{id_color} referencia COLOR,
+{id_material} referencia MATERIAL,
+{id_modelo} referencia MODELO
+
+TALLA (*id_talla*, nom)
+COLOR (*id_color*, nom)
+MATERIAL (*id_material*, nom)
+MODELO (*id_modelo*, nom)
+
