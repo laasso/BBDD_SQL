@@ -1,0 +1,191 @@
+Consultes d'una sola taula (unitaula):
+
+Consulta de tots els articles de la taula ARTICLE que tenen id_color = 8 :
+mysql:[root:roba]> SELECT * FROM ARTICLE WHERE id_color = 8;
++------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
+| id_article | nom                | id_categoria | id_clase | id_talla | id_color | id_material | id_modelo | stock | preu_cost | preu_venda |
++------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
+|          4 | Samarreta de nadó  |            3 |        4 |        7 |        8 |           1 |         5 |    80 |      7.99 |      15.99 |
+|          5 | Vestit de nena     |            3 |        5 |        8 |        8 |           1 |         3 |    60 |     14.99 |      29.99 |
+|         10 | Vestit de festa    |            3 |        7 |       14 |        8 |           4 |         3 |    30 |     49.99 |      99.99 |
+|         17 | Faldilla plisada   |            3 |        7 |       12 |        8 |           1 |         3 |    30 |     29.99 |      59.99 |
++------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
+
+Consulta de totes les categories disponibles:
+mysql:[root:roba]> SELECT * FROM CATEGORIA;
++--------------+----------------+----------------------------------------+
+| id_categoria | nom_cat        | descripcio                             |
++--------------+----------------+----------------------------------------+
+|            1 | Roba de casa   | Llençols, estovalles, tovallons, etc.  |
+|            2 | Complements    | Cinturons, gorres, bufandes, etc.      |
+|            3 | Roba de vestir | Ropa de nadons, nens, home i dona      |
++--------------+----------------+----------------------------------------+
+3 rows in set (0,00 sec)
+
+
+Consulta de tots els models disponibles:
+mysql:[root:roba]> SELECT * FROM MODELO;
++-----------+-----------+
+| id_modelo | nom       |
++-----------+-----------+
+|         1 | Clàssic   |
+|         2 | Esportiu  |
+|         3 | Elegant   |
+|         4 | Casual    |
+|         5 | Estampat  |
+|         6 | Floral    |
+|         7 | A ratlles |
+|         8 | A quadres |
+|         9 | Degradat  |
+|        10 | Llis      |
++-----------+-----------+
+10 rows in set (0,01 sec)
+
+
+Consulta de totes les classes disponibles de la categoria 3:
+mysql:[root:roba]> SELECT * FROM CLASE 
+    -> WHERE id_categoria = 3;
++----------+--------------+----------------+--------------------------------------+
+| id_clase | id_categoria | nom_clase      | descripcio                           |
++----------+--------------+----------------+--------------------------------------+
+|        4 |            3 | Roba de nadons | Samarretes, bodis, pijames, etc.     |
+|        5 |            3 | Roba de nens   | Vestits, pantalons, samarretes, etc. |
+|        6 |            3 | Roba home      | Camises, pantalons, americanes, etc. |
+|        7 |            3 | Roba de dona   | Vestits, faldilles, pantalons, etc.  |
++----------+--------------+----------------+--------------------------------------+
+
+
+Consultes que involucren múltiples taules (multitaula):
+
+Consulta dels articles juntament amb la seva categoria i classe corresponent:
+
+mysql:[root:roba]> SELECT A.nom AS nom_article, C.nom_cat AS categoria, CL.nom_clase AS classe
+    -> FROM ARTICLE A
+    -> INNER JOIN CATEGORIA C ON A.id_categoria = C.id_categoria
+    -> INNER JOIN CLASE CL ON A.id_clase = CL.id_clase;
++-----------------------+----------------+----------------+
+| nom_article           | categoria      | classe         |
++-----------------------+----------------+----------------+
+| Joc de llençols       | Roba de casa   | Roba de llit   |
+| Tovalloles de bany    | Roba de casa   | Roba de bany   |
+| Cinturó de cuir       | Complements    | Accessoris     |
+| Bufanda de llana      | Complements    | Accessoris     |
+| Samarreta de nadó     | Roba de vestir | Roba de nadons |
+| Vestit de nena        | Roba de vestir | Roba de nens   |
+| Pantalons dhome       | Roba de vestir | Roba home      |
+| Vestit de dona        | Roba de vestir | Roba de dona   |
+| Samareta de cotó      | Roba de vestir | Roba de nens   |
+| Pantalons de texans   | Roba de vestir | Roba home      |
+| Vestit de festa       | Roba de vestir | Roba de dona   |
+| Sabatilles esportives | Roba de vestir | Roba de bany   |
+| Jaqueta de pell       | Roba de vestir | Roba home      |
+| Pijama de nena        | Roba de vestir | Roba de nadons |
+| Jaqueta elegant       | Roba de vestir | Roba de dona   |
+| Sudadera amb caputxa  | Roba de vestir | Roba home      |
+| Faldilla plisada      | Roba de vestir | Roba de dona   |
++-----------------------+----------------+----------------+
+17 rows in set (0,00 sec)
+
+Consulta dels articles juntament amb les seves talles i colors corresponents:
+mysql:[root:roba]> SELECT A.nom AS nom_article, T.nom AS talla, CO.nom AS color
+    -> FROM ARTICLE A
+    -> INNER JOIN TALLA T ON A.id_talla = T.id_talla
+    -> INNER JOIN COLOR CO ON A.id_color = CO.id_color;
++----------------------+-------------+-------+
+| nom_article          | talla       | color |
++----------------------+-------------+-------+
+| Samarreta de nadó    | 0-3 mesos   | Rosa  |
+| Vestit de nena       | 3-6 mesos   | Rosa  |
+| Pantalons dhome      | S           | Blanc |
+| Vestit de dona       | L           | Negre |
+| Samareta de cotó     | S           | Blanc |
+| Pantalons de texans  | 8           | Negre |
+| Vestit de festa      | 10          | Rosa  |
+| Jaqueta de pell      | 6           | Gris  |
+| Pijama de nena       | 12-18 mesos | Blanc |
+| Jaqueta elegant      | 10          | Negre |
+| Sudadera amb caputxa | 6           | Verd  |
+| Faldilla plisada     | 6           | Rosa  |
++----------------------+-------------+-------+
+12 rows in set (0,00 sec)
+
+Consulta dels articles juntament amb el seu model i material corresponents:
+mysql:[root:roba]> SELECT A.nom AS nom_article, M.nom AS model, MA.nom AS material
+    -> FROM ARTICLE A
+    -> INNER JOIN MODELO M ON A.id_modelo = M.id_modelo
+    -> INNER JOIN MATERIAL MA ON A.id_material = MA.id_material;
++-----------------------+-----------+------------+
+| nom_article           | model     | material   |
++-----------------------+-----------+------------+
+| Joc de llençols       | Clàssic   | Cotó       |
+| Tovalloles de bany    | Clàssic   | Cotó       |
+| Cinturó de cuir       | Clàssic   | Pell       |
+| Samarreta de nadó     | Estampat  | Cotó       |
+| Vestit de nena        | Elegant   | Cotó       |
+| Pantalons dhome       | Clàssic   | Polièster  |
+| Vestit de dona        | Elegant   | Cotó       |
+| Samareta de cotó      | Clàssic   | Cotó       |
+| Pantalons de texans   | Casual    | Denim      |
+| Vestit de festa       | Elegant   | Seda       |
+| Bufanda de llana      | A quadres | Llana      |
+| Sabatilles esportives | Esportiu  | Polièster  |
+| Jaqueta de pell       | Clàssic   | Pell       |
+| Pijama de nena        | Estampat  | Cotó       |
+| Jaqueta elegant       | Elegant   | Pell       |
+| Sudadera amb caputxa  | Casual    | Felpa      |
+| Faldilla plisada      | Elegant   | Cotó       |
++-----------------------+-----------+------------+
+17 rows in set (0,00 sec)
+
+Consultes amb subconsultes:
+
+Consulta per mostrar els articles amb un preu de venda superior a la mitjana de tots els preus de venda:
+mysql:[root:roba]> SELECT nom, preu_venda
+    -> FROM ARTICLE
+    -> WHERE preu_venda > (SELECT AVG(preu_venda) FROM ARTICLE);
++-----------------------+------------+
+| nom                   | preu_venda |
++-----------------------+------------+
+| Vestit de dona        |      59.99 |
+| Vestit de festa       |      99.99 |
+| Sabatilles esportives |      59.99 |
+| Jaqueta de pell       |     149.99 |
+| Jaqueta elegant       |     119.99 |
+| Faldilla plisada      |      59.99 |
++-----------------------+------------+
+6 rows in set (0,00 sec)
+
+Consulta per mostrar les categories que tenen almenys un article en estoc:
+mysql:[root:roba]> SELECT nom_cat
+    -> FROM CATEGORIA
+    -> WHERE id_categoria IN (SELECT id_categoria FROM ARTICLE WHERE stock > 0);
++----------------+
+| nom_cat        |
++----------------+
+| Roba de casa   |
+| Complements    |
+| Roba de vestir |
++----------------+
+3 rows in set (0,01 sec)
+
+Consulta per mostrar els articles les classes dels quals estan relacionades amb la categoria "Roba de vestir":
+mysql:[root:roba]> SELECT nom
+    -> FROM ARTICLE
+    -> WHERE id_clase IN (SELECT id_clase FROM CLASE WHERE id_categoria = (SELECT id_categoria FROM CATEGORIA WHERE nom_cat = 'Roba de vestir'));
++----------------------+
+| nom                  |
++----------------------+
+| Samarreta de nadó    |
+| Pijama de nena       |
+| Vestit de nena       |
+| Samareta de cotó     |
+| Pantalons dhome      |
+| Pantalons de texans  |
+| Jaqueta de pell      |
+| Sudadera amb caputxa |
+| Vestit de dona       |
+| Vestit de festa      |
+| Jaqueta elegant      |
+| Faldilla plisada     |
++----------------------+
+12 rows in set (0,00 sec)
