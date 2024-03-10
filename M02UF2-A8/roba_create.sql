@@ -1,3 +1,9 @@
+DROP DATABASE IF EXISTS roba;
+
+CREATE DATABASE roba;
+
+USE roba;
+
 -- Creación de la tabla CATEGORIA
 CREATE TABLE CATEGORIA (
     id_categoria INT PRIMARY KEY,
