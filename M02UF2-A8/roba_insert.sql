@@ -44,14 +44,15 @@ INSERT INTO ARTICLE (id_article, nom, id_categoria, id_clase, id_talla, id_color
 (4, 'Samarreta de nadó', 3, 4, 7, 8, 1, 5, 80, 7.99, 15.99),
 (5, 'Vestit de nena', 3, 5, 8, 8, 1, 3, 60, 14.99, 29.99),
 (6, 'Pantalons dhome', 3, 6, 2, 1, 6, 1, 120, 22.5, 49.99),
-(7, 'Vestit de dona', 3, 7, 4, 2, 1, 3, 70, 29.99, 59.99);
-(8, 'Camiseta de algodón', 3, 5, 2, 1, 1, 1, 60, 8.99, 19.99),
-(9, 'Pantalones vaqueros', 3, 6, 13, 2, 10, 4, 40, 24.99, 49.99),
-(10, 'Vestido de fiesta', 3, 7, 14, 8, 4, 3, 30, 49.99, 99.99),
-(11, 'Bufanda de lana', 2, 3, NULL, NULL, 8, 8, 80, 12.99, 24.99),
-(12, 'Zapatos deportivos', 3, 2, NULL, 5, 6, 2, 50, 29.99, 59.99),
-(13, 'Chaqueta de cuero', 3, 6, 12, 4, 9, 1, 20, 79.99, 149.99),
-(14, 'Pijama de niña', 3, 4, 10, 1, 1, 5, 35, 15.99, 29.99),
-(15, 'Chaqueta elegante', 3, 7, 14, 2, 9, 3, 25, 59.99, 119.99),
-(16, 'Sudadera con capucha', 3, 6, 12, 6, 5, 4, 45, 19.99, 39.99),
-(17, 'Falda plisada', 3, 7, 12, 8, 1, 3, 30, 29.99, 59.99);
+(7, 'Vestit de dona', 3, 7, 4, 2, 1, 3, 70, 29.99, 59.99),
+(8, 'Samareta de cotó', 3, 5, 2, 1, 1, 1, 60, 8.99, 19.99),
+(9, 'Pantalons de texans', 3, 6, 13, 2, 10, 4, 40, 24.99, 49.99),
+(10, 'Vestit de festa', 3, 7, 14, 8, 4, 3, 30, 49.99, 99.99),
+(11, 'Bufanda de llana', 2, 3, NULL, NULL, 8, 8, 80, 12.99, 24.99),
+(12, 'Sabatilles esportives', 3, 2, NULL, 5, 6, 2, 50, 29.99, 59.99),
+(13, 'Jaqueta de pell', 3, 6, 12, 4, 9, 1, 20, 79.99, 149.99),
+(14, 'Pijama de nena', 3, 4, 10, 1, 1, 5, 35, 15.99, 29.99),
+(15, 'Jaqueta elegant', 3, 7, 14, 2, 9, 3, 25, 59.99, 119.99),
+(16, 'Sudadera amb caputxa', 3, 6, 12, 6, 5, 4, 45, 19.99, 39.99),
+(17, 'Faldilla plisada', 3, 7, 12, 8, 1, 3, 30, 29.99, 59.99);
+
