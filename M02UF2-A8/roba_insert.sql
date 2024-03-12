@@ -32,18 +32,23 @@ INSERT INTO MATERIAL (id_material, nom) VALUES
 
 -- Inserts para la tabla MODELO
 INSERT INTO MODELO (id_modelo, nom) VALUES
-(1, 'Clàssic'), (2, 'Esportiu'), (3, 'Elegant'), (4, 'Casual'), (5, 'Estampat'),
+(1, 'Levis501'), (2, 'NikeFit'), (3, 'Elegant'), (4, 'Casual'), (5, 'Estampat'),
 (6, 'Floral'), (7, 'A ratlles'), (8, 'A quadres'), (9, 'Degradat'), (10, 'Llis');
+
+INSERT INTO TIPUS (id_tipus, nom) VALUES
+(1, 'Pantalo Llarg'), (2, 'Samarreta'), (3, 'Pantalo Curt'), (4, 'Casual'), (5, 'Estampat'),
+(6, 'Floral'), (7, 'A ratlles'), (8, 'A quadres'), (9, 'Degradat'), (10, 'Llis');
+
 
 -- Inserts para la tabla ARTICLE
 -- Inserts adicionales para la tabla ARTICLE
 INSERT INTO ARTICLE (id_article, nom, id_categoria, id_clase, id_talla, id_color, id_material, id_modelo, stock, preu_cost, preu_venda) VALUES
-(1, 'Joc de llençols', 1, 1, NULL, 1, 1, 1, 50, 15.99, 29.99),
-(2, 'Tovalloles de bany', 1, 2, NULL, 3, 1, 1, 100, 8.99, 19.99),
-(3, 'Cinturó de cuir', 2, 3, NULL, NULL, 9, 1, 30, 12.5, 29.99),
-(4, 'Samarreta de nadó', 3, 4, 7, 8, 1, 5, 80, 7.99, 15.99),
-(5, 'Vestit de nena', 3, 5, 8, 8, 1, 3, 60, 14.99, 29.99),
-(6, 'Pantalons dhome', 3, 6, 2, 1, 6, 1, 120, 22.5, 49.99),
+(1, 'Pantalo Texa Basic', 3, 6, 3, 3, 10, 1, 50, 15.99, 29.99),
+(2, 'Pantalo Texa Basic', 3, 6, 4, 3, 10, 1, 50, 15.99, 29.99),
+(3, 'Pantalo Texa Basic', 3, 6, 5, 3, 10, 1, 50, 15.99, 29.99),
+(4, 'Pantalo Texa Basic', 3, 6, 6, 3, 10, 1, 50, 15.99, 29.99),
+(5, 'Pantalo Texa Basic', 3, 5, 6, 3, 10, 1, 50, 15.99, 29.99),
+(6, 'Vestit de nena', 3, 5, 8, 8, 1, 3, 60, 14.99, 29.99),
 (7, 'Vestit de dona', 3, 7, 4, 2, 1, 3, 70, 29.99, 59.99),
 (8, 'Samareta de cotó', 3, 5, 2, 1, 1, 1, 60, 8.99, 19.99),
 (9, 'Pantalons de texans', 3, 6, 13, 2, 10, 4, 40, 24.99, 49.99),

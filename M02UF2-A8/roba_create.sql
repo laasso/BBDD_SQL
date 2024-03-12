@@ -44,12 +44,20 @@ CREATE TABLE MODELO (
     nom VARCHAR(50)
 );
 
+-- Creación de la tabla MODELO
+CREATE TABLE TIPUS (
+    id_tipus INT PRIMARY KEY,
+    nom VARCHAR(50)
+);
+
+
 -- Creación de la tabla ARTICLE
 CREATE TABLE ARTICLE (
     id_article INT PRIMARY KEY,
     nom VARCHAR(255),
     id_categoria INT,
     id_clase INT,
+    id_tipus iNT,
     id_talla INT,
     id_color INT,
     id_material INT,
@@ -62,5 +70,16 @@ CREATE TABLE ARTICLE (
     FOREIGN KEY (id_talla) REFERENCES TALLA(id_talla),
     FOREIGN KEY (id_color) REFERENCES COLOR(id_color),
     FOREIGN KEY (id_material) REFERENCES MATERIAL(id_material),
-    FOREIGN KEY (id_modelo) REFERENCES MODELO(id_modelo)
+    FOREIGN KEY (id_modelo) REFERENCES MODELO(id_modelo),
+    FOREIGN KEY (id_tipus) REFERENCES TIPUS(Id_tipus)
+
+);
+
+-- Creación de la tabla MODELO
+CREATE TABLE MIDA (
+    id_article INT,
+    amplada INT,
+    llargada INT,
+    FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
+
 );

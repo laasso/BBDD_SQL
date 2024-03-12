@@ -1,0 +1,21 @@
+SELECT 
+    ARTICLE.nom AS 'Nombre del Artículo',
+    MODELO.nom AS 'Modelo',
+    COLOR.nom AS 'Color',
+    TALLA.nom AS 'Talla',
+    CLASE.nom_clase AS 'Genero',
+    CATEGORIA.nom_cat AS 'Categoria'
+FROM 
+    ARTICLE
+JOIN 
+    MODELO ON ARTICLE.id_modelo = MODELO.id_modelo
+JOIN 
+    COLOR ON ARTICLE.id_color = COLOR.id_color
+JOIN 
+    TALLA ON ARTICLE.id_talla = TALLA.id_talla
+JOIN 
+    CLASE ON ARTICLE.id_clase = CLASE.id_clase
+JOIN 
+    CATEGORIA ON CLASE.id_categoria = CATEGORIA.id_categoria
+WHERE 
+    MODELO.nom = 'Levis501';
