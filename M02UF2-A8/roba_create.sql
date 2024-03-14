@@ -20,12 +20,6 @@ CREATE TABLE CLASE (
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria)
 );
 
--- Creación de la tabla TALLA
-CREATE TABLE TALLA (
-    id_talla INT PRIMARY KEY,
-    nom VARCHAR(50)
-);
-
 -- Creación de la tabla COLOR
 CREATE TABLE COLOR (
     id_color INT PRIMARY KEY,
@@ -44,7 +38,7 @@ CREATE TABLE MODELO (
     nom VARCHAR(50)
 );
 
--- Creación de la tabla MODELO
+-- Creación de la tabla TIPUS
 CREATE TABLE TIPUS (
     id_tipus INT PRIMARY KEY,
     nom VARCHAR(50)
@@ -57,8 +51,7 @@ CREATE TABLE ARTICLE (
     nom VARCHAR(255),
     id_categoria INT,
     id_clase INT,
-    id_tipus iNT,
-    id_talla INT,
+    id_tipus INT,
     id_color INT,
     id_material INT,
     id_modelo INT,
@@ -67,19 +60,48 @@ CREATE TABLE ARTICLE (
     preu_venda FLOAT,
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria),
     FOREIGN KEY (id_clase) REFERENCES CLASE(id_clase),
-    FOREIGN KEY (id_talla) REFERENCES TALLA(id_talla),
     FOREIGN KEY (id_color) REFERENCES COLOR(id_color),
     FOREIGN KEY (id_material) REFERENCES MATERIAL(id_material),
     FOREIGN KEY (id_modelo) REFERENCES MODELO(id_modelo),
-    FOREIGN KEY (id_tipus) REFERENCES TIPUS(Id_tipus)
-
+    FOREIGN KEY (id_tipus) REFERENCES TIPUS(id_tipus)
 );
 
--- Creación de la tabla MODELO
+-- Creación de la tabla MIDA
 CREATE TABLE MIDA (
     id_article INT,
     amplada INT,
     llargada INT,
     FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
+);
 
+-- Creación de la tabla TALLA_ADULTS_SUPERIOR
+CREATE TABLE TALLA_ADULTS_SUPERIOR (
+    id_article INT,
+    nom_talla VARCHAR(50),
+    PRIMARY KEY (id_article, nom_talla),
+    FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
+);
+
+-- Creación de la tabla TALLA_ADULTS_INFERIOR
+CREATE TABLE TALLA_ADULTS_INFERIOR (
+    id_article INT,
+    nom_talla VARCHAR(50),
+    PRIMARY KEY (id_article, nom_talla),
+    FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
+);
+
+-- Creación de la tabla TALLA_NADONS
+CREATE TABLE TALLA_NADONS (
+    id_article INT,
+    nom_talla VARCHAR(50),
+    PRIMARY KEY (id_article, nom_talla),
+    FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
+);
+
+-- Creación de la tabla TALLA_NENS
+CREATE TABLE TALLA_NENS (
+    id_article INT,
+    nom_talla VARCHAR(50),
+    PRIMARY KEY (id_article, nom_talla),
+    FOREIGN KEY (id_article) REFERENCES ARTICLE(id_article)
 );
