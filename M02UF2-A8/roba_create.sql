@@ -69,6 +69,7 @@ CREATE TABLE mida (
     id_article INT,
     amplada INT,
     llargada INT,
+    stock INT,
     FOREIGN KEY (id_article) REFERENCES article(id_article)
 );
 

@@ -1,11 +1,10 @@
 -- Inserts para la tabla categoria
 INSERT INTO categoria (id_categoria, nom_cat, descripcio) VALUES
-(1, 'Roba de casa', 'Llençols, estovalles, tovallons, etc.'),
-(2, 'Complements', 'Cinturons, gorres, bufandes, etc.'),
-(3, 'Roba de vestir', 'Ropa de nadons, nens, home i dona');
+(1, 'Ropa de casa', 'Ropa para uso en el hogar, como sábanas y toallas'),
+(2, 'Complementos', 'Accesorios para complementar el vestuario'),
+(3, 'Ropa de vestir', 'Prendas de vestir para todas las edades y géneros');
 
--- Inserts para la tabla clase
-INSERT INTO clase (id_clase, id_categoria, nom_clase, descripcio) VALUES
+INSERT INTO CLASE (id_clase, id_categoria, nom_clase, descripcio) VALUES
 (1, 1, 'Roba de llit', 'Llençols, estovalles, fundes, etc.'),
 (2, 1, 'Roba de bany', 'Tovalloles de bany, estores, etc.'),
 (3, 2, 'Accessoris', 'Cinturons, bufandes, gorres, mocadors, etc.'),
@@ -14,76 +13,76 @@ INSERT INTO clase (id_clase, id_categoria, nom_clase, descripcio) VALUES
 (6, 3, 'Roba home', 'Camises, pantalons, americanes, etc.'),
 (7, 3, 'Roba de dona', 'Vestits, faldilles, pantalons, etc.');
 
--- Inserts para la tabla talla_nadons
-INSERT INTO talla_nadons (id_article, nom_talla) VALUES
-(6, '0-3 mesos'), 
-(7, '3-6 mesos'), 
-(8, '6-12 mesos'), 
-(9, '12-18 mesos'), 
-(10, '18-24 mesos');
-
--- Inserts para la tabla talla_nens
-INSERT INTO talla_nens (id_article, nom_talla) VALUES
-(5, '4'), 
-(6, '6'), 
-(7, '8'), 
-(8, '10'), 
-(9, '12'), 
-(10, '14');
-
--- Inserts para la tabla talla_adults_superior
-INSERT INTO talla_adults_superior (id_article, nom_talla) VALUES
-(11, 'S'), 
-(12, 'M'), 
-(13, 'L'), 
-(14, 'XL'), 
-(15, 'XXL');
-
--- Inserts para la tabla talla_adults_inferior
-INSERT INTO talla_adults_inferior (id_article, nom_talla) VALUES
-(1, '34'), 
-(2, '36'), 
-(3, '38'), 
-(4, '40'), 
-(5, '42');
-
 -- Inserts para la tabla color
 INSERT INTO color (id_color, nom) VALUES
-(1, 'Blanc'), (2, 'Negre'), (3, 'Blau'), (4, 'Gris'), (5, 'Vermell'),
-(6, 'Verd'), (7, 'Groc'), (8, 'Rosa'), (9, 'Marró'), (10, 'Taronja');
+(1, 'Blanco'), (2, 'Negro'), (3, 'Azul'), (4, 'Gris'), (5, 'Rojo'),
+(6, 'Verde'), (7, 'Amarillo'), (8, 'Rosa'), (9, 'Marrón'), (10, 'Naranja');
 
 -- Inserts para la tabla material
 INSERT INTO material (id_material, nom) VALUES
-(1, 'Cotó'), (2, 'Lli'), (3, 'Tergal'), (4, 'Seda'), (5, 'Felpa'),
-(6, 'Polièster'), (7, 'Nylon'), (8, 'Llana'), (9, 'Pell'), (10, 'Denim');
+(1, 'Algodón'), (2, 'Lino'), (3, 'Seda'), (4, 'Poliéster'), (5, 'Lana'),
+(6, 'Cuero'), (7, 'Nylon'), (8, 'Denim'), (9, 'Felpa'), (10, 'Terciopelo');
 
 -- Inserts para la tabla modelo
 INSERT INTO modelo (id_modelo, nom) VALUES
-(1, 'Levis501'), (2, 'NikeFit'), (3, 'Elegant'), (4, 'Casual'), (5, 'Estampat'),
-(6, 'Floral'), (7, 'A ratlles'), (8, 'A quadres'), (9, 'Degradat'), (10, 'Llis');
+(1, 'Levis 501'), (2, 'Nike Air Force'), (3, 'Elegant Style'), (4, 'Casual Look'), (5, 'Striped Pattern'),
+(6, 'Floral Design'), (7, 'Checked Style'), (8, 'Degraded Color'), (9, 'Plain Texture'), (10, 'Printed');
 
 -- Inserts para la tabla tipus
 INSERT INTO tipus (id_tipus, nom) VALUES
-(1, 'Pantalo Llarg'), (2, 'Samarreta'), (3, 'Pantalo Curt'), (4, 'Camisa'), (5, 'Pantalo Esportiu'),
-(6, 'Vestit'), (7, 'Pantalo Regular Fit'), (8, 'A quadres'), (9, 'Degradat'), (10, 'Llis');
-
+(1, 'Pantalones'), (2, 'Camisetas'), (3, 'Vestidos'), (4, 'Chaquetas'), (5, 'Faldas'),
+(6, 'Camisas'), (7, 'Sudaderas'), (8, 'Accesorios'), (9, 'Zapatos'), (10, 'Calcetines');
 
 -- Inserts para la tabla article
-INSERT INTO article (id_article, nom, id_categoria, id_clase, id_color, id_material, id_modelo, stock, preu_cost, preu_venda) VALUES
-(1, 'Pantalo Texa Basic', 3, 6, 3, 10, 1, 50, 15.99, 29.99),
-(2, 'Pantalo Texa Basic', 3, 6, 3, 10, 1, 50, 15.99, 29.99),
-(3, 'Pantalo Texa Basic', 3, 6, 3, 10, 1, 50, 15.99, 29.99),
-(4, 'Pantalo Texa Basic', 3, 6, 3, 10, 1, 50, 15.99, 29.99),
-(5, 'Pantalo Texa Basic', 3, 5, 3, 10, 1, 50, 15.99, 29.99),
-(6, 'Vestit de nena', 3, 4, 8, 1, 3, 60, 14.99, 29.99),
-(7, 'Vestit de dona', 3, 7, 4, 2, 1, 3, 70, 29.99, 59.99),
-(8, 'Samareta de cotó', 3, 5, 2, 1, 1, 1, 60, 8.99, 19.99),
-(9, 'Pantalons de texans', 3, 6, 13, 2, 10, 4, 40, 24.99, 49.99),
-(10, 'Vestit de festa', 3, 7, 14, 8, 4, 3, 30, 49.99, 99.99),
-(11, 'Bufanda de llana', 2, 3, NULL, NULL, 8, 8, 80, 12.99, 24.99),
-(12, 'Sabatilles esportives', 3, 2, NULL, 5, 6, 2, 50, 29.99, 59.99),
-(13, 'Jaqueta de pell', 3, 6, 12, 4, 9, 1, 20, 79.99, 149.99),
-(14, 'Pijama de nena', 3, 4, 10, 1, 1, 5, 35, 15.99, 29.99),
-(15, 'Jaqueta elegant', 3, 7, 14, 2, 9, 3, 25, 59.99, 119.99),
-(16, 'Sudadera amb caputxa', 3, 6, 12, 6, 5, 4, 45, 19.99, 39.99),
-(17, 'Faldilla plisada', 3, 7, 12, 8, 1, 3, 30, 29.99, 59.99);
+INSERT INTO article (id_article, nom, id_categoria, id_clase, id_tipus, id_color, id_material, id_modelo, preu_cost, preu_venda) VALUES
+(1, 'Levis 501 Blanco', 3, 5, 1, 3, 8, 1, 25.00, 49.99),
+(2, 'Vestido Floral', 3, 4, 3, 6, 1, 6, 35.00, 69.99),
+(3, 'Gorra de Lana', 2, 3, 8, 5, 5, 3, 10.00, 19.99),
+(4, 'Camiseta Rayada', 3, 2, 2, 4, 1, 5, 15.00, 29.99),
+(5, 'Chaqueta de Cuero', 3, 4, 4, 2, 6, 4, 80.00, 149.99);
+
+-- Inserts para la tabla mida (ejemplo de tallas y medidas para los pantalones)
+INSERT INTO mida (id_article, amplada, llargada, stock) VALUES
+(1, 34, 32, 20),
+(1, 36, 32, 15),
+(1, 38, 32, 10),
+(1, 40, 32, 8);
+
+-- Inserts para la tabla talla_adults_superior (ejemplo de tallas y stock para la chaqueta de cuero)
+INSERT INTO talla_adults_superior (id_article, nom_talla, stock) VALUES
+(5, 'S', 15),
+(5, 'M', 20),
+(5, 'L', 10),
+(5, 'XL', 5);
+
+-- Inserts para la tabla talla_nens (ejemplo de tallas y stock para la camiseta rayada)
+INSERT INTO talla_nens (id_article, nom_talla, stock) VALUES
+(4, '4 años', 10),
+(4, '6 años', 15),
+(4, '8 años', 8),
+(4, '10 años', 5);
+-- Inserts para la tabla article
+INSERT INTO article (id_article, nom, id_categoria, id_clase, id_tipus, id_color, id_material, id_modelo, preu_cost, preu_venda) VALUES
+(1, 'Levis 501 Azul Hombre', 3, 5, 1, 3, 8, 1, 25.00, 49.99),
+(2, 'Levis 501 Negro Hombre', 3, 5, 1, 2, 8, 1, 25.00, 49.99),
+(3, 'Levis 501 Rojo Hombre', 3, 5, 1, 5, 8, 1, 25.00, 49.99),
+(4, 'Levis 501 Azul Mujer', 3, 5, 1, 3, 8, 1, 25.00, 49.99),
+(5, 'Levis 501 Verde Mujer', 3, 5, 1, 6, 8, 1, 25.00, 49.99),
+(6, 'Levis 501 Amarillo Mujer', 3, 5, 1, 7, 8, 1, 25.00, 49.99),
+(7, 'Levis 501 Blanco Niño', 3, 5, 1, 1, 8, 1, 25.00, 49.99),
+(8, 'Levis 501 Azul Niño', 3, 5, 1, 3, 8, 1, 25.00, 49.99),
+(9, 'Levis 501 Negro Niña', 3, 5, 1, 2, 8, 1, 25.00, 49.99);
+
+-- Ropa de Casa
+INSERT INTO article (id_article, nom, id_categoria, id_clase, id_tipus, id_color, id_material, id_modelo, preu_cost, preu_venda) VALUES
+(10, 'Sábanas de Algodón', 1, 1, NULL, 1, 1, NULL, 30.00, 59.99),
+(11, 'Toallas Grises', 1, 2, NULL, 4, 9, NULL, 15.00, 29.99),
+(12, 'Mantel de Lino', 1, 1, NULL, 1, 2, NULL, 20.00, 39.99),
+(13, 'Alfombra de Felpa', 1, 2, NULL, 5, 9, NULL, 25.00, 49.99);
+
+-- Complementos
+INSERT INTO article (id_article, nom, id_categoria, id_clase, id_tipus, id_color, id_material, id_modelo, preu_cost, preu_venda) VALUES
+(14, 'Gorro de Lana', 2, 3, NULL, 9, 5, NULL, 10.00, 24.99),
+(15, 'Bufanda a Rayas', 2, 3, NULL, 7, 5, NULL, 12.00, 29.99),
+(16, 'Gorra Negra', 2, 3, NULL, 2, 1, NULL, 8.00, 19.99),
+(17, 'Pañuelo Estampado', 2, 3, NULL, 10, 2, NULL, 7.00, 14.99);
