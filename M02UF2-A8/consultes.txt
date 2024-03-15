@@ -1,191 +1,236 @@
-Consultes d'una sola taula (unitaula):
+-- Consultas unitabla
 
-Consulta de tots els articles de la taula ARTICLE que tenen id_color = 8 :
-mysql:[root:roba]> SELECT * FROM ARTICLE WHERE id_color = 8;
-+------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
-| id_article | nom                | id_categoria | id_clase | id_talla | id_color | id_material | id_modelo | stock | preu_cost | preu_venda |
-+------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
-|          4 | Samarreta de nadó  |            3 |        4 |        7 |        8 |           1 |         5 |    80 |      7.99 |      15.99 |
-|          5 | Vestit de nena     |            3 |        5 |        8 |        8 |           1 |         3 |    60 |     14.99 |      29.99 |
-|         10 | Vestit de festa    |            3 |        7 |       14 |        8 |           4 |         3 |    30 |     49.99 |      99.99 |
-|         17 | Faldilla plisada   |            3 |        7 |       12 |        8 |           1 |         3 |    30 |     29.99 |      59.99 |
-+------------+--------------------+--------------+----------+----------+----------+-------------+-----------+-------+-----------+------------+
+-- 1. Seleccionar todos los modelos de la tabla modelo
+SELECT * FROM modelo;
++-----------+------------------+
+| id_modelo | nom              |
++-----------+------------------+
+|         1 | Levis 501        |
+|         2 | Fit Nike         |
+|         3 | Estil Elegant    |
+|         4 | Aspecte Casual   |
+|         5 | Patró a Ratlles  |
+|         6 | Disseny Floral   |
+|         7 | Estil a Quadres  |
+|         8 | Color Degradat   |
+|         9 | Textura Plana    |
+|        10 | Estampat         |
++-----------+------------------+
+10 rows in set (0,00 sec)
+-- 2. Seleccionar el precio de venta de todos los artículos de la tabla article
+SELECT preu_venda FROM article;
 
-Consulta de totes les categories disponibles:
-mysql:[root:roba]> SELECT * FROM CATEGORIA;
-+--------------+----------------+----------------------------------------+
-| id_categoria | nom_cat        | descripcio                             |
-+--------------+----------------+----------------------------------------+
-|            1 | Roba de casa   | Llençols, estovalles, tovallons, etc.  |
-|            2 | Complements    | Cinturons, gorres, bufandes, etc.      |
-|            3 | Roba de vestir | Ropa de nadons, nens, home i dona      |
-+--------------+----------------+----------------------------------------+
++------------+
+| preu_venda |
++------------+
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
+|      59.99 |
+|      29.99 |
+|      39.99 |
+|      49.99 |
+|      24.99 |
+|      29.99 |
+|      19.99 |
+|      14.99 |
+|      49.99 |
+|      29.99 |
+|      39.99 |
+|      49.99 |
+|      49.99 |
+|      49.99 |
++------------+
+
+-- 3. Contar la cantidad de colores distintos en la tabla color
+SELECT COUNT(DISTINCT nom) AS cantidad_colores FROM color;
+
++------------------+
+| cantidad_colores |
++------------------+
+|               10 |
++------------------+
+1 row in set (0,00 sec)
+
+-- 4. Seleccionar el nombre y descripción de todas las categorías de la tabla categoria
+SELECT nom_cat, descripcio FROM categoria;
+
++----------------+----------------------------------------------------+
+| nom_cat        | descripcio                                         |
++----------------+----------------------------------------------------+
+| Ropa de casa   | Ropa para uso en el hogar, como sábanas y toallas  |
+| Complementos   | Accesorios para complementar el vestuario          |
+| Ropa de vestir | Prendas de vestir para todas las edades y géneros  |
++----------------+----------------------------------------------------+
 3 rows in set (0,00 sec)
 
+-- Consultas multitabla
 
-Consulta de tots els models disponibles:
-mysql:[root:roba]> SELECT * FROM MODELO;
-+-----------+-----------+
-| id_modelo | nom       |
-+-----------+-----------+
-|         1 | Clàssic   |
-|         2 | Esportiu  |
-|         3 | Elegant   |
-|         4 | Casual    |
-|         5 | Estampat  |
-|         6 | Floral    |
-|         7 | A ratlles |
-|         8 | A quadres |
-|         9 | Degradat  |
-|        10 | Llis      |
-+-----------+-----------+
-10 rows in set (0,01 sec)
-
-
-Consulta de totes les classes disponibles de la categoria 3:
-mysql:[root:roba]> SELECT * FROM CLASE 
-    -> WHERE id_categoria = 3;
-+----------+--------------+----------------+--------------------------------------+
-| id_clase | id_categoria | nom_clase      | descripcio                           |
-+----------+--------------+----------------+--------------------------------------+
-|        4 |            3 | Roba de nadons | Samarretes, bodis, pijames, etc.     |
-|        5 |            3 | Roba de nens   | Vestits, pantalons, samarretes, etc. |
-|        6 |            3 | Roba home      | Camises, pantalons, americanes, etc. |
-|        7 |            3 | Roba de dona   | Vestits, faldilles, pantalons, etc.  |
-+----------+--------------+----------------+--------------------------------------+
-
-
-Consultes que involucren múltiples taules (multitaula):
-
-Consulta dels articles juntament amb la seva categoria i classe corresponent:
-
-mysql:[root:roba]> SELECT A.nom AS nom_article, C.nom_cat AS categoria, CL.nom_clase AS classe
-    -> FROM ARTICLE A
-    -> INNER JOIN CATEGORIA C ON A.id_categoria = C.id_categoria
-    -> INNER JOIN CLASE CL ON A.id_clase = CL.id_clase;
-+-----------------------+----------------+----------------+
-| nom_article           | categoria      | classe         |
-+-----------------------+----------------+----------------+
-| Joc de llençols       | Roba de casa   | Roba de llit   |
-| Tovalloles de bany    | Roba de casa   | Roba de bany   |
-| Cinturó de cuir       | Complements    | Accessoris     |
-| Bufanda de llana      | Complements    | Accessoris     |
-| Samarreta de nadó     | Roba de vestir | Roba de nadons |
-| Vestit de nena        | Roba de vestir | Roba de nens   |
-| Pantalons dhome       | Roba de vestir | Roba home      |
-| Vestit de dona        | Roba de vestir | Roba de dona   |
-| Samareta de cotó      | Roba de vestir | Roba de nens   |
-| Pantalons de texans   | Roba de vestir | Roba home      |
-| Vestit de festa       | Roba de vestir | Roba de dona   |
-| Sabatilles esportives | Roba de vestir | Roba de bany   |
-| Jaqueta de pell       | Roba de vestir | Roba home      |
-| Pijama de nena        | Roba de vestir | Roba de nadons |
-| Jaqueta elegant       | Roba de vestir | Roba de dona   |
-| Sudadera amb caputxa  | Roba de vestir | Roba home      |
-| Faldilla plisada      | Roba de vestir | Roba de dona   |
-+-----------------------+----------------+----------------+
-17 rows in set (0,00 sec)
-
-Consulta dels articles juntament amb les seves talles i colors corresponents:
-mysql:[root:roba]> SELECT A.nom AS nom_article, T.nom AS talla, CO.nom AS color
-    -> FROM ARTICLE A
-    -> INNER JOIN TALLA T ON A.id_talla = T.id_talla
-    -> INNER JOIN COLOR CO ON A.id_color = CO.id_color;
-+----------------------+-------------+-------+
-| nom_article          | talla       | color |
-+----------------------+-------------+-------+
-| Samarreta de nadó    | 0-3 mesos   | Rosa  |
-| Vestit de nena       | 3-6 mesos   | Rosa  |
-| Pantalons dhome      | S           | Blanc |
-| Vestit de dona       | L           | Negre |
-| Samareta de cotó     | S           | Blanc |
-| Pantalons de texans  | 8           | Negre |
-| Vestit de festa      | 10          | Rosa  |
-| Jaqueta de pell      | 6           | Gris  |
-| Pijama de nena       | 12-18 mesos | Blanc |
-| Jaqueta elegant      | 10          | Negre |
-| Sudadera amb caputxa | 6           | Verd  |
-| Faldilla plisada     | 6           | Rosa  |
-+----------------------+-------------+-------+
+-- 1. Seleccionar la informacion con nombres de los articulos
+SELECT a.nom AS nombre_articulo, c.nom AS nombre_color, m.nom AS nombre_modelo, t.nom AS tipo, 
+       a.preu_cost AS precio_coste, a.preu_venda AS precio_venta
+FROM article a
+INNER JOIN color c ON a.id_color = c.id_color
+INNER JOIN modelo m ON a.id_modelo = m.id_modelo
+INNER JOIN tipus t ON a.id_tipus = t.id_tipus;
++--------------------------+--------------+----------------+------------+--------------+--------------+
+| nombre_articulo          | nombre_color | nombre_modelo  | tipo       | precio_coste | precio_venta |
++--------------------------+--------------+----------------+------------+--------------+--------------+
+| Levis 501 Blanco Niño    | Blanco       | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Negro Hombre   | Negro        | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Negro Niña     | Negro        | Levis 501      | Pantalones |           25 |        49.99 |
+| Nike Fit Negro Hombre    | Negro        | Fit Nike       | Camisetas  |           25 |        49.99 |
+| Nike Fit Negro Mujer     | Negro        | Fit Nike       | Camisetas  |           25 |        49.99 |
+| Body Bebe                | Negro        | Disseny Floral | Camisetas  |           25 |        49.99 |
+| Levis 501 Azul Hombre    | Azul         | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Azul Mujer     | Azul         | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Azul Niño      | Azul         | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Rojo Hombre    | Rojo         | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Verde Mujer    | Verde        | Levis 501      | Pantalones |           25 |        49.99 |
+| Levis 501 Amarillo Mujer | Amarillo     | Levis 501      | Pantalones |           25 |        49.99 |
++--------------------------+--------------+----------------+------------+--------------+--------------+
 12 rows in set (0,00 sec)
 
-Consulta dels articles juntament amb el seu model i material corresponents:
-mysql:[root:roba]> SELECT A.nom AS nom_article, M.nom AS model, MA.nom AS material
-    -> FROM ARTICLE A
-    -> INNER JOIN MODELO M ON A.id_modelo = M.id_modelo
-    -> INNER JOIN MATERIAL MA ON A.id_material = MA.id_material;
-+-----------------------+-----------+------------+
-| nom_article           | model     | material   |
-+-----------------------+-----------+------------+
-| Joc de llençols       | Clàssic   | Cotó       |
-| Tovalloles de bany    | Clàssic   | Cotó       |
-| Cinturó de cuir       | Clàssic   | Pell       |
-| Samarreta de nadó     | Estampat  | Cotó       |
-| Vestit de nena        | Elegant   | Cotó       |
-| Pantalons dhome       | Clàssic   | Polièster  |
-| Vestit de dona        | Elegant   | Cotó       |
-| Samareta de cotó      | Clàssic   | Cotó       |
-| Pantalons de texans   | Casual    | Denim      |
-| Vestit de festa       | Elegant   | Seda       |
-| Bufanda de llana      | A quadres | Llana      |
-| Sabatilles esportives | Esportiu  | Polièster  |
-| Jaqueta de pell       | Clàssic   | Pell       |
-| Pijama de nena        | Estampat  | Cotó       |
-| Jaqueta elegant       | Elegant   | Pell       |
-| Sudadera amb caputxa  | Casual    | Felpa      |
-| Faldilla plisada      | Elegant   | Cotó       |
-+-----------------------+-----------+------------+
-17 rows in set (0,00 sec)
 
-Consultes amb subconsultes:
+-- 2. Seleccionar el nombre del artículo, el tipo y el precio de venta de los artículos de la tabla article junto con el nombre del tipo de la tabla tipus
+SELECT a.nom AS nombre_articulo, t.nom AS tipo, a.preu_venda
+FROM article a
+INNER JOIN tipus t ON a.id_tipus = t.id_tipus;
 
-Consulta per mostrar els articles amb un preu de venda superior a la mitjana de tots els preus de venda:
-mysql:[root:roba]> SELECT nom, preu_venda
-    -> FROM ARTICLE
-    -> WHERE preu_venda > (SELECT AVG(preu_venda) FROM ARTICLE);
-+-----------------------+------------+
-| nom                   | preu_venda |
-+-----------------------+------------+
-| Vestit de dona        |      59.99 |
-| Vestit de festa       |      99.99 |
-| Sabatilles esportives |      59.99 |
-| Jaqueta de pell       |     149.99 |
-| Jaqueta elegant       |     119.99 |
-| Faldilla plisada      |      59.99 |
-+-----------------------+------------+
-6 rows in set (0,00 sec)
-
-Consulta per mostrar les categories que tenen almenys un article en estoc:
-mysql:[root:roba]> SELECT nom_cat
-    -> FROM CATEGORIA
-    -> WHERE id_categoria IN (SELECT id_categoria FROM ARTICLE WHERE stock > 0);
-+----------------+
-| nom_cat        |
-+----------------+
-| Roba de casa   |
-| Complements    |
-| Roba de vestir |
-+----------------+
-3 rows in set (0,01 sec)
-
-Consulta per mostrar els articles les classes dels quals estan relacionades amb la categoria "Roba de vestir":
-mysql:[root:roba]> SELECT nom
-    -> FROM ARTICLE
-    -> WHERE id_clase IN (SELECT id_clase FROM CLASE WHERE id_categoria = (SELECT id_categoria FROM CATEGORIA WHERE nom_cat = 'Roba de vestir'));
-+----------------------+
-| nom                  |
-+----------------------+
-| Samarreta de nadó    |
-| Pijama de nena       |
-| Vestit de nena       |
-| Samareta de cotó     |
-| Pantalons dhome      |
-| Pantalons de texans  |
-| Jaqueta de pell      |
-| Sudadera amb caputxa |
-| Vestit de dona       |
-| Vestit de festa      |
-| Jaqueta elegant      |
-| Faldilla plisada     |
-+----------------------+
++--------------------------+------------+------------+
+| nombre_articulo          | tipo       | preu_venda |
++--------------------------+------------+------------+
+| Levis 501 Azul Hombre    | Pantalones |      49.99 |
+| Levis 501 Negro Hombre   | Pantalones |      49.99 |
+| Levis 501 Rojo Hombre    | Pantalones |      49.99 |
+| Levis 501 Azul Mujer     | Pantalones |      49.99 |
+| Levis 501 Verde Mujer    | Pantalones |      49.99 |
+| Levis 501 Amarillo Mujer | Pantalones |      49.99 |
+| Levis 501 Blanco Niño    | Pantalones |      49.99 |
+| Levis 501 Azul Niño      | Pantalones |      49.99 |
+| Levis 501 Negro Niña     | Pantalones |      49.99 |
+| Nike Fit Negro Hombre    | Camisetas  |      49.99 |
+| Nike Fit Negro Mujer     | Camisetas  |      49.99 |
+| Body Bebe                | Camisetas  |      49.99 |
++--------------------------+------------+------------+
 12 rows in set (0,00 sec)
+
+-- 3. Seleccionar el nombre del artículo, la clase y el precio de venta de los artículos de la tabla article junto con la descripción de la clase de la tabla clase
+SELECT a.nom AS nombre_articulo, c.nom_clase AS clase, a.preu_venda
+FROM article a
+INNER JOIN clase c ON a.id_clase = c.id_clase;
++--------------------------+----------------+------------+
+| nombre_articulo          | clase          | preu_venda |
++--------------------------+----------------+------------+
+| Sábanas de Algodón       | Roba de llit   |      59.99 |
+| Mantel de Lino           | Roba de llit   |      39.99 |
+| Mantel de Lino           | Roba de llit   |      39.99 |
+| Toallas Grises           | Roba de bany   |      29.99 |
+| Alfombra de Felpa        | Roba de bany   |      49.99 |
+| Toallas Grises           | Roba de bany   |      29.99 |
+| Alfombra de Felpa        | Roba de bany   |      49.99 |
+| Gorro de Lana            | Accessoris     |      24.99 |
+| Bufanda a Rayas          | Accessoris     |      29.99 |
+| Gorra Negra              | Accessoris     |      19.99 |
+| Pañuelo Estampado        | Accessoris     |      14.99 |
+| Body Bebe                | Roba de nadons |      49.99 |
+| Levis 501 Blanco Niño    | Roba de nens   |      49.99 |
+| Levis 501 Azul Niño      | Roba de nens   |      49.99 |
+| Levis 501 Negro Niña     | Roba de nens   |      49.99 |
+| Levis 501 Azul Hombre    | Roba home      |      49.99 |
+| Levis 501 Negro Hombre   | Roba home      |      49.99 |
+| Levis 501 Rojo Hombre    | Roba home      |      49.99 |
+| Nike Fit Negro Hombre    | Roba home      |      49.99 |
+| Levis 501 Azul Mujer     | Roba de dona   |      49.99 |
+| Levis 501 Verde Mujer    | Roba de dona   |      49.99 |
+| Levis 501 Amarillo Mujer | Roba de dona   |      49.99 |
+| Nike Fit Negro Mujer     | Roba de dona   |      49.99 |
++--------------------------+----------------+------------+
+23 rows in set (0,00 sec)
+
+-- Consultas con subconsultas
+
+-- 1. Seleccionar el nombre y la descripción de las categorías de la tabla categoria donde existan artículos asociados en la tabla article
+SELECT nom_cat, descripcio
+FROM categoria
+WHERE id_categoria IN (SELECT DISTINCT id_categoria FROM article);
++----------------+----------------------------------------------------+
+| nom_cat        | descripcio                                         |
++----------------+----------------------------------------------------+
+| Ropa de casa   | Ropa para uso en el hogar, como sábanas y toallas  |
+| Complementos   | Accesorios para complementar el vestuario          |
+| Ropa de vestir | Prendas de vestir para todas las edades y géneros  |
++----------------+----------------------------------------------------+
+3 rows in set (0,00 sec)
+
+-- 2. Seleccionar el nombre del artículo, el precio de venta y el nombre del tipo de la tabla tipus donde el precio de venta sea mayor que el precio de coste
+SELECT nom AS nombre_articulo, preu_venda, (SELECT nom FROM tipus WHERE id_tipus = a.id_tipus) AS tipo
+FROM article a
+WHERE preu_venda > preu_cost;
++--------------------------+------------+------------+
+| nombre_articulo          | preu_venda | tipo       |
++--------------------------+------------+------------+
+| Levis 501 Azul Hombre    |      49.99 | Pantalones |
+| Levis 501 Negro Hombre   |      49.99 | Pantalones |
+| Levis 501 Rojo Hombre    |      49.99 | Pantalones |
+| Levis 501 Azul Mujer     |      49.99 | Pantalones |
+| Levis 501 Verde Mujer    |      49.99 | Pantalones |
+| Levis 501 Amarillo Mujer |      49.99 | Pantalones |
+| Levis 501 Blanco Niño    |      49.99 | Pantalones |
+| Levis 501 Azul Niño      |      49.99 | Pantalones |
+| Levis 501 Negro Niña     |      49.99 | Pantalones |
+| Sábanas de Algodón       |      59.99 | NULL       |
+| Toallas Grises           |      29.99 | NULL       |
+| Mantel de Lino           |      39.99 | NULL       |
+| Alfombra de Felpa        |      49.99 | NULL       |
+| Gorro de Lana            |      24.99 | NULL       |
+| Bufanda a Rayas          |      29.99 | NULL       |
+| Gorra Negra              |      19.99 | NULL       |
+| Pañuelo Estampado        |      14.99 | NULL       |
+| Nike Fit Negro Hombre    |      49.99 | Camisetas  |
+| Toallas Grises           |      29.99 | NULL       |
+| Mantel de Lino           |      39.99 | NULL       |
+| Alfombra de Felpa        |      49.99 | NULL       |
+| Nike Fit Negro Mujer     |      49.99 | Camisetas  |
+| Body Bebe                |      49.99 | Camisetas  |
++--------------------------+------------+------------+
+23 rows in set (0,00 sec)
+
+-- 3. Seleccionar el nombre del artículo y el precio de venta de los artículos de la tabla article donde el nombre del color esté presente en la tabla talla_adults_superior
+SELECT nom AS nombre_articulo, preu_venda
+FROM article
+WHERE id_color IN (SELECT id_color FROM talla_adults_superior);
++--------------------------+------------+
+| nombre_articulo          | preu_venda |
++--------------------------+------------+
+| Levis 501 Azul Hombre    |      49.99 |
+| Levis 501 Negro Hombre   |      49.99 |
+| Levis 501 Rojo Hombre    |      49.99 |
+| Levis 501 Azul Mujer     |      49.99 |
+| Levis 501 Verde Mujer    |      49.99 |
+| Levis 501 Amarillo Mujer |      49.99 |
+| Levis 501 Blanco Niño    |      49.99 |
+| Levis 501 Azul Niño      |      49.99 |
+| Levis 501 Negro Niña     |      49.99 |
+| Sábanas de Algodón       |      59.99 |
+| Toallas Grises           |      29.99 |
+| Mantel de Lino           |      39.99 |
+| Alfombra de Felpa        |      49.99 |
+| Gorro de Lana            |      24.99 |
+| Bufanda a Rayas          |      29.99 |
+| Gorra Negra              |      19.99 |
+| Pañuelo Estampado        |      14.99 |
+| Nike Fit Negro Hombre    |      49.99 |
+| Toallas Grises           |      29.99 |
+| Mantel de Lino           |      39.99 |
+| Alfombra de Felpa        |      49.99 |
+| Nike Fit Negro Mujer     |      49.99 |
+| Body Bebe                |      49.99 |
++--------------------------+------------+
+23 rows in set (0,01 sec)

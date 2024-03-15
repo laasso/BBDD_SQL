@@ -21,7 +21,7 @@ INSERT INTO material (id_material, nom) VALUES
 (6, 'Cuero'), (7, 'Nylon'), (8, 'Denim'), (9, 'Felpa'), (10, 'Terciopelo');
 
 INSERT INTO modelo (id_modelo, nom) VALUES
-(1, 'Levis 501'), (2, 'Ajust Nike'), (3, 'Estil Elegant'), (4, 'Aspecte Casual'), (5, 'Patró a Ratlles'),
+(1, 'Levis 501'), (2, 'Fit Nike'), (3, 'Estil Elegant'), (4, 'Aspecte Casual'), (5, 'Patró a Ratlles'),
 (6, 'Disseny Floral'), (7, 'Estil a Quadres'), (8, 'Color Degradat'), (9, 'Textura Plana'), (10, 'Estampat');
 
 INSERT INTO tipus (id_tipus, nom) VALUES
@@ -38,9 +38,9 @@ INSERT INTO article (id_article, nom, id_categoria, id_clase, id_tipus, id_color
 (7, 'Levis 501 Blanco Niño', 3, 5, 1, 1, 8, 1, 25.00, 49.99),
 (8, 'Levis 501 Azul Niño', 3, 5, 1, 3, 8, 1, 25.00, 49.99),
 (9, 'Levis 501 Negro Niña', 3, 5, 1, 2, 8, 1, 25.00, 49.99),
-(18, 'Nike Fit Negro Hombre', 3, 6, 2, 2, 8, 1, 25.00, 49.99),
-(22, 'Nike Fit Negro Mujer', 3, 7, 2, 2, 8, 1, 25.00, 49.99),
-(23, 'Body Bebe ', 3, 4, 2, 2, 8, 1, 25.00, 49.99);
+(18, 'Nike Fit Negro Hombre', 3, 6, 2, 2, 8, 2, 25.00, 49.99),
+(22, 'Nike Fit Negro Mujer', 3, 7, 2, 2, 8, 2, 25.00, 49.99),
+(23, 'Body Bebe ', 3, 4, 2, 2, 8, 6, 25.00, 49.99);
 
 
 INSERT INTO talla_adults_superior (id_article, nom_talla, stock) VALUES

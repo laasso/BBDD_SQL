@@ -23,10 +23,13 @@ SELECT nom_cat, descripcio FROM categoria;
 
 -- Consultas multitabla
 
--- 1. Seleccionar el nombre y el precio de venta de los artículos de la tabla article junto con el nombre del modelo de la tabla modelo
-SELECT a.nom, a.preu_venda, m.nom AS nombre_modelo
+-- 1. Seleccionar la informacion con nombres de los articulos
+SELECT a.nom AS nombre_articulo, c.nom AS nombre_color, m.nom AS nombre_modelo, t.nom AS tipo, 
+       a.preu_cost AS precio_coste, a.preu_venda AS precio_venta
 FROM article a
-INNER JOIN modelo m ON a.id_modelo = m.id_modelo;
+INNER JOIN color c ON a.id_color = c.id_color
+INNER JOIN modelo m ON a.id_modelo = m.id_modelo
+INNER JOIN tipus t ON a.id_tipus = t.id_tipus;
 
 -- Respuesta del servidor: Devuelve el nombre y el precio de venta de los artículos junto con el nombre del modelo correspondiente.
 
