@@ -1,4 +1,0 @@
-afegir robacasa
-(idart, ample,llarg)
-afegir tipo_producto
-(pantalon, camiseta)
