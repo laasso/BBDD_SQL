@@ -1,30 +1,32 @@
-ARTICLE(id_article,nom, id_categoria, id_clase, id_color, id_material, id_modelo, preu_cost, preu_venda)
-on id_categoria REFERENCIA CATEGORIA,
-on id_clase REFERENCIA CLASE,
-on id_tipus REFERENCIA TIPUS,
-on id_color REFERENCIA COLOR,
-on id_modelo REFERENCIA MODELO
+ARTICLE(*id_article*,nom, id_categoria, id_clase, id_color, id_material, id_modelo, preu_cost, preu_venda)
+    on {id_categoria} REFERENCIA CATEGORIA,
+    on {id_clase} REFERENCIA CLASE,
+    on {id_tipus} REFERENCIA TIPUS,
+    on {id_color} REFERENCIA COLOR,
+    on {id_modelo} REFERENCIA MODELO
 
-CATEGORIA(id_categoria, nom_cat, descripcio)
+CATEGORIA(*id_categoria*, nom_cat, descripcio)
 
-CLASE(id_clase, id_categoria, nom_clase, descripcio)
-ON id_categoria REFERENCIA CATEGORIA
+CLASE(*id_clase*, id_categoria, nom_clase, descripcio)
+    ON {id_categoria} REFERENCIA CATEGORIA
 
-COLOR(id_color, nom)
-MODELO(id_modelo, nom)
-MATERIAL(id_material, nom)
+COLOR(*id_color*, nom)
 
-MIDA(id_article, amplada,llargada, stock)
-on id_article referencia ARTICLE
+MODELO(*id_modelo*, nom)
 
-TALLA_ADULT_SUP(id_article, talla, stock)
-on id_article referencia ARTICLE
+MATERIAL(*id_material*, nom)
 
-TALLA_ADULT_INF(id_article, talla, stock)
-on id_article referencia ARTICLE
+MIDA(*id_article*, amplada,llargada, stock)
+    on {id_article} referencia ARTICLE
 
-TALLA_NADONS(id_article, talla, stock)
-on id_article referencia ARTICLE
+TALLA_ADULT_SUP(*id_article*, talla, stock)
+on {id_article} referencia ARTICLE
 
-TALLA_NENS(id_article, talla, stock)
-on id_article referencia ARTICLE
+TALLA_ADULT_INF(*id_article*, talla, stock)
+on {id_article} referencia ARTICLE
+
+TALLA_NADONS(*id_article*, talla, stock)
+on {id_article} referencia ARTICLE
+
+TALLA_NENS(*id_article*, talla, stock)
+on {id_article} referencia ARTICLE
