@@ -1,3 +1,5 @@
+
+
 ARTICLE(*id_article*,nom, id_categoria, id_clase, id_color, id_material, id_modelo, preu_cost, preu_venda)
     on {id_categoria} REFERENCIA CATEGORIA,
     on {id_clase} REFERENCIA CLASE,
