@@ -15,12 +15,12 @@ CREATE TEMPORARY TABLE IF NOT EXISTS municipi_com_prov (
     georef VARCHAR(100)
 )
 
-LOAD DATA INFILE '/home/lasso/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
+LOAD DATA INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (cod_mun, nom_mun, cod_prov, nom_prov, cod_com, nom_com, UTMX, UTMY, longi, lati, georef);
 
-LOAD DATA LOCAL INFILE '/home/lasso/BBDD_SQL/M02UF2-A9/DATA/provincia.csv' INTO TABLE provincia
+LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/provincia.csv' INTO TABLE provincia
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (id_provincia, nom_catala, nom_oficial);
@@ -65,14 +65,14 @@ CREATE TEMPORARY TABLE IF NOT EXISTS houses (
     descript VARCHAR(140)
 );
 
-LOAD DATA LOCAL INFILE '/home/lasso/BBDD_SQL/M02UF2-A9/DATA/houses_barcelona.csv' INTO TABLE houses
+LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/houses_barcelona.csv' INTO TABLE houses
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (descript, air_conditioner, balcony, bath_num, built_in_wardrobe, chimeney, condicion, 
 construct_date, floor, garage_desc, garden, heating, house_id, house_type, lift, loc_city, loc_zone, 
 m2_real, m2_useful, obtention_date, price, room_num, storage_room, swimming_pool, terrace);
 
-LOAD DATA LOCAL INFILE '/home/lasso/BBDD_SQL/M02UF2-A9/DATA/houses_girona.csv' INTO TABLE houses
+LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/houses_girona.csv' INTO TABLE houses
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (descript, air_conditioner, balcony, bath_num, built_in_wardrobe, chimeney, condicion, 
