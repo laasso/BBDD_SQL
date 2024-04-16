@@ -1,7 +1,6 @@
 USE habitatge;
-
--- TABLAS COMPLETAS CSV --
 DROP TEMPORARY TABLE IF EXISTS municipi_com_prov;
+
 CREATE TEMPORARY TABLE IF NOT EXISTS municipi_com_prov (
     cod_mun INT PRIMARY KEY,
     nom_mun VARCHAR(48),
@@ -14,7 +13,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS municipi_com_prov (
     longi DECIMAL(9,6),
     lati DECIMAL(9,6),
     georef VARCHAR(100)
-) ENGINE=InnoDB;
+)
 
 LOAD DATA INFILE '/home/lasso/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
@@ -34,6 +33,8 @@ WHERE cod_com IS NOT NULL;
 INSERT INTO municipi(id_municipi, id_provincia, nom_municipi, id_comarca, utmX, utmY, longitud, latitud, geo_referencia)
 SELECT DISTINCT cod_mun, cod_prov, nom_mun, cod_com, UTMX, UTMY, longi, lati, georef 
 FROM municipi_com_prov;
+
+--taula temporla per carregar les dades del csv
 
 DROP TEMPORARY TABLE IF EXISTS houses;
 CREATE TEMPORARY TABLE IF NOT EXISTS houses (
@@ -127,6 +128,8 @@ FROM (
     ORDER BY RAND()
     LIMIT 100
 ) AS vivendas;
+
+--Insert codi INE 
 
 UPDATE municipi
 SET codi_INE = CONCAT(LEFT(id_municipi, 3), id_provincia)
