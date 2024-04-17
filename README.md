@@ -33,6 +33,7 @@ git clone https://github.com/laasso/BBDD_SQL.git
 
 ## Resources
 
+- [Operatiu Cat](http://operatiu.cat/): Online Databses for practice and notes.
 - [SQL Tutorial](https://www.w3schools.com/sql/): W3Schools SQL tutorial for beginners.
 - [SQLZoo](https://sqlzoo.net/): Interactive SQL tutorial with exercises.
 - [SQL Fiddle](http://sqlfiddle.com/): Online SQL sandbox for testing queries.
