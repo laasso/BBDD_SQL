@@ -88,13 +88,6 @@ SELECT house_id, id_municipi, id_provincia
 FROM municipi m
 JOIN houses h ON h.loc_city=m.nom_municipi;
 
-DROP TEMPORARY TABLE IF EXISTS random_energetic;
-CREATE TEMPORARY TABLE IF NOT EXISTS random_energetic (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    consum_random ENUM('A', 'B', 'C', 'D', 'E', 'F', 'G'),
-    emisions_random ENUM('A', 'B', 'C', 'D', 'E', 'F', 'G')
-);
-
 INSERT INTO consum_energetic (id_vivenda, consum, emisions)
 SELECT
     id_vivenda,
@@ -120,12 +113,10 @@ SELECT
             WHEN 6 THEN 'G'
         END
     ) AS emisions
-FROM (
-    SELECT id_vivenda
-    FROM vivenda
-    ORDER BY RAND()
-    LIMIT 100
-) AS vivendas;
+FROM vivenda
+ORDER BY RAND()
+LIMIT 100;
+
 
 UPDATE municipi
 SET codi_INE = CONCAT(LEFT(id_municipi, 3), id_provincia)
@@ -139,18 +130,6 @@ house_type = "Piso" or
 house_type = "Ático" or 
 house_type = "Estudio";
 
-
-
-
-INSERT INTO caracteristiques(aire_condicionat, ascensor, armari_empotrat, garatge, jardi, calefaccio, piscina, traster, xemeneia, terassa, balco)
-SELECT air_conditioner, lift, built_in_wardrobe, garage_desc, garden, heating, swimming_pool, storage_room, chimeney, terrace, balcony
-FROM houses ORDER BY house_id;
-
-INSERT INTO caracteristiques_vivendes(id_vivenda)
-SELECT house_id
-FROM houses 
-ORDER BY house_id; 
-
 INSERT INTO casa(id_vivenda, tipus, num_plantes, superficie_garatge, superficie_jardi)
 SELECT 
     v.id_vivenda, 
@@ -163,3 +142,14 @@ INNER JOIN vivenda v ON h.house_id = v.id_vivenda
 INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
 INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
 WHERE c.garatge IS NOT NULL OR c.jardi = 1;
+
+
+INSERT INTO caracteristiques(aire_condicionat, ascensor, armari_empotrat, garatge, jardi, calefaccio, piscina, traster, xemeneia, terassa, balco)
+SELECT air_conditioner, lift, built_in_wardrobe, garage_desc, garden, heating, swimming_pool, storage_room, chimeney, terrace, balcony
+FROM houses ORDER BY house_id;
+
+INSERT INTO caracteristiques_vivendes(id_vivenda)
+SELECT house_id
+FROM houses 
+ORDER BY house_id; 
+
