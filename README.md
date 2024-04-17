@@ -25,7 +25,7 @@ This repository contains materials related to the Databases subject, focusing on
 
 1. Clone the repository to your local machine:
 
-git clone https://github.com/laasso/BBDD_SQL.git
+  git clone https://github.com/laasso/BBDD_SQL.git
 
 
 2. Explore the folders and files to access SQL scripts, documentation, and sample data.
