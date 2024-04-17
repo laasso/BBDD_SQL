@@ -39,11 +39,11 @@ git clone https://github.com/laasso/BBDD_SQL.git
 
 ## Screenshots
 
-![SQL Image 1](images/sql_image1.png)
+![SQL Image 1](repoInfo/images/query.png)
 *Screenshot 1: Example of a SQL query*
 
-![SQL Image 2](images/sql_image2.png)
-*Screenshot 2: ER Diagram of the sample database*
+![SQL Image 2](repoInfo/images/er.png)
+*Screenshot 2: Reverse Engineer of a sample database*
 
 ## Contributions
 
@@ -51,7 +51,7 @@ Contributions to improve the content, add more SQL examples, or fix issues are w
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](repoInfo/license) file for details.
 
 
 
