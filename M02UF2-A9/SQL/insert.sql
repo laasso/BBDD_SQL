@@ -12,13 +12,13 @@ CREATE TEMPORARY TABLE IF NOT EXISTS municipi_com_prov (
     UTMY VARCHAR(100),
     longi DECIMAL(9,6),
     lati DECIMAL(9,6),
-    georef VARCHAR(100)
-)
+    coord_point VARCHAR(100)
+);
 
-LOAD DATA INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
+LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(cod_mun, nom_mun, cod_prov, nom_prov, cod_com, nom_com, UTMX, UTMY, longi, lati, georef);
+(cod_mun, nom_mun, cod_prov, nom_prov, cod_com, nom_com, UTMX, UTMY, longi, lati, coord_point);
 
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/provincia.csv' INTO TABLE provincia
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
@@ -30,11 +30,9 @@ SELECT DISTINCT cod_com, nom_com
 FROM municipi_com_prov
 WHERE cod_com IS NOT NULL;
 
-INSERT INTO municipi(id_municipi, id_provincia, nom_municipi, id_comarca, utmX, utmY, longitud, latitud, geo_referencia)
-SELECT DISTINCT cod_mun, cod_prov, nom_mun, cod_com, UTMX, UTMY, longi, lati, georef 
+INSERT INTO municipi(id_municipi, id_provincia, nom_municipi, id_comarca, utmX, utmY, longitud, latitud, coord_vectorial)
+SELECT DISTINCT cod_mun, cod_prov, nom_mun, cod_com, UTMX, UTMY, longi, lati, coord_point 
 FROM municipi_com_prov;
-
---taula temporla per carregar les dades del csv
 
 DROP TEMPORARY TABLE IF EXISTS houses;
 CREATE TEMPORARY TABLE IF NOT EXISTS houses (
@@ -128,8 +126,6 @@ FROM (
     ORDER BY RAND()
     LIMIT 100
 ) AS vivendas;
-
---Insert codi INE 
 
 UPDATE municipi
 SET codi_INE = CONCAT(LEFT(id_municipi, 3), id_provincia)

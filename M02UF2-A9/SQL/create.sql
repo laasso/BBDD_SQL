@@ -77,7 +77,7 @@ CREATE TABLE `municipi` (
     utmY VARCHAR(100),
     latitud DECIMAL(9,6),
     longitud DECIMAL(9,6),
-    coord_vecvtorial VARCHAR(100),
+    coord_vectorial VARCHAR(100),
     PRIMARY KEY(id_municipi, id_provincia),
     FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia),
     FOREIGN KEY (id_comarca) REFERENCES comarca(id_comarca)
