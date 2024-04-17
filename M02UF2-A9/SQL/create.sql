@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS habitatge;
 CREATE DATABASE IF NOT EXISTS habitatge;
 USE habitatge;
 
-CREATE TABLE `vivenda` (
+CREATE TABLE vivenda (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
     tipus VARCHAR(24),
     dormitoris VARCHAR(24),
@@ -17,7 +17,7 @@ CREATE TABLE `vivenda` (
     data DATE
 );
 
-CREATE TABLE `casa` (
+CREATE TABLE casa (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
     tipus VARCHAR(24),
     num_plantes VARCHAR(48),
@@ -26,14 +26,14 @@ CREATE TABLE `casa` (
     FOREIGN KEY (id_vivenda) REFERENCES vivenda(id_vivenda)
 );
 
-CREATE TABLE `pis` (
+CREATE TABLE pis (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
     tipus VARCHAR(24),
     num_planta VARCHAR(48),
     FOREIGN KEY (id_vivenda) REFERENCES vivenda(id_vivenda)
 );
 
-CREATE TABLE `caracteristiques` (
+CREATE TABLE caracteristiques (
     id_caracteristica INT AUTO_INCREMENT PRIMARY KEY,
     aire_condicionat BOOLEAN,
     ascensor BOOLEAN,
@@ -48,7 +48,7 @@ CREATE TABLE `caracteristiques` (
     balco BOOLEAN
 );
 
-CREATE TABLE `caracteristiques_vivendes` (
+CREATE TABLE caracteristiques_vivendes (
     id_vivenda INT,
     id_caracteristica INT AUTO_INCREMENT,
     PRIMARY KEY(id_vivenda, id_caracteristica),
@@ -56,18 +56,18 @@ CREATE TABLE `caracteristiques_vivendes` (
     FOREIGN KEY (id_caracteristica) REFERENCES caracteristiques(id_caracteristica)
 );
 
-CREATE TABLE `provincia` (
+CREATE TABLE provincia (
     id_provincia INT AUTO_INCREMENT PRIMARY KEY,
     nom_oficial VARCHAR(64) UNIQUE,
     nom_catala VARCHAR(64) UNIQUE
 );
 
-CREATE TABLE `comarca` (
+CREATE TABLE comarca (
     id_comarca INT AUTO_INCREMENT PRIMARY KEY,
     nom_comarca VARCHAR(100) UNIQUE
 );
 
-CREATE TABLE `municipi` (
+CREATE TABLE municipi (
     id_municipi INT AUTO_INCREMENT,
     id_provincia INT,
     nom_municipi VARCHAR(100),
@@ -83,14 +83,14 @@ CREATE TABLE `municipi` (
     FOREIGN KEY (id_comarca) REFERENCES comarca(id_comarca)
 );
 
-CREATE TABLE `consum_energetic` (
+CREATE TABLE consum_energetic (
     id_vivenda INT PRIMARY KEY,
     consum ENUM('A', 'B', 'C', 'D', 'E', 'F', 'G'),
     emisions ENUM('A', 'B', 'C', 'D', 'E', 'F', 'G'),
     FOREIGN KEY (id_vivenda) REFERENCES vivenda(id_vivenda)
 );
 
-CREATE TABLE `municipi_vivenda` (
+CREATE TABLE municipi_vivenda (
     id_vivenda INT PRIMARY KEY,
     id_municipi INT,
     id_provincia INT,
