@@ -130,18 +130,6 @@ house_type = "Piso" or
 house_type = "Ático" or 
 house_type = "Estudio";
 
-INSERT INTO casa(id_vivenda, tipus, num_plantes, superficie_garatge, superficie_jardi)
-SELECT 
-    v.id_vivenda, 
-    LTRIM(h.house_type), 
-    h.floor,
-    CASE WHEN c.garatge IS NOT NULL THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
-    CASE WHEN c.jardi = 1 THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
-FROM houses h
-INNER JOIN vivenda v ON h.house_id = v.id_vivenda
-INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
-INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
-WHERE c.garatge IS NOT NULL OR c.jardi = 1;
 
 
 INSERT INTO caracteristiques(aire_condicionat, ascensor, armari_empotrat, garatge, jardi, calefaccio, piscina, traster, xemeneia, terassa, balco)
@@ -152,4 +140,18 @@ INSERT INTO caracteristiques_vivendes(id_vivenda)
 SELECT house_id
 FROM houses 
 ORDER BY house_id; 
+
+INSERT INTO casa(id_vivenda, tipus, num_plantes, superficie_garatge, superficie_jardi)
+SELECT 
+    v.id_vivenda, 
+    LTRIM(h.house_type), 
+    h.floor,
+    CASE WHEN c.garatge IS NOT NULL AND c.garatge != '' THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
+    CASE WHEN c.jardi = 1 THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
+FROM houses h
+INNER JOIN vivenda v ON h.house_id = v.id_vivenda
+INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
+INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
+WHERE c.garatge IS NOT NULL OR c.jardi = 1;
+
 
