@@ -139,13 +139,20 @@ house_type = "Piso" or
 house_type = "Ático" or 
 house_type = "Estudio";
 
-INSERT INTO casa(id_vivenda, tipus, num_plantes)
-SELECT house_id, LTRIM(house_type), floor 
+INSERT INTO casa(id_vivenda, tipus, num_plantes, superficie_garatge, superficie_jardi)
+SELECT 
+    house_id, 
+    LTRIM(house_type), 
+    floor,
+    CASE WHEN garage_desc IS NOT NULL THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
+    CASE WHEN garden IS NOT NULL THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
 FROM houses 
-WHERE house_type != "Dúplex" and
-house_type != "Piso" and 
-house_type != "Ático" and 
-house_type != "Estudio";
+WHERE house_type != "Dúplex" AND
+      house_type != "Piso" AND 
+      house_type != "Ático" AND 
+      house_type != "Estudio" AND
+      garage_desc IS NOT NULL AND
+      garden IS NOT NULL;
 
 INSERT INTO caracteristiques(aire_condicionat, ascensor, armari_empotrat, garatge, jardi, calefaccio, piscina, traster, xemeneia, terassa, balco)
 SELECT air_conditioner, lift, built_in_wardrobe, garage_desc, garden, heating, swimming_pool, storage_room, chimeney, terrace, balcony
