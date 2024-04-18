@@ -1,39 +1,45 @@
 USE habitatge;
 DROP TEMPORARY TABLE IF EXISTS municipi_com_prov;
 
+-- Crear una taula temporal per emmagatzemar dades dels municipis
 CREATE TEMPORARY TABLE IF NOT EXISTS municipi_com_prov (
-    cod_mun INT PRIMARY KEY,
-    nom_mun VARCHAR(48),
-    cod_prov INT,
-    nom_prov VARCHAR(48),
-    cod_com INT,
-    nom_com VARCHAR(48),
-    UTMX VARCHAR(100),
-    UTMY VARCHAR(100),
-    longi DECIMAL(9,6),
-    lati DECIMAL(9,6),
-    coord_point VARCHAR(100)
+    cod_mun INT PRIMARY KEY,           
+    nom_mun VARCHAR(48),               
+    cod_prov INT,                      
+    nom_prov VARCHAR(48),             
+    cod_com INT,                       
+    nom_com VARCHAR(48),               
+    UTMX VARCHAR(100),                 
+    UTMY VARCHAR(100),                 
+    longi DECIMAL(9,6),             
+    lati DECIMAL(9,6),                 
+    coord_point VARCHAR(100)           
 );
 
+-- Carregar dades del fitxer CSV a la taula temporal municipi_com_prov
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/municipi_com_prov.csv' INTO TABLE municipi_com_prov
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (cod_mun, nom_mun, cod_prov, nom_prov, cod_com, nom_com, UTMX, UTMY, longi, lati, coord_point);
 
+-- Carregar dades del fitxer CSV a la taula provincia
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/provincia.csv' INTO TABLE provincia
 FIELDS TERMINATED BY ';' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (id_provincia, nom_catala, nom_oficial);
 
+-- Inserir dades a la taula comarca
 INSERT INTO comarca(id_comarca, nom_comarca)
 SELECT DISTINCT cod_com, nom_com
 FROM municipi_com_prov
 WHERE cod_com IS NOT NULL;
 
+-- Inserir dades a la taula municipi
 INSERT INTO municipi(id_municipi, id_provincia, nom_municipi, id_comarca, utmX, utmY, longitud, latitud, coord_vectorial)
 SELECT DISTINCT cod_mun, cod_prov, nom_mun, cod_com, UTMX, UTMY, longi, lati, coord_point 
 FROM municipi_com_prov;
 
+-- Crear una taula temporal per emmagatzemar dades de les cases
 DROP TEMPORARY TABLE IF EXISTS houses;
 CREATE TEMPORARY TABLE IF NOT EXISTS houses (
     house_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -63,6 +69,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS houses (
     descript VARCHAR(140)
 );
 
+-- Carregar dades dels fitxers CSV a la taula temporal houses (barcelona i girona)
 LOAD DATA LOCAL INFILE '/home/usuari/BBDD_SQL/M02UF2-A9/DATA/houses_barcelona.csv' INTO TABLE houses
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
@@ -77,14 +84,14 @@ IGNORE 1 LINES
 construct_date, floor, garage_desc, garden, heating, house_id, house_type, lift, loc_city, loc_zone, 
 m2_real, m2_useful, obtention_date, price, room_num, storage_room, swimming_pool, terrace);
 
+-- Inserir dades a la taula vivenda
 INSERT INTO vivenda(id_vivenda, dormitoris, banys, superficie_vivenda, any_construccio, 
 estat_conservacio, preu_venda, descripcio, data)
-
 SELECT house_id, room_num, bath_num, m2_real, construct_date, condicion, price,
 descript, obtention_date
 FROM houses;
 
-
+-- Actualitzar la columna tipus de la taula vivenda segons el tipus de casa
 UPDATE vivenda
 SET tipus = 'Pis'
 WHERE id_vivenda IN (
@@ -107,6 +114,7 @@ house_type != "Ático" and
 house_type != "Estudio"
 );
 
+-- Inserir dades a la taula pis segons el tipus de casa
 INSERT INTO pis(id_vivenda, tipus, num_planta)
 SELECT house_id, LTRIM(house_type), floor 
 FROM houses 
@@ -115,6 +123,7 @@ house_type = "Piso" or
 house_type = "Ático" or 
 house_type = "Estudio";
 
+-- Inserir dades a la taula casa segons el tipus de casa
 INSERT INTO casa(id_vivenda, tipus, num_plantes)
 SELECT house_id, LTRIM(house_type), floor 
 FROM houses 
@@ -123,13 +132,13 @@ house_type != "Piso" and
 house_type != "Ático" and 
 house_type != "Estudio";
 
-
-
+-- Inserir dades a la taula municipi_vivenda
 INSERT INTO municipi_vivenda(id_vivenda, id_municipi, id_provincia)
 SELECT house_id, id_municipi, id_provincia
 FROM municipi m
 JOIN houses h ON h.loc_city=m.nom_municipi;
 
+-- Inserir dades a la taula consum_energetic
 INSERT INTO consum_energetic (id_vivenda, consum, emisions)
 SELECT
     id_vivenda,
@@ -158,21 +167,12 @@ SELECT
 FROM vivenda
 ORDER BY RAND();
 
-
+-- Actualitzar la columna codi_INE de la taula municipi
 UPDATE municipi
 SET codi_INE = CONCAT(LEFT(id_municipi, 3), id_provincia)
 WHERE codi_INE IS NULL;
 
-INSERT INTO pis(id_vivenda, tipus, num_planta)
-SELECT house_id, LTRIM(house_type), floor 
-FROM houses 
-WHERE house_type = "Dúplex" or 
-house_type = "Piso" or 
-house_type = "Ático" or 
-house_type = "Estudio";
-
-
-
+-- Inserir dades a la taula caracteristiques i caracteristiques_vivendes
 INSERT INTO caracteristiques(aire_condicionat, ascensor, armari_empotrat, garatge, jardi, calefaccio, piscina, traster, xemeneia, terassa, balco)
 SELECT air_conditioner, lift, built_in_wardrobe, garage_desc, garden, heating, swimming_pool, storage_room, chimeney, terrace, balcony
 FROM houses ORDER BY house_id;
@@ -182,6 +182,7 @@ SELECT house_id
 FROM houses 
 ORDER BY house_id; 
 
+-- Actualitzar dades de la taula casa amb superfícies de garatge i jardí
 UPDATE casa c
 JOIN (
     SELECT 
@@ -197,6 +198,7 @@ JOIN (
 SET c.superficie_garatge = new_data.superficie_garatge,
     c.superficie_jardi = new_data.superficie_jardi;
 
+-- Actualitzar dades de la taula vivenda amb superfície de terrassa
 UPDATE vivenda v
 JOIN (
     SELECT 
@@ -211,5 +213,6 @@ JOIN (
 ) AS new_data ON v.id_vivenda = new_data.house_id
 SET v.superficie_terrassa = new_data.superficie_terrassa;
 
+-- Assignar valors aleatoris (0 o 1) a la columna disponible_lloguer de la taula vivenda
 UPDATE vivenda
 SET disponible_lloguer = ROUND(RAND());
