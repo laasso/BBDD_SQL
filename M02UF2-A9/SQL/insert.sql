@@ -77,11 +77,52 @@ IGNORE 1 LINES
 construct_date, floor, garage_desc, garden, heating, house_id, house_type, lift, loc_city, loc_zone, 
 m2_real, m2_useful, obtention_date, price, room_num, storage_room, swimming_pool, terrace);
 
-INSERT INTO vivenda(id_vivenda, tipus, dormitoris, banys, superficie_vivenda, any_construccio, 
+INSERT INTO vivenda(id_vivenda, dormitoris, banys, superficie_vivenda, any_construccio, 
 estat_conservacio, preu_venda, descripcio, data)
-SELECT house_id, LTRIM(house_type), room_num, bath_num, m2_real, construct_date, condicion, price,
+SELECT house_id, room_num, bath_num, m2_real, construct_date, condicion, price,
 descript, obtention_date
 FROM houses;
+
+
+UPDATE vivenda
+SET tipus = 'Pis'
+WHERE id_vivenda IN (
+SELECT house_id
+FROM houses
+WHERE house_type = "Dúplex" or 
+house_type = "Piso" or 
+house_type = "Ático" or 
+house_type = "Estudio"
+);
+
+UPDATE vivenda
+SET tipus = 'Casa'
+WHERE id_vivenda IN (
+SELECT house_id
+FROM houses
+WHERE house_type != "Dúplex" and
+house_type != "Piso" and 
+house_type != "Ático" and 
+house_type != "Estudio"
+);
+
+INSERT INTO pis(id_vivenda, tipus, num_planta)
+SELECT house_id, LTRIM(house_type), floor 
+FROM houses 
+WHERE house_type = "Dúplex" or 
+house_type = "Piso" or 
+house_type = "Ático" or 
+house_type = "Estudio";
+
+INSERT INTO casa(id_vivenda, tipus, num_plantes)
+SELECT house_id, LTRIM(house_type), floor 
+FROM houses 
+WHERE house_type != "Dúplex" and
+house_type != "Piso" and 
+house_type != "Ático" and 
+house_type != "Estudio";
+
+
 
 INSERT INTO municipi_vivenda(id_vivenda, id_municipi, id_provincia)
 SELECT house_id, id_municipi, id_provincia
@@ -114,8 +155,7 @@ SELECT
         END
     ) AS emisions
 FROM vivenda
-ORDER BY RAND()
-LIMIT 100;
+ORDER BY RAND();
 
 
 UPDATE municipi
@@ -141,10 +181,9 @@ SELECT house_id
 FROM houses 
 ORDER BY house_id; 
 
-INSERT INTO casa(id_vivenda, tipus, num_plantes, superficie_garatge, superficie_jardi)
+INSERT INTO casa(id_vivenda, num_plantes, superficie_garatge, superficie_jardi)
 SELECT 
-    v.id_vivenda, 
-    LTRIM(h.house_type), 
+    v.id_vivenda,  
     h.floor,
     CASE WHEN c.garatge IS NOT NULL AND c.garatge != '' THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
     CASE WHEN c.jardi = 1 THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
