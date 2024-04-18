@@ -1,45 +1,44 @@
 # Habitatge
 
-## Descripción del proyecto
+## Descripció del projecte
 
-Este proyecto tiene como objetivo crear una base de datos (BBDD) llamada "habitatge" para la venta y alquiler de viviendas. La base de datos estará centrada en los municipios de Cataluña, pero debería poder funcionar para cualquier municipio del resto del Estado.
+Aquest projecte té com a objectiu crear una base de dades (BBDD) anomenada "habitatge" per a la venda i lloguer d'habitatges. La base de dades estarà centrada en els municipis de Catalunya, però hauria de poder funcionar per a qualsevol municipi de la resta de l'Estat.
 
-## Esquema de la base de datos
+## Esquema de la base de dades
 
-La base de datos contendrá información detallada sobre cada vivienda, incluyendo:
+La base de dades contindrà informació detallada sobre cada habitatge, incloent:
 
-- **Identificador único**: Cada vivienda tendrá un identificador único.
-- **Características básicas**: Número de dormitorios, número de baños, superficie de la vivienda, superficie de terrazas (si las hay), año de construcción, estado de conservación (nueva, reformada o necesita reformas), precio de venta y disponibilidad para alquiler.
-- **Descripción breve**: Una pequeña descripción sobre la vivienda, con un máximo de 140 caracteres.
-- **Última actualización**: Fecha de la última actualización de los datos.
+- **Identificador únic**: Cada habitatge tindrà un identificador únic.
+- **Característiques bàsiques**: Nombre de dormitoris, nombre de banys, superfície de l'habitatge, superfície de terrasses (si les hi ha), any de construcció, estat de conservació (nova, reformada o necessita reformes), preu de venda i disponibilitat per a lloguer.
+- **Descripció breu**: Una petita descripció sobre l'habitatge, amb un màxim de 140 caràcters.
+- **Última actualització**: Data de la darrera actualització de les dades.
 
-Las viviendas se clasificarán en dos categorías principales: unidades independientes (casas) o apartamentos (pisos). Cada una de estas categorías tendrá subtipos específicos:
+Els habitatges es classificaran en dues categories principals: unitats independents (cases) o apartaments (pisos). Cadascuna d'aquestes categories tindrà subtipus específics:
 
-### Casas
+### Cases
 
-- **Tipos**: Aislada, Adosada, Finca rústica, Masía o Castillo.
-- **Características adicionales**: Número de plantas, superficie de garaje y jardín.
+- **Tipus**: Aïllada, Adossada, Finca rústica, Masia o Castell.
+- **Característiques addicionals**: Nombre de plantes, superfície de garatge i jardí.
 
 ### Pisos
 
-- **Tipos**: Piso (genérico), Ático, Dúplex, Estudio o Loft.
-- **Planta**: Número de la planta en la que se encuentra (0 para planta baja).
+- **Tipus**: Pis (genèric), Àtic, Dúplex, Estudi o Loft.
+- **Planta**: Nombre de la planta en la qual es troba (0 per a planta baixa).
 
-Todas las viviendas podrán tener ciertas características adicionales, como aire acondicionado, ascensor, calefacción, muebles, estacionamiento, piscina, trastero y chimenea. Además, se registrarán los datos del Certificado Energético de cada vivienda, incluyendo consumo y emisiones.
+Tots els habitatges podran tenir certes característiques addicionals, com ara aire condicionat, ascensor, calefacció, mobles, estacionament, piscina, traster i xemeneia. A més, s'enregistraran les dades del Certificat Energètic de cada habitatge, incloent consum i emissions.
 
-## Ubicación de las viviendas
+## Ubicació dels habitatges
 
-Las viviendas se localizarán en municipios que pertenecen a provincias. Cada municipio tendrá asociada una provincia. También se registrará la comarca para los municipios y provincias de Cataluña.
+Els habitatges es localitzaran en municipis que pertanyen a províncies. Cada municipi tindrà associada una província. També es registrarà la comarca per als municipis i províncies de Catalunya.
 
-### Municipios
+### Municipis
 
-- **Nombre**: Nombre del municipio.
-- **Código INE**: Código INE autogenerado.
-- **Coordenadas**: Coordenadas en formato UTM, coordenadas geográficas (longitud y latitud) y coordenadas vectoriales (POINT).
+- **Nom**: Nom del municipi.
+- **Codi INE**: Codi INE autogenerat.
+- **Coordenades**: Coordenades en format UTM, coordenades geogràfiques (longitud i latitud) i coordenades vectorials (POINT).
 
-Para la creación de la base de datos se proporcionarán archivos CSV con datos de municipios, provincias y comarcas. Se requerirá un mínimo de 100 registros por tabla.
+Per a la creació de la base de dades, es proporcionaran fitxers CSV amb dades de municipis, províncies i comarques. Es requerirà un mínim de 100 registres per taula.
 
 ---
 
-Se proporciona un archivo que relaciona municipio, provincia y comarca, junto con datos de geolocalización. El tipo POINT se puede calcular de manera similar al código INE.
-
+S'adjunta un fitxer que relaciona municipi, província i comarca, juntament amb dades de geolocalització. El tipus POINT es pot calcular de manera similar al codi INE.
