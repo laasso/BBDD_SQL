@@ -4,7 +4,7 @@ USE habitatge;
 
 CREATE TABLE vivenda (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
-    tipus ENUM('casa', 'pis'),
+    tipus VARCHAR(24),
     dormitoris VARCHAR(24),
     banys INT,
     superficie_vivenda DECIMAL(8, 2),
@@ -19,7 +19,7 @@ CREATE TABLE vivenda (
 
 CREATE TABLE casa (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
-    tipus ENUM('Aïllada', 'Adosada', 'Finca rústica', 'Masia', 'Castell'),
+    tipus VARCHAR(24),
     num_plantes VARCHAR(48),
     superficie_garatge DECIMAL(8, 2),
     superficie_jardi DECIMAL(8, 2),
@@ -28,7 +28,7 @@ CREATE TABLE casa (
 
 CREATE TABLE pis (
     id_vivenda INT AUTO_INCREMENT PRIMARY KEY,
-    tipus ENUM('Pis', 'Àtic', 'Dúplex', 'Estudi', 'Loft'),
+    tipus VARCHAR(24),
     num_planta VARCHAR(48),
     FOREIGN KEY (id_vivenda) REFERENCES vivenda(id_vivenda)
 );

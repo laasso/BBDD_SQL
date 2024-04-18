@@ -154,4 +154,16 @@ INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
 INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
 WHERE c.garatge IS NOT NULL OR c.jardi = 1;
 
-
+UPDATE vivenda v
+JOIN (
+    SELECT 
+        h.house_id,
+        CASE WHEN c.terassa = 1 THEN ROUND(RAND() * 150 + 30, 2) ELSE NULL END AS superficie_terrassa
+    FROM 
+        houses h
+    JOIN 
+        caracteristiques_vivendes cv ON h.house_id = cv.id_vivenda
+    JOIN 
+        caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
+) AS new_data ON v.id_vivenda = new_data.house_id
+SET v.superficie_terrassa = new_data.superficie_terrassa;
