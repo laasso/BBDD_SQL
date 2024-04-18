@@ -79,6 +79,7 @@ m2_real, m2_useful, obtention_date, price, room_num, storage_room, swimming_pool
 
 INSERT INTO vivenda(id_vivenda, dormitoris, banys, superficie_vivenda, any_construccio, 
 estat_conservacio, preu_venda, descripcio, data)
+
 SELECT house_id, room_num, bath_num, m2_real, construct_date, condicion, price,
 descript, obtention_date
 FROM houses;
@@ -181,17 +182,20 @@ SELECT house_id
 FROM houses 
 ORDER BY house_id; 
 
-INSERT INTO casa(id_vivenda, num_plantes, superficie_garatge, superficie_jardi)
-SELECT 
-    v.id_vivenda,  
-    h.floor,
-    CASE WHEN c.garatge IS NOT NULL AND c.garatge != '' THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
-    CASE WHEN c.jardi = 1 THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
-FROM houses h
-INNER JOIN vivenda v ON h.house_id = v.id_vivenda
-INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
-INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
-WHERE c.garatge IS NOT NULL OR c.jardi = 1;
+UPDATE casa c
+JOIN (
+    SELECT 
+        v.id_vivenda, 
+        CASE WHEN c.garatge IS NOT NULL AND c.garatge != '' THEN ROUND(RAND() * 100 + 20, 2) ELSE NULL END AS superficie_garatge,
+        CASE WHEN c.jardi = 1 THEN ROUND(RAND() * 200 + 50, 2) ELSE NULL END AS superficie_jardi
+    FROM houses h
+    INNER JOIN vivenda v ON h.house_id = v.id_vivenda
+    INNER JOIN caracteristiques_vivendes cv ON v.id_vivenda = cv.id_vivenda
+    INNER JOIN caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
+    WHERE c.garatge IS NOT NULL OR c.jardi = 1
+) AS new_data ON c.id_vivenda = new_data.id_vivenda
+SET c.superficie_garatge = new_data.superficie_garatge,
+    c.superficie_jardi = new_data.superficie_jardi;
 
 UPDATE vivenda v
 JOIN (
@@ -206,3 +210,6 @@ JOIN (
         caracteristiques c ON cv.id_caracteristica = c.id_caracteristica
 ) AS new_data ON v.id_vivenda = new_data.house_id
 SET v.superficie_terrassa = new_data.superficie_terrassa;
+
+UPDATE vivenda
+SET disponible_lloguer = ROUND(RAND());
