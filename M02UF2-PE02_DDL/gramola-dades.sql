@@ -84,3 +84,9 @@ INSERT INTO concerts (codi_grup, data_concert, hora_inici, codi_municipi, preu_e
 (8, '2024-06-25', '19:30:00', 9167, 25.00, 35.00),
 (9, '2024-06-30', '18:45:00', 9998, 15.00, 25.00),
 (10, '2024-07-05', '20:00:00', 9999, 20.00, 30.00);
+
+
+INSERT INTO grups_generes (codi_grup, id_genere)
+SELECT g.codi_grup, ge.id_genere
+FROM grups g
+JOIN generes ge ON g.genere_principal = ge.nom;

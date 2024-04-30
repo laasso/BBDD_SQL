@@ -75,3 +75,10 @@ CREATE TABLE concerts (
 );
 
 
+CREATE TABLE grups_generes (
+    id_relacion INT AUTO_INCREMENT PRIMARY KEY,
+    codi_grup INT,
+    id_genere INT,
+    FOREIGN KEY (codi_grup) REFERENCES grups(codi_grup),
+    FOREIGN KEY (id_genere) REFERENCES generes(id_genere)
+);

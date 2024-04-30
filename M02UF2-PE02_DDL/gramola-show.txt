@@ -1,0 +1,118 @@
+mysql:[root:gramola]> show tables;
++-------------------+
+| Tables_in_gramola |
++-------------------+
+| concerts          |
+| contractes        |
+| discografiques    |
+| discos            |
+| generes           |
+| grups             |
+| grups_generes     |
+| municipi          |
+| provincia         |
++-------------------+
+9 rows in set (0,00 sec)
+
+
+mysql:[root:gramola]> DESC provincia;
++---------------+--------------------------+------+-----+---------+-------+
+| Field         | Type                     | Null | Key | Default | Extra |
++---------------+--------------------------+------+-----+---------+-------+
+| codiprov      | int(2) unsigned zerofill | NO   | PRI | NULL    |       |
+| nom_provincia | varchar(24)              | YES  | UNI | NULL    |       |
++---------------+--------------------------+------+-----+---------+-------+
+2 rows in set (0,01 sec)
+
+mysql:[root:gramola]> DESC municipi;
++--------------+--------------------------+------+-----+---------+-------+
+| Field        | Type                     | Null | Key | Default | Extra |
++--------------+--------------------------+------+-----+---------+-------+
+| codimun      | int(4) unsigned zerofill | NO   | PRI | NULL    |       |
+| codiprov     | int(2) unsigned zerofill | NO   | PRI | NULL    |       |
+| nom_municipi | varchar(44)              | YES  |     | NULL    |       |
++--------------+--------------------------+------+-----+---------+-------+
+3 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC grups;
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| codi_grup          | int          | NO   | PRI | NULL    | auto_increment |
+| nom_grup           | varchar(100) | YES  |     | NULL    |                |
+| genere_principal   | varchar(50)  | YES  |     | NULL    |                |
+| any_creacio        | int          | YES  |     | NULL    |                |
+| busca_discografica | tinyint(1)   | YES  |     | 0       |                |
++--------------------+--------------+------+-----+---------+----------------+
+5 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC discos;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id_disc       | int           | NO   | PRI | NULL    | auto_increment |
+| codi_grup     | int           | YES  | MUL | NULL    |                |
+| any_disc      | int           | YES  |     | NULL    |                |
+| titol         | varchar(100)  | YES  |     | NULL    |                |
+| durada_minuts | int           | YES  |     | NULL    |                |
+| cost_economic | decimal(10,2) | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+6 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC generes;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| id_genere | int         | NO   | PRI | NULL    | auto_increment |
+| nom       | varchar(30) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+2 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC discografiques;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| NIF   | varchar(20)  | NO   | PRI | NULL    |       |
+| nom   | varchar(100) | YES  |     | NULL    |       |
+| email | varchar(100) | YES  |     | NULL    |       |
+| web   | varchar(100) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+4 rows in set (0,01 sec)
+
+mysql:[root:gramola]> DESC contractes;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| id_contracte | int         | NO   | PRI | NULL    | auto_increment |
+| codi_grup    | int         | YES  | MUL | NULL    |                |
+| NIF          | varchar(20) | YES  | MUL | NULL    |                |
+| data_inici   | date        | YES  |     | NULL    |                |
+| data_final   | date        | YES  |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+5 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC concerts;
++--------------------+--------------------------+------+-----+---------+----------------+
+| Field              | Type                     | Null | Key | Default | Extra          |
++--------------------+--------------------------+------+-----+---------+----------------+
+| id_concert         | int                      | NO   | PRI | NULL    | auto_increment |
+| codi_grup          | int                      | YES  | MUL | NULL    |                |
+| data_concert       | date                     | YES  |     | NULL    |                |
+| hora_inici         | time                     | YES  |     | NULL    |                |
+| codi_municipi      | int(4) unsigned zerofill | YES  | MUL | NULL    |                |
+| preu_entrada_pista | decimal(10,2)            | YES  |     | NULL    |                |
+| preu_entrada_grada | decimal(10,2)            | YES  |     | NULL    |                |
++--------------------+--------------------------+------+-----+---------+----------------+
+7 rows in set (0,00 sec)
+
+mysql:[root:gramola]> DESC grups_generes;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| id_relacion | int  | NO   | PRI | NULL    | auto_increment |
+| codi_grup   | int  | YES  | MUL | NULL    |                |
+| id_genere   | int  | YES  | MUL | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+3 rows in set (0,00 sec)
+
+mysql:[root:gramola]> 

@@ -1,0 +1,483 @@
+mysql:[root:gramola]> source /home/usuari/BBDD_SQL/M02UF2-PE02_DDL/select.sql
+Database changed
++----------+------------------------+
+| codiprov | nom_provincia          |
++----------+------------------------+
+|       01 | Àlaba                  |
+|       03 | Alacant                |
+|       02 | Albacete               |
+|       04 | Almeria                |
+|       99 | Altres/Diversos        |
+|       33 | Astúries               |
+|       05 | Àvila                  |
+|       06 | Badajoz                |
+|       08 | Barcelona              |
+|       48 | Biscaia                |
+|       09 | Burgos                 |
+|       10 | Càceres                |
+|       11 | Cadis                  |
+|       39 | Cantàbria              |
+|       12 | Castelló de la Plana   |
+|       51 | Ceuta                  |
+|       13 | Ciudad Real            |
+|       16 | Conca                  |
+|       14 | Còrdova                |
+|       15 | Corunya, la            |
+|       17 | Girona                 |
+|       18 | Granada                |
+|       19 | Guadalajara            |
+|       20 | Guipúscoa              |
+|       21 | Huelva                 |
+|       07 | Illes Balears          |
+|       23 | Jaén                   |
+|       25 | Lleida                 |
+|       24 | Lleó                   |
+|       27 | Lugo                   |
+|       28 | Madrid                 |
+|       29 | Màlaga                 |
+|       52 | Melilla                |
+|       30 | Múrcia                 |
+|       31 | Navarra                |
+|       98 | No consta              |
+|       22 | Osca                   |
+|       32 | Ourense                |
+|       34 | Palència               |
+|       35 | Palmas, Las            |
+|       36 | Pontevedra             |
+|       26 | Rioja, La              |
+|       37 | Salamanca              |
+|       38 | Santa Cruz de Tenerife |
+|       50 | Saragossa              |
+|       40 | Segòvia                |
+|       41 | Sevilla                |
+|       42 | Sòria                  |
+|       43 | Tarragona              |
+|       44 | Terol                  |
+|       45 | Toledo                 |
+|       46 | València               |
+|       47 | Valladolid             |
+|       49 | Zamora                 |
++----------+------------------------+
+54 rows in set (0,00 sec)
+
++---------+----------+----------------------+
+| codimun | codiprov | nom_municipi         |
++---------+----------+----------------------+
+|    0010 |       04 | Abla                 |
+|    0010 |       17 | Agullana             |
+|    0010 |       21 | Alájar               |
+|    0010 |       36 | Arbo                 |
+|    0010 |       48 | Abadiño              |
+|    0011 |       09 | Abajas               |
+|    0011 |       15 | Abegondo             |
+|    0011 |       23 | Albanchez de Mágina  |
+|    0011 |       30 | Abanilla             |
+|    0011 |       42 | Abejar               |
++---------+----------+----------------------+
+10 rows in set (0,00 sec)
+
++-----------+----------------------------+------------------+-------------+--------------------+
+| codi_grup | nom_grup                   | genere_principal | any_creacio | busca_discografica |
++-----------+----------------------------+------------------+-------------+--------------------+
+|         1 | Ayax y Prok                | Rap              |        2010 |                  0 |
+|         2 | Bad Gyal                   | Reggaeton        |        2016 |                  0 |
+|         3 | Belako                     | Rock             |        2011 |                  1 |
+|         4 | Beret                      | Pop              |        2013 |                  1 |
+|         5 | C. Tangana                 | Rap              |        2005 |                  1 |
+|         6 | Cariño                     | Pop              |        2017 |                  0 |
+|         7 | Celtas Cortos              | Folk             |        1984 |                  0 |
+|         8 | Cultura profética          | Reggae           |        1996 |                  1 |
+|         9 | Cupido                     | Pop              |        2018 |                  1 |
+|        10 | Danza Invisible            | Pop              |        1981 |                  0 |
+|        11 | Delorean                   | Electrònica      |        2000 |                  1 |
+|        12 | Dorian                     | Electrònica      |        2002 |                  1 |
+|        13 | Dover                      | Rock             |        1992 |                  1 |
+|        14 | El Último de la Fila       | Rock             |        1985 |                  1 |
+|        15 | Elyella                    | Electrònica      |        2007 |                  1 |
+|        16 | Estopa                     | Funk             |        1999 |                  1 |
+|        17 | Extremoduro                | Rock             |        1987 |                  1 |
+|        18 | Fuel Fandango              | Techno           |        2010 |                  1 |
+|        19 | Funambulista               | Pop              |        2010 |                  1 |
+|        20 | Héroes del Silencio        | Rock             |        1984 |                  1 |
+|        21 | Hora zulú                  | Metal            |        2000 |                  1 |
+|        22 | Izal                       | Rock             |        2010 |                  0 |
+|        23 | Jarabe de Palo             | Pop              |        1996 |                  1 |
+|        24 | Ketama                     | Flamenc          |        1984 |                  1 |
+|        25 | La Bien Querida            | Pop              |        2008 |                  1 |
+|        26 | La Casa Azul               | Pop              |        1997 |                  1 |
+|        27 | La Fuga                    | Punk             |        1996 |                  1 |
+|        28 | La M.O.D.A.                | Folk             |        2011 |                  1 |
+|        29 | La Oreja de Van Gogh       | Pop              |        1996 |                  1 |
+|        30 | La Pegatina                | Rumba            |        2003 |                  1 |
+|        31 | La Polla Records           | Punk             |        1979 |                  1 |
+|        32 | La Quinta Estación         | Pop              |        2000 |                  0 |
+|        33 | Los Brincos                | Pop              |        1964 |                  1 |
+|        34 | Los Chichos                | Rumba            |        2000 |                  0 |
+|        35 | Los Chikos del Maíz        | Rap              |        2005 |                  1 |
+|        36 | Los Delinqüentes           | Rumba            |        1998 |                  1 |
+|        37 | Los Enemigos               | Rock             |        1985 |                  1 |
+|        38 | Los Inhumanos              | Pop              |        1980 |                  1 |
+|        39 | Los Nikis                  | Punk             |        1981 |                  1 |
+|        40 | Los Piratas                | Rock             |        1991 |                  1 |
+|        41 | Los Planetas               | Rock             |        1993 |                  1 |
+|        42 | Los Porretas               | Punk             |        1985 |                  1 |
+|        43 | Los Punsetes               | Rock             |        2004 |                  1 |
+|        44 | Los Rebeldes               | Rockabilly       |        1979 |                  1 |
+|        45 | Los Rodríguez              | Rock             |        1991 |                  1 |
+|        46 | Los Ronaldos               | Rock             |        1987 |                  1 |
+|        47 | Los Secretos               | Pop              |        1978 |                  1 |
+|        48 | Los Sirex                  | Rock             |        1962 |                  1 |
+|        49 | Los Suaves                 | Rock             |        1980 |                  1 |
+|        50 | Los Toreros Muertos        | Rock             |        1984 |                  0 |
+|        51 | Los Zigarros               | Rock             |        2011 |                  1 |
+|        52 | Love of Lesbian            | Rock             |        1997 |                  1 |
+|        53 | M Clan                     | Rock             |        1993 |                  1 |
+|        54 | Mago de Oz                 | Metal            |        1988 |                  1 |
+|        55 | Maika Makovski             | Folk             |        2005 |                  1 |
+|        56 | Maná                       | Pop              |        1981 |                  1 |
+|        57 | María José Llergo          | Flamenc          |        2018 |                  1 |
+|        58 | Mecano                     | Pop              |        1981 |                  1 |
+|        59 | Miss Caffeina              | Rock             |        2006 |                  1 |
+|        60 | Nacha Pop                  | Pop              |        1978 |                  1 |
+|        61 | Nil Moliner                | Pop              |        2005 |                  1 |
+|        62 | Novedades Carminha         | Punk             |        2007 |                  1 |
+|        63 | Pata Negra                 | Flamenc          |        1978 |                  1 |
+|        64 | Pereza                     | Rock             |        2001 |                  1 |
+|        65 | Radio Futura               | Rock             |        1982 |                  1 |
+|        66 | Rayden                     | Rap              |        2000 |                  1 |
+|        67 | Rels B                     | Hip-Hop          |        2012 |                  1 |
+|        68 | Rozalén                    | Soul             |        2012 |                  1 |
+|        69 | Rufus T. Firefly           | Rock             |        2006 |                  1 |
+|        70 | Rulo y la Contrabanda      | Country          |        2010 |                  1 |
+|        71 | Second                     | Rock             |        1997 |                  1 |
+|        72 | Sidecars                   | Pop              |        2006 |                  1 |
+|        73 | Siniestro Total            | Punk             |        1981 |                  1 |
+|        74 | Sôber                      | Metal            |        1994 |                  1 |
+|        75 | Triana                     | Rock             |        1974 |                  1 |
+|        76 | Triángulo de Amor Bizarro  | Rock             |        2004 |                  1 |
+|        77 | Vetusta Morla              | Rock             |        1998 |                  1 |
++-----------+----------------------------+------------------+-------------+--------------------+
+77 rows in set (0,00 sec)
+
++---------+-----------+----------+-----------------------------------------------------+---------------+---------------+
+| id_disc | codi_grup | any_disc | titol                                               | durada_minuts | cost_economic |
++---------+-----------+----------+-----------------------------------------------------+---------------+---------------+
+|       1 |         1 |     2016 | Cara y Cruz                                         |            64 |      18349.00 |
+|       2 |         1 |     2017 | Cementerio de Sirenas                               |            56 |      20786.00 |
+|       3 |         2 |     2018 | Worldwide Angel                                     |            69 |      20518.00 |
+|       4 |         2 |     2021 | Warm Up                                             |            65 |      17418.00 |
+|       5 |         3 |     2016 | Hamabi                                              |            71 |       6808.00 |
+|       6 |         3 |     2018 | Render Me Numb, Trivial Violence                    |            61 |      19383.00 |
+|       7 |         4 |     2016 | Inéditos                                            |            70 |      23307.00 |
+|       8 |         4 |     2019 | Ápices                                              |            74 |      15552.00 |
+|       9 |         5 |     2017 | Ídolo                                               |            64 |      13586.00 |
+|      10 |         5 |     2021 | El Madrileño                                        |            70 |       7224.00 |
+|      11 |         6 |     2018 | Movidas                                             |            69 |      13958.00 |
+|      12 |         6 |     2021 | La importancia de llamarlo amor                     |            65 |      17423.00 |
+|      13 |         7 |     1991 | Gente impresentable                                 |            62 |      20566.00 |
+|      14 |         7 |     1989 | Nos vemos en los bares                              |            55 |      13069.00 |
+|      15 |         8 |     2002 | Diario                                              |            59 |      21954.00 |
+|      16 |         8 |     2010 | La dulzura                                          |            66 |      13632.00 |
+|      17 |         9 |     2019 | Préstame un sentimiento                             |            70 |      12946.00 |
+|      18 |         9 |     2021 | Érase una vez...                                    |            64 |      20813.00 |
+|      19 |        10 |     1983 | Danza Invisible                                     |            56 |      21944.00 |
+|      20 |        10 |     1989 | Contacto Interior                                   |            67 |      21239.00 |
+|      21 |        11 |     2006 | Into the Plateau                                    |            70 |      13818.00 |
+|      22 |        11 |     2010 | Subiza                                              |            67 |      23468.00 |
+|      23 |        12 |     2007 | La ciudad subterránea                               |            74 |      12351.00 |
+|      24 |        12 |     2015 | Diez años y un día                                  |            68 |       8502.00 |
+|      25 |        13 |     1997 | Devil Came to Me                                    |            56 |      10740.00 |
+|      26 |        13 |     2003 | The Flame                                           |            57 |      10399.00 |
+|      27 |        14 |     1986 | Enemigos de lo ajeno                                |            60 |      15708.00 |
+|      28 |        14 |     1988 | Como la cabeza al sombrero                          |            65 |      21971.00 |
+|      29 |        15 |     2019 | Drama                                               |            55 |       8163.00 |
+|      30 |        15 |     2017 | Dreamers                                            |            74 |      21822.00 |
+|      31 |        16 |     2001 | Destrangis                                          |            71 |      17547.00 |
+|      32 |        16 |     2024 | Estopía                                             |            61 |      11542.00 |
+|      33 |        17 |     1989 | Rock transgresivo                                   |            73 |      15401.00 |
+|      34 |        17 |     1996 | Agila                                               |            62 |       7882.00 |
+|      35 |        18 |     2011 | Fuel Fandango                                       |            56 |      23744.00 |
+|      36 |        18 |     2013 | Trece lunas                                         |            65 |      12347.00 |
+|      37 |        19 |     2014 | Quiero que vuelvas                                  |            70 |       6230.00 |
+|      38 |        19 |     2016 | Dual                                                |            74 |      22187.00 |
+|      39 |        20 |     1988 | El mar no cesa                                      |            61 |      12273.00 |
+|      40 |        20 |     1990 | Senderos de traición                                |            74 |      15218.00 |
+|      41 |        21 |     2001 | Siempre soñé saber sobre nadie                      |            70 |       8596.00 |
+|      42 |        21 |     2004 | Grita                                               |            57 |      21942.00 |
+|      43 |        22 |     2012 | Magia & Efectos Especiales                          |            67 |      14430.00 |
+|      44 |        22 |     2015 | Copacabana                                          |            72 |      18889.00 |
+|      45 |        23 |     1996 | La Flaca                                            |            71 |      18440.00 |
+|      46 |        23 |     1998 | Depende                                             |            70 |      16340.00 |
+|      47 |        24 |     1987 | Ketama                                              |            74 |      19380.00 |
+|      48 |        24 |     1988 | Songhai                                             |            61 |      15933.00 |
+|      49 |        25 |     2009 | Romancero                                           |            60 |       8559.00 |
+|      50 |        25 |     2012 | Ceremonia                                           |            65 |      13511.00 |
+|      51 |        26 |     2003 | Tan simple como el amor                             |            62 |      19207.00 |
+|      52 |        26 |     2007 | La revolución sexual                                |            74 |      20120.00 |
+|      53 |        27 |     2002 | Mientras brille la luna                             |            61 |      19523.00 |
+|      54 |        27 |     2003 | Negociando Gasolina                                 |            57 |       9566.00 |
+|      55 |        28 |     2011 | La Maravillosa Orquesta del Alcohol                 |            62 |      16769.00 |
+|      56 |        28 |     2013 | ¿Quién nos va a salvar?                             |            68 |       9844.00 |
+|      57 |        29 |     1998 | Dile al sol                                         |            68 |      23479.00 |
+|      58 |        29 |     2003 | Lo que te conté mientras te hacías la dormida       |            69 |      17863.00 |
+|      59 |        30 |     2010 | Al Carrer!                                          |            56 |      16523.00 |
+|      60 |        30 |     2012 | Eureka!                                             |            64 |      12512.00 |
+|      61 |        31 |     1984 | Salve                                               |            58 |      12975.00 |
+|      62 |        31 |     1985 | Revolución                                          |            60 |      23647.00 |
+|      63 |        32 |     2001 | Primera toma                                        |            64 |      17280.00 |
+|      64 |        32 |     2004 | Flores de alquiler                                  |            57 |      19330.00 |
+|      65 |        33 |     1968 | Contrabando                                         |            67 |      13852.00 |
+|      66 |        33 |     1970 | Mundo, demonio y carne                              |            69 |      11171.00 |
+|      67 |        34 |     1977 | Ni más ni menos                                     |            56 |      12617.00 |
+|      68 |        34 |     1981 | Voy en un coche                                     |            64 |       6467.00 |
+|      69 |        35 |     2007 | Los chikos del maíz                                 |            69 |       7561.00 |
+|      70 |        35 |     2010 | Pasión de Talibanes                                 |            56 |      10238.00 |
+|      71 |        36 |     2001 | El sentimiento garrapatero que nos traen las flores |            69 |      21349.00 |
+|      72 |        36 |     2004 | Bienvenidos a la época iconoclasta                  |            70 |      11643.00 |
+|      73 |        37 |     1991 | Ferpectamente                                       |            68 |      13117.00 |
+|      74 |        37 |     1993 | La vida mata                                        |            70 |       6707.00 |
+|      75 |        38 |     1997 | 30 éxitos insuperables                              |            60 |      10500.00 |
+|      76 |        38 |     2004 | Mega Inhumanos                                      |            69 |      18666.00 |
+|      77 |        39 |     1981 | La Amenaza Amarilla                                 |            61 |      17736.00 |
+|      78 |        39 |     1983 | Gran ganga                                          |            61 |      21754.00 |
+|      79 |        40 |     1994 | Quiero hacerte gritar                               |            62 |      14722.00 |
+|      80 |        40 |     1997 | Poligamia                                           |            71 |      13443.00 |
+|      81 |        41 |     1994 | Super 8                                             |            67 |      10550.00 |
+|      82 |        41 |     1998 | Una semana en el motor de un autobús                |            64 |      18020.00 |
+|      83 |        42 |     1991 | Brigada del vicio                                   |            70 |       9370.00 |
+|      84 |        42 |     2006 | Clásicos                                            |            61 |       6085.00 |
+|      85 |        43 |     2008 | Los Punsetes                                        |            74 |      19624.00 |
+|      86 |        43 |     2010 | LP2                                                 |            63 |      15132.00 |
+|      87 |        44 |     1981 | Los Rebeldes                                        |            62 |      23509.00 |
+|      88 |        44 |     1982 | Cambio de Plan                                      |            57 |       9157.00 |
+|      89 |        45 |     1993 | Para no olvidar                                     |            58 |      15305.00 |
+|      90 |        45 |     1995 | Palabras más, palabras menos                        |            64 |      18907.00 |
+|      91 |        46 |     1985 | Saca la lengua                                      |            61 |       7855.00 |
+|      92 |        46 |     1987 | Sabor salado                                        |            61 |      15733.00 |
+|      93 |        47 |     1981 | Los Secretos                                        |            56 |      16450.00 |
+|      94 |        47 |     1983 | La calle del olvido                                 |            58 |       7777.00 |
+|      95 |        48 |     1965 | Los Sirex                                           |            64 |      23440.00 |
+|      96 |        48 |     1966 | Sirex en acción                                     |            58 |      21363.00 |
+|      97 |        49 |     1991 | Esta vida me va a matar                             |            72 |      17412.00 |
+|      98 |        49 |     1993 | Siempre igual                                       |            61 |      10786.00 |
+|      99 |        50 |     1986 | Los Toreros Muertos                                 |            66 |      22951.00 |
+|     100 |        50 |     2017 | 30 años de éxitos                                   |            69 |      19152.00 |
+|     101 |        51 |     2013 | Los Zigarros                                        |            59 |      23801.00 |
+|     102 |        51 |     2016 | A todo que sí                                       |            58 |      12223.00 |
+|     103 |        52 |     2009 | 1999 O cómo generar..                               |            59 |      12398.00 |
+|     104 |        52 |     2012 | La noche eterna. Los días no vividos                |            60 |      15730.00 |
+|     105 |        53 |     2014 | Unplugged                                           |            59 |      15761.00 |
+|     106 |        53 |     1998 | Memorias de un espantapájaros                       |            65 |      14738.00 |
+|     107 |        54 |     1994 | Mägo de Oz                                          |            63 |      11651.00 |
+|     108 |        54 |     2000 | Finisterra                                          |            67 |      23915.00 |
+|     109 |        55 |     2009 | Maika Makovski                                      |            74 |      17094.00 |
+|     110 |        55 |     2012 | Chinook Wind                                        |            72 |      12003.00 |
+|     111 |        56 |     1992 | ¿Dónde jugarán los niños?                           |            56 |       9113.00 |
+|     112 |        56 |     1997 | Sueños líquidos                                     |            69 |      22574.00 |
+|     113 |        57 |     2020 | Sanación                                            |            65 |       8973.00 |
+|     114 |        57 |     2023 | Ultrabelleza                                        |            61 |      13081.00 |
+|     115 |        58 |     1986 | Entre el cielo y el suelo                           |            58 |      13660.00 |
+|     116 |        58 |     1988 | Descanso dominical                                  |            65 |      23965.00 |
+|     117 |        59 |     2010 | Imposibilidad del fenómeno                          |            66 |       7165.00 |
+|     118 |        59 |     2013 | Detroit                                             |            73 |      22123.00 |
+|     119 |        60 |     1980 | Nacha Pop                                           |            56 |       7048.00 |
+|     120 |        60 |     1982 | Buena disposición                                   |            69 |      11938.00 |
+|     121 |        61 |     2019 | Nil Moliner                                         |            59 |      16553.00 |
+|     122 |        61 |     2021 | Bailando en la batalla                              |            74 |      23196.00 |
+|     123 |        62 |     2013 | Novedades Carminha                                  |            72 |      20241.00 |
+|     124 |        62 |     2018 | Campeones del mundo                                 |            64 |      18007.00 |
+|     125 |        63 |     1981 | Pata Negra                                          |            63 |      22600.00 |
+|     126 |        63 |     1987 | Blues de la Frontera                                |            67 |      10729.00 |
+|     127 |        64 |     2001 | Pereza                                              |            71 |       7789.00 |
+|     128 |        64 |     2005 | Animales                                            |            72 |      16634.00 |
+|     129 |        65 |     1980 | Música moderna                                      |            63 |      17041.00 |
+|     130 |        65 |     1985 | De un país en llamas                                |            61 |      17223.00 |
+|     131 |        66 |     2014 | Antónimo                                            |            72 |       8440.00 |
+|     132 |        66 |     2016 | En alma y hueso                                     |            73 |      22793.00 |
+|     133 |        67 |     2015 | Happy Birthday Flakko                               |            65 |      19293.00 |
+|     134 |        67 |     2017 | Flakk Daniel's LP                                   |            70 |      11498.00 |
+|     135 |        68 |     2013 | Con derecho a...                                    |            55 |      10269.00 |
+|     136 |        68 |     2017 | Cuando el río suena...                              |            55 |      20369.00 |
+|     137 |        69 |     2008 | My Synthetic Heart                                  |            60 |      20879.00 |
+|     138 |        69 |     2014 | Nueve                                               |            70 |      18435.00 |
+|     139 |        70 |     2013 | Señales de humo                                     |            74 |      19279.00 |
+|     140 |        70 |     2015 | Especies en extinción                               |            55 |      22522.00 |
+|     141 |        71 |     2009 | Fracciones de un segundo                            |            70 |      15064.00 |
+|     142 |        71 |     2013 | Montaña rusa                                        |            71 |      23154.00 |
+|     143 |        72 |     2011 | Cremalleras                                         |            66 |      19319.00 |
+|     144 |        72 |     2016 | Cuestión de gravedad                                |            68 |      13191.00 |
+|     145 |        73 |     1982 | ¿Cuándo se come aquí?                               |            63 |      13881.00 |
+|     146 |        73 |     1984 | En beneficio de todos                               |            56 |      14353.00 |
+|     147 |        74 |     1996 | Torcidos                                            |            55 |       8422.00 |
+|     148 |        74 |     2024 | Retorcidos                                          |            68 |       8437.00 |
+|     149 |        75 |     1975 | El Patio                                            |            60 |      23684.00 |
+|     150 |        75 |     1977 | Hijos del agobio                                    |            62 |       8707.00 |
+|     151 |        76 |     2007 | Mushroom pillow                                     |            73 |      23659.00 |
+|     152 |        76 |     2010 | Año Santo                                           |            62 |       8539.00 |
+|     153 |        77 |     2008 | Un día en el mundo                                  |            68 |      11774.00 |
+|     154 |        77 |     2011 | Mapas                                               |            67 |       8458.00 |
++---------+-----------+----------+-----------------------------------------------------+---------------+---------------+
+154 rows in set (0,00 sec)
+
++-----------+--------------+
+| id_genere | nom          |
++-----------+--------------+
+|         1 | Rap          |
+|         2 | Reggaeton    |
+|         3 | Rock         |
+|         4 | Pop          |
+|         5 | Folk         |
+|         6 | Reggae       |
+|         7 | Electrònica  |
+|         8 | Funk         |
+|         9 | Techno       |
+|        10 | Metal        |
+|        11 | Flamenc      |
+|        12 | Punk         |
+|        13 | Rumba        |
+|        14 | Rockabilly   |
+|        15 | Hip-Hop      |
+|        16 | Soul         |
+|        17 | Country      |
++-----------+--------------+
+17 rows in set (0,00 sec)
+
++------------+-----------------------+--------------------------+--------------------------------+
+| NIF        | nom                   | email                    | web                            |
++------------+-----------------------+--------------------------+--------------------------------+
+| A47748482E | Mute Records          | muterec@mute.com         | https://www.muterec.com        |
+| B46518169W | BMG Rights Management | bmgrm@bmg.com            | https://www.bmgrm.com          |
+| C41335400F | Discos Belter         | dbelter@belter.es        | https://www.dbelter.es         |
+| D44460802P | Sony Music            | sonymusic@sony.es        | https://www.sonymusic.es       |
+| D47132492H | Altafonte Network     | altanet@altanet.es       | https://www.altanet.es         |
+| E35626261C | Elefant Records       | elefant@elerec.fr        | https://www.elefant.fr         |
+| E46903680X | Universal Music Group | universalmusic@umg.com   | https://www.universalmusic.com |
+| F39115993P | Warner Music Group    | warnermusic@warner.com   | https://www.warnermusic.com    |
+| F44763825Y | Rock Indiana          | rockindi@rindi.com       | https://www.rockindi.com       |
+| G34878926R | EMI                   | emi@emi.com              | https://www.emi.com            |
+| G40910347V | Columbia Records      | columbiarec@columbia.com | https://www.columbiarec.com    |
+| H36260258E | Epic Records          | epic@epic.com            | https://www.epic.com           |
+| H37056648Z | Subterfuge Records    | subrecords@subrec.com    | https://www.subrecords.com     |
+| I46646465G | PolyGram              | polygram@polygram.com    | https://www.polygram.com       |
+| J46032381C | Perro Records         | perrorecords@mgqp.es     | https://www.perrorecords.es    |
+| K42212511J | PIAS Recordings       | piasrec@pias.es          | https://www.piasrec.es         |
+| L38965413D | Virgin Records        | virgin@records.com       | https://www.virgin.com         |
+| M34189531P | RCA Records           | rca@rca.com              | https://www.rca.com            |
+| N34061415W | Warner Bros. Records  | wbros@warner.com         | https://www.wbros.cpm          |
++------------+-----------------------+--------------------------+--------------------------------+
+19 rows in set (0,00 sec)
+
++--------------+-----------+------------+------------+------------+
+| id_contracte | codi_grup | NIF        | data_inici | data_final |
++--------------+-----------+------------+------------+------------+
+|            1 |         1 | D44460802P | 2023-01-01 | NULL       |
+|            2 |         2 | E46903680X | 2022-05-15 | 2023-05-14 |
+|            3 |        50 | F39115993P | 2023-09-01 | NULL       |
+|            4 |        32 | G34878926R | 2024-03-01 | NULL       |
+|            5 |        10 | E46903680X | 2024-01-01 | NULL       |
+|            6 |         6 | F39115993P | 2024-04-01 | NULL       |
+|            7 |         7 | D44460802P | 2024-06-01 | NULL       |
+|            8 |        34 | E46903680X | 2024-09-01 | NULL       |
+|            9 |        22 | J46032381C | 2025-01-01 | NULL       |
+|           10 |         2 | D44460802P | 2025-05-01 | NULL       |
++--------------+-----------+------------+------------+------------+
+10 rows in set (0,00 sec)
+
++------------+-----------+--------------+------------+---------------+--------------------+--------------------+
+| id_concert | codi_grup | data_concert | hora_inici | codi_municipi | preu_entrada_pista | preu_entrada_grada |
++------------+-----------+--------------+------------+---------------+--------------------+--------------------+
+|          1 |         1 | 2024-05-01   | 20:00:00   |          1469 |              20.00 |              30.00 |
+|          2 |         2 | 2024-05-15   | 21:30:00   |          9102 |              25.00 |              35.00 |
+|          3 |         3 | 2024-05-30   | 19:00:00   |          9120 |              15.00 |              25.00 |
+|          4 |         4 | 2024-06-05   | 18:30:00   |          9139 |              20.00 |              30.00 |
+|          5 |         5 | 2024-06-10   | 19:45:00   |          9141 |              25.00 |              35.00 |
+|          6 |         6 | 2024-06-15   | 21:00:00   |          9154 |              15.00 |              25.00 |
+|          7 |         7 | 2024-06-20   | 20:15:00   |          9158 |              20.00 |              30.00 |
+|          8 |         8 | 2024-06-25   | 19:30:00   |          9167 |              25.00 |              35.00 |
+|          9 |         9 | 2024-06-30   | 18:45:00   |          9998 |              15.00 |              25.00 |
+|         10 |        10 | 2024-07-05   | 20:00:00   |          9999 |              20.00 |              30.00 |
++------------+-----------+--------------+------------+---------------+--------------------+--------------------+
+10 rows in set (0,00 sec)
+
++-------------+-----------+-----------+
+| id_relacion | codi_grup | id_genere |
++-------------+-----------+-----------+
+|           1 |         1 |         1 |
+|           2 |         2 |         2 |
+|           3 |         3 |         3 |
+|           4 |         4 |         4 |
+|           5 |         5 |         1 |
+|           6 |         6 |         4 |
+|           7 |         7 |         5 |
+|           8 |         8 |         6 |
+|           9 |         9 |         4 |
+|          10 |        10 |         4 |
+|          11 |        11 |         7 |
+|          12 |        12 |         7 |
+|          13 |        13 |         3 |
+|          14 |        14 |         3 |
+|          15 |        15 |         7 |
+|          16 |        16 |         8 |
+|          17 |        17 |         3 |
+|          18 |        18 |         9 |
+|          19 |        19 |         4 |
+|          20 |        20 |         3 |
+|          21 |        21 |        10 |
+|          22 |        22 |         3 |
+|          23 |        23 |         4 |
+|          24 |        24 |        11 |
+|          25 |        25 |         4 |
+|          26 |        26 |         4 |
+|          27 |        27 |        12 |
+|          28 |        28 |         5 |
+|          29 |        29 |         4 |
+|          30 |        30 |        13 |
+|          31 |        31 |        12 |
+|          32 |        32 |         4 |
+|          33 |        33 |         4 |
+|          34 |        34 |        13 |
+|          35 |        35 |         1 |
+|          36 |        36 |        13 |
+|          37 |        37 |         3 |
+|          38 |        38 |         4 |
+|          39 |        39 |        12 |
+|          40 |        40 |         3 |
+|          41 |        41 |         3 |
+|          42 |        42 |        12 |
+|          43 |        43 |         3 |
+|          44 |        44 |        14 |
+|          45 |        45 |         3 |
+|          46 |        46 |         3 |
+|          47 |        47 |         4 |
+|          48 |        48 |         3 |
+|          49 |        49 |         3 |
+|          50 |        50 |         3 |
+|          51 |        51 |         3 |
+|          52 |        52 |         3 |
+|          53 |        53 |         3 |
+|          54 |        54 |        10 |
+|          55 |        55 |         5 |
+|          56 |        56 |         4 |
+|          57 |        57 |        11 |
+|          58 |        58 |         4 |
+|          59 |        59 |         3 |
+|          60 |        60 |         4 |
+|          61 |        61 |         4 |
+|          62 |        62 |        12 |
+|          63 |        63 |        11 |
+|          64 |        64 |         3 |
+|          65 |        65 |         3 |
+|          66 |        66 |         1 |
+|          67 |        67 |        15 |
+|          68 |        68 |        16 |
+|          69 |        69 |         3 |
+|          70 |        70 |        17 |
+|          71 |        71 |         3 |
+|          72 |        72 |         4 |
+|          73 |        73 |        12 |
+|          74 |        74 |        10 |
+|          75 |        75 |         3 |
+|          76 |        76 |         3 |
+|          77 |        77 |         3 |
++-------------+-----------+-----------+
+77 rows in set (0,01 sec)
