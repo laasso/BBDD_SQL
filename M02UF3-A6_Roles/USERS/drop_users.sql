@@ -1,0 +1,9 @@
+DROP USER IF EXISTS 'Venedor1'@'localhost';
+DROP USER IF EXISTS 'Venedor2'@'localhost';
+DROP USER IF EXISTS 'Venedor3'@'localhost';
+DROP USER IF EXISTS 'Director1'@'localhost';
+DROP USER IF EXISTS 'Director2'@'localhost';
+DROP USER IF EXISTS 'Gerent'@'localhost';
+DROP ROLE IF EXISTS 'Venedor';
+DROP ROLE IF EXISTS 'Director';
+DROP ROLE IF EXISTS 'Gerent';
