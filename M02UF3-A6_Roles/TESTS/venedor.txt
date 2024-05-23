@@ -1,28 +1,7 @@
-mysql:[Venedor1:vk22]> tee /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/venedor.txt
-mysql:[Venedor1:vk22]> SOURCE /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/venedor.sql
-Database changed
-+-------------+------------+--------------+------+------+-----+------+
-| num_comanda | descripcio | data_comanda | clie | ven  | iva | dte  |
-+-------------+------------+--------------+------+------+-----+------+
-|      112885 | Autoservei | 1989-06-15   | 2102 |  101 |  16 |    0 |
-+-------------+------------+--------------+------+------+-----+------+
-1 row in set (0,00 sec)
+mysql:[DanRoberts:(none)]> source /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/venedor.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
 
-ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
-Query OK, 1 row affected (0,01 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
-
-+-------------+-----+----------+-----------+--------+
-| num_comanda | fab | producte | quantitat | preu   |
-+-------------+-----+----------+-----------+--------+
-|      112885 | imm | 887p     |         2 | 375.00 |
-+-------------+-----+----------+-----------+--------+
-1 row in set (0,00 sec)
-
-ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
-ERROR 1142 (42000): SELECT command denied to user 'Venedor1'@'localhost' for table 'productes'
-ERROR 1142 (42000): INSERT command denied to user 'Venedor1'@'localhost' for table 'productes'
-mysql:[Venedor1:vk22]> SOURCE /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/venedor.sql
 Database changed
 +-------------+------------+--------------+------+------+-----+------+
 | num_comanda | descripcio | data_comanda | clie | ven  | iva | dte  |
@@ -43,6 +22,6 @@ Rows matched: 1  Changed: 1  Warnings: 0
 1 row in set (0,01 sec)
 
 ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
-ERROR 1142 (42000): SELECT command denied to user 'Venedor1'@'localhost' for table 'productes'
-ERROR 1142 (42000): INSERT command denied to user 'Venedor1'@'localhost' for table 'productes'
-mysql:[Venedor1:vk22]> EXIT
+ERROR 1142 (42000): SELECT command denied to user 'DanRoberts'@'localhost' for table 'productes'
+ERROR 1142 (42000): INSERT command denied to user 'DanRoberts'@'localhost' for table 'productes'
+mysql:[DanRoberts:vk22]> exit

@@ -1,4 +1,4 @@
-\mysql:[Director1:(none)]> source /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/director.sql
+mysql:[BobSmith:(none)]> source /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/director.sql
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
@@ -15,11 +15,11 @@ Query OK, 0 rows affected (0,00 sec)
 +-------------+------------+--------------+------+------+-----+------+
 | num_comanda | descripcio | data_comanda | clie | ven  | iva | dte  |
 +-------------+------------+--------------+------+------+-----+------+
-|      112950 | Autoservei | 1995-11-21   | 2107 |  110 |  16 |    0 |
+|      112885 | Autoservei | 1989-06-15   | 2102 |  101 |  16 |    0 |
 +-------------+------------+--------------+------+------+-----+------+
 1 row in set (0,00 sec)
 
 ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
-Query OK, 0 rows affected (0,00 sec)
+Query OK, 1 row affected (0,00 sec)
 
-mysql:[Director1:vk22]> exit
+mysql:[BobSmith:vk22]> exit

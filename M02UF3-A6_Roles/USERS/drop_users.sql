@@ -1,9 +1,12 @@
-DROP USER IF EXISTS 'Venedor1'@'localhost';
-DROP USER IF EXISTS 'Venedor2'@'localhost';
-DROP USER IF EXISTS 'Venedor3'@'localhost';
-DROP USER IF EXISTS 'Director1'@'localhost';
-DROP USER IF EXISTS 'Director2'@'localhost';
-DROP USER IF EXISTS 'Gerent'@'localhost';
+-- Eliminar usuarios
+DROP USER IF EXISTS 'DanRoberts'@'localhost';
+DROP USER IF EXISTS 'SueSmith'@'localhost';
+DROP USER IF EXISTS 'PaulCruz'@'localhost';
+DROP USER IF EXISTS 'BobSmith'@'localhost';
+DROP USER IF EXISTS 'LarryFitch'@'localhost';
+DROP USER IF EXISTS 'SamClark'@'localhost';
+
+-- Eliminar roles
 DROP ROLE IF EXISTS 'Venedor';
 DROP ROLE IF EXISTS 'Director';
 DROP ROLE IF EXISTS 'Gerent';

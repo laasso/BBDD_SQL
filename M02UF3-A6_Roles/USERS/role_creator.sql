@@ -1,11 +1,13 @@
--- Crear rols i assignar privilegis
-CREATE ROLE Venedor;
-GRANT SELECT, INSERT, UPDATE ON vk22.comandes TO Venedor;
-GRANT SELECT, INSERT, UPDATE ON vk22.detall TO Venedor;
-GRANT SELECT ON vk22.clients TO Venedor;
+-- Crear rols
+CREATE ROLE venedor;
+CREATE ROLE director;
+CREATE ROLE gerent;
 
-CREATE ROLE Director;
-GRANT SELECT, UPDATE, DELETE, DROP, ALTER ON vk22.* TO Director;
+-- Assignar privilegis als rols
+GRANT SELECT, INSERT, UPDATE ON vk22.comandes TO venedor;
+GRANT SELECT, INSERT, UPDATE ON vk22.detall TO venedor;
+GRANT SELECT ON vk22.clients TO venedor;
 
-CREATE ROLE Gerent;
-GRANT ALL PRIVILEGES ON vk22.* TO Gerent;
+GRANT SELECT, UPDATE, DELETE, DROP, ALTER ON vk22.* TO director;
+
+GRANT ALL PRIVILEGES ON vk22.* TO gerent;
