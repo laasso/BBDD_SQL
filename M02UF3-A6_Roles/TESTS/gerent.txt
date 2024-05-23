@@ -1,2 +1,16 @@
-num_ven	nom	any_naix	oficina_ven	titol	contracte	director	quota	vendes
-101	Dan Roberts	1945	12	Venedor	1986-10-20	104	300000	354637
+mysql:[Gerent:vk22]> source /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/gerent.sql
+Database changed
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+| num_ven | nom         | any_naix | oficina_ven | titol   | contracte  | director | quota  | vendes |
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+|     101 | Dan Roberts |     1945 |          12 | Venedor | 1986-10-20 |      104 | 300000 | 354637 |
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+1 row in set (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 1 row affected (0,01 sec)
+
+Query OK, 0 rows affected (0,02 sec)
+
+mysql:[Gerent:vk22]> exit

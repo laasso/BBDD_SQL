@@ -1,0 +1,25 @@
+\mysql:[Director1:(none)]> source /home/lasso/BBDD_SQL/M02UF3-A6_Roles/TESTS/director.sql
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+| num_ven | nom         | any_naix | oficina_ven | titol   | contracte  | director | quota  | vendes |
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+|     101 | Dan Roberts |     1945 |          12 | Venedor | 1986-10-20 |      104 | 300000 | 354637 |
++---------+-------------+----------+-------------+---------+------------+----------+--------+--------+
+1 row in set (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
++-------------+------------+--------------+------+------+-----+------+
+| num_comanda | descripcio | data_comanda | clie | ven  | iva | dte  |
++-------------+------------+--------------+------+------+-----+------+
+|      112950 | Autoservei | 1995-11-21   | 2107 |  110 |  16 |    0 |
++-------------+------------+--------------+------+------+-----+------+
+1 row in set (0,00 sec)
+
+ERROR 1216 (23000): Cannot add or update a child row: a foreign key constraint fails
+Query OK, 0 rows affected (0,00 sec)
+
+mysql:[Director1:vk22]> exit

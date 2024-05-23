@@ -5,13 +5,10 @@ USE vk22;
 SELECT * FROM venedors LIMIT 1;
 
 -- Prova DELETE a la taula "venedors"
-DELETE FROM venedors WHERE id_venedor = 1;
-
--- Prova SELECT a la taula "comandes"
-SELECT * FROM comandes LIMIT 1;
+DELETE FROM venedors WHERE num_ven = 1;
 
 -- Prova DELETE a la taula "comandes"
-DELETE FROM comandes WHERE id_comanda = 1;
+DELETE FROM comandes WHERE num_comanda = 112885;
 
 -- Prova creació d'una nova taula de nom 'gerencia'
 CREATE TABLE gerencia (

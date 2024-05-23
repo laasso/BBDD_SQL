@@ -8,6 +8,10 @@
 /*!50503 SET character_set_client = utf8mb4 */;
 /* mysqldump -u root -p -v --skip-extended-insert --skip-comments --skip-add-locks --skip-disable-keys --skip-opt --skip-triggers vk22 > sql/backup_vendesK22-create-insert.sql */
 
+DROP DATABASE IF EXISTS `vk22`;
+CREATE DATABASE `vk22`;
+USE `vk22`;
+
 CREATE TABLE `clients` (
   `num_clie` int NOT NULL AUTO_INCREMENT COMMENT 'Codi de client i clau primària',
   `societat` varchar(20) NOT NULL COMMENT 'Nom del client o empresa',
