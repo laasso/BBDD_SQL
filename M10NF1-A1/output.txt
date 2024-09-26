@@ -1,0 +1,168 @@
+mysql:[root:vk21]> source /home/lasso/BBDD_SQL/M10NF1-A1/triggers.sql
+Database changed
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+Query OK, 0 rows affected (0,01 sec)
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+mysql:[root:vk21]> show triggers;
++------------------------+--------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------+--------------------+
+| Trigger                | Event  | Table  | Statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Timing | Created                | sql_mode                                                                                                              | Definer        | character_set_client | collation_connection | Database Collation |
++------------------------+--------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------+--------------------+
+| actualiza_stock_insert | INSERT | detall | BEGIN
+    
+    UPDATE productes
+    SET stock = stock - NEW.quantitat
+    WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+END                                                                                                                                                                                                                                                                                                                                                                                                                  | AFTER  | 2024-09-26 18:44:14.78 | ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION | root@localhost | utf8mb4              | utf8mb4_0900_ai_ci   | utf8mb4_0900_ai_ci |
+| actualiza_stock_update | UPDATE | detall | BEGIN
+    
+    IF OLD.producte = NEW.producte AND OLD.fab = NEW.fab THEN
+        UPDATE productes
+        SET stock = stock - (NEW.quantitat - OLD.quantitat)
+        WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+    ELSE
+        
+        
+        UPDATE productes
+        SET stock = stock + OLD.quantitat
+        WHERE id_producte = OLD.producte AND id_fab = OLD.fab;
+
+        
+        UPDATE productes
+        SET stock = stock - NEW.quantitat
+        WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+    END IF;
+END | AFTER  | 2024-09-26 18:44:14.79 | ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION | root@localhost | utf8mb4              | utf8mb4_0900_ai_ci   | utf8mb4_0900_ai_ci |
+| actualiza_stock_delete | DELETE | detall | BEGIN
+    
+    UPDATE productes
+    SET stock = stock + OLD.quantitat
+    WHERE id_producte = OLD.producte AND id_fab = OLD.fab;
+END                                                                                                                                                                                                                                                                                                                                                                                                                  | AFTER  | 2024-09-26 18:44:14.80 | ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION | root@localhost | utf8mb4              | utf8mb4_0900_ai_ci   | utf8mb4_0900_ai_ci |
++------------------------+--------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------------------+-----------------------------------------------------------------------------------------------------------------------+----------------+----------------------+----------------------+--------------------+
+3 rows in set (0,00 sec)
+
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="aci";
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| id_fab | id_producte | descripcio      | preu  | stock | datamod    | imatge       |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| aci    | 41001       | Articulo Tipo 1 | 82.50 |   808 | 2021-01-08 | noimatge.png |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> INSERT INTO comandes VALUES('113240', 'Joc de proves', '2024-09-25', 2111, 105, 21, 0);
+te, quantitat, preu) VALUES('113240','aci', '41001Query OK, 1 row affected (0,01 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> INSERT INTO detall(num_comanda,fab, producte, quantitat, preu) VALUES('113240','aci', '41001', 10, 82.50);
+Query OK, 1 row affected (0,01 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM detall WHERE num_comanda='113240';
++-------------+-----+----------+-----------+-------+
+| num_comanda | fab | producte | quantitat | preu  |
++-------------+-----+----------+-----------+-------+
+|      113240 | aci | 41001    |        10 | 82.50 |
++-------------+-----+----------+-----------+-------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="aci";
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| id_fab | id_producte | descripcio      | preu  | stock | datamod    | imatge       |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| aci    | 41001       | Articulo Tipo 1 | 82.50 |   798 | 2021-01-08 | noimatge.png |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> UPDATE detall SET quantitat=15 WHERE num_comanda='113240';
+Query OK, 1 row affected (0,00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM detall WHERE num_comanda='113240';
++-------------+-----+----------+-----------+-------+
+| num_comanda | fab | producte | quantitat | preu  |
++-------------+-----+----------+-----------+-------+
+|      113240 | aci | 41001    |        15 | 82.50 |
++-------------+-----+----------+-----------+-------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="aci";
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| id_fab | id_producte | descripcio      | preu  | stock | datamod    | imatge       |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| aci    | 41001       | Articulo Tipo 1 | 82.50 |   793 | 2021-01-08 | noimatge.png |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="bio";
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| id_fab | id_producte | descripcio        | preu  | stock | datamod    | imatge         |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| bio    | 41001       | Tubo ensayo c/250 | 30.00 |  1173 | 2021-01-25 | tubensc250.png |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> UPDATE detall SET fab='bio', preu=30.00 WHERE num_comanda='113240';
+Query OK, 1 row affected (0,00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM detall WHERE num_comanda='113240';
++-------------+-----+----------+-----------+-------+
+| num_comanda | fab | producte | quantitat | preu  |
++-------------+-----+----------+-----------+-------+
+|      113240 | bio | 41001    |        15 | 30.00 |
++-------------+-----+----------+-----------+-------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="aci";
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| id_fab | id_producte | descripcio      | preu  | stock | datamod    | imatge       |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+| aci    | 41001       | Articulo Tipo 1 | 82.50 |   808 | 2021-01-08 | noimatge.png |
++--------+-------------+-----------------+-------+-------+------------+--------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="bio";
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| id_fab | id_producte | descripcio        | preu  | stock | datamod    | imatge         |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| bio    | 41001       | Tubo ensayo c/250 | 30.00 |  1158 | 2021-01-25 | tubensc250.png |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> DELETE FROM detall WHERE num_comanda='113240';
+Query OK, 1 row affected (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM detall WHERE num_comanda='113240';
+Empty set (0,00 sec)
+
+mysql:[root:vk21]> 
+mysql:[root:vk21]> SELECT * FROM productes WHERE id_producte="41001" AND id_fab="bio";
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| id_fab | id_producte | descripcio        | preu  | stock | datamod    | imatge         |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+| bio    | 41001       | Tubo ensayo c/250 | 30.00 |  1173 | 2021-01-25 | tubensc250.png |
++--------+-------------+-------------------+-------+-------+------------+----------------+
+1 row in set (0,00 sec)
+
+mysql:[root:vk21]> 

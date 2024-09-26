@@ -1,69 +1,62 @@
 USE vk21;
 
+-- Trigger para insertar en detall
 DROP TRIGGER IF EXISTS actualiza_stock_insert;
-DROP TRIGGER IF EXISTS actualiza_stock_update;
-DROP TRIGGER IF EXISTS actualiza_stock_delete;
-
 DELIMITER $$
 
-CREATE TRIGGER IF NOT EXISTS actualiza_stock_insert 
+CREATE TRIGGER actualiza_stock_insert
 AFTER INSERT ON detall
 FOR EACH ROW
 BEGIN
-  DECLARE stock_actual INT;
+    -- Ajustar el stock del producto en función de la cantidad insertada
+    UPDATE productes
+    SET stock = stock - NEW.quantitat
+    WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+END$$
 
-  SELECT stock INTO stock_actual FROM productes WHERE num_prod = NEW.num_prod;
-
-  IF NEW.unitats > stock_actual THEN
-    SET NEW.unitats = stock_actual;
-  END IF;
-
-  UPDATE productes 
-  SET stock = stock - NEW.unitats 
-  WHERE num_prod = NEW.num_prod;
-END $$
 DELIMITER ;
 
--- Trigger para controlar las actualizaciones en la tabla `detall`
+-- Trigger para actualizar en detall
+DROP TRIGGER IF EXISTS actualiza_stock_update;
 DELIMITER $$
-CREATE TRIGGER ID NOT EXISTS actualiza_stock_update 
+
+CREATE TRIGGER actualiza_stock_update
 AFTER UPDATE ON detall
 FOR EACH ROW
 BEGIN
-  DECLARE stock_actual INT;
-  DECLARE diferencia INT;
+    -- Si se cambia la cantidad del mismo producto
+    IF OLD.producte = NEW.producte AND OLD.fab = NEW.fab THEN
+        UPDATE productes
+        SET stock = stock - (NEW.quantitat - OLD.quantitat)
+        WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+    ELSE
+        -- Si se cambia el producto o el fabricante
+        -- Reponer el stock del producto antiguo
+        UPDATE productes
+        SET stock = stock + OLD.quantitat
+        WHERE id_producte = OLD.producte AND id_fab = OLD.fab;
 
-  -- Obtenemos el stock actual del producto
-  SELECT stock INTO stock_actual FROM productes WHERE num_prod = NEW.num_prod;
-
-  -- Calculamos la diferencia entre la nueva cantidad y la cantidad anterior
-  SET diferencia = NEW.unitats - OLD.unitats;
-
-  -- Si la nueva cantidad excede el stock disponible, ajustamos la cantidad
-  IF diferencia > stock_actual THEN
-    SET NEW.unitats = OLD.unitats + stock_actual;
-    SET diferencia = stock_actual;
-  END IF;
-
-  -- Actualizamos el stock en función de la diferencia de unidades
-  UPDATE productes 
-  SET stock = stock - diferencia 
-  WHERE num_prod = NEW.num_prod;
+        -- Reducir el stock del nuevo producto
+        UPDATE productes
+        SET stock = stock - NEW.quantitat
+        WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
+    END IF;
 END $$
+
 DELIMITER ;
 
--- Trigger para controlar las eliminaciones en la tabla `detall`
-
+-- Trigger para eliminar en detall
+DROP TRIGGER IF EXISTS actualiza_stock_delete;
 DELIMITER $$
-CREATE TRIGGER actualiza_stock_delete 
+
+CREATE TRIGGER actualiza_stock_delete
 AFTER DELETE ON detall
 FOR EACH ROW
 BEGIN
-  -- Cuando se elimina un pedido, devolvemos el stock al almacén
-  UPDATE productes 
-  SET stock = stock + OLD.unitats 
-  WHERE num_prod = OLD.num_prod;
+    -- Reponer el stock al eliminar un detalle
+    UPDATE productes
+    SET stock = stock + OLD.quantitat
+    WHERE id_producte = OLD.producte AND id_fab = OLD.fab;
 END $$
-DELIMITER ;
 
--- Fin de la creación de triggers.
+DELIMITER ;
