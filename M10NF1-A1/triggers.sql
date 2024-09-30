@@ -1,10 +1,13 @@
 USE vk21;
 
--- Trigger para insertar en detall
 DROP TRIGGER IF EXISTS actualiza_stock_insert;
+DROP TRIGGER IF EXISTS actualiza_stock_update;
+DROP TRIGGER IF EXISTS actualiza_stock_delete;
+
+-- Trigger para insertar en detall
 DELIMITER $$
 
-CREATE TRIGGER actualiza_stock_insert
+CREATE TRIGGER IF NOT EXISTS actualiza_stock_insert
 AFTER INSERT ON detall
 FOR EACH ROW
 BEGIN
@@ -12,15 +15,14 @@ BEGIN
     UPDATE productes
     SET stock = stock - NEW.quantitat
     WHERE id_producte = NEW.producte AND id_fab = NEW.fab;
-END$$
+END $$
 
 DELIMITER ;
 
 -- Trigger para actualizar en detall
-DROP TRIGGER IF EXISTS actualiza_stock_update;
 DELIMITER $$
 
-CREATE TRIGGER actualiza_stock_update
+CREATE TRIGGER IF NOT EXISTS actualiza_stock_update
 AFTER UPDATE ON detall
 FOR EACH ROW
 BEGIN
@@ -46,10 +48,9 @@ END $$
 DELIMITER ;
 
 -- Trigger para eliminar en detall
-DROP TRIGGER IF EXISTS actualiza_stock_delete;
 DELIMITER $$
 
-CREATE TRIGGER actualiza_stock_delete
+CREATE TRIGGER IF NOT EXISTS actualiza_stock_delete
 AFTER DELETE ON detall
 FOR EACH ROW
 BEGIN
