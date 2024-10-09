@@ -9,7 +9,7 @@ CREATE TRIGGER before_insert_Reserves_Viatges
 BEFORE INSERT ON Reserves_Viatges
 FOR EACH ROW
 BEGIN
-    IF Reserves_Viatges.N_places > Viatges.N_places THEN
+    IF Reserves_Viatges.N_Places > Viatges.N_Places THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'No hi ha places suficients';
     END IF;
@@ -20,4 +20,19 @@ BEGIN
 
 END $$
 
--- Trigger para actualizar en detall
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS after_insert_Reserves_Viatges;
+
+-- Trigger para insertar en detall
+DELIMITER $$
+
+CREATE TRIGGER after_insert_Reserves_Viatges 
+AFTER INSERT ON Reserves_Viatges
+FOR EACH ROW
+BEGIN
+    UPDATE Viatges
+    SET N_Places = N_Places - NEW.N_Places
+    WHERE Codi = NEW.Codi_Viatge;
+END $$
+DELIMITER ;
