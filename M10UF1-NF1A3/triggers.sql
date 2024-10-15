@@ -1,35 +1,82 @@
-USE instadb;
-
 DROP TRIGGER IF EXISTS after_insert_photo;
 
 DELIMITER $$
 
-CREATE TRIGGER IF NOT EXISTS after_insert_photo
+CREATE TRIGGER after_insert_photo
 AFTER INSERT ON photouser
 FOR EACH ROW
 BEGIN
-    DECLARE longitud INT;
-    DECLARE posicio_incial INT DEFAULT 0;
-    SET @POS=1;
-    set @FRASE='ESTO ES UNA #FRASE DE PRUEBA de #FRANCIA';
-    SET LON = LENGTH(@FRASE);
+    DECLARE pos_ini INT DEFAULT 0;
+    DECLARE pos_final INT DEFAULT 0;
+    DECLARE hashtag VARCHAR(24);
+    DECLARE desc_restant VARCHAR(255);
 
-    -- SET posicio_incial = LOCATE('#', new.descripcio);
-    -- DECLARE posicio_final INT DEFAULT 0;
-    -- SET posicio_final = LOCATE(' ', new.descripcio);
+    SET desc_restant = NEW.descripcio;
 
-    -- SET hastag =  SUBSTRING(new.descripcio, posicio_inicial, posicio_final) FROM photouser;
+    WHILE LOCATE('#', desc_restant) > 0 DO
+        SET pos_ini = LOCATE('#', desc_restant);
+        SET pos_final = LOCATE(' ', desc_restant, pos_ini);
 
-    -- INSERT INTO tagphoto(idphoto, nomuser, tag)
-    -- SELECT idphoto, nomuser, hastag FROM photouser;
+        IF pos_final = 0 THEN
+            SET hashtag = SUBSTRING(desc_restant, pos_ini);
+        ELSE
+            SET hashtag = SUBSTRING(desc_restant, pos_ini, pos_final - pos_ini);
+        END IF;
+
+        INSERT INTO tagphoto(idphoto, nomuser, tag)
+        VALUES (NEW.idphoto, NEW.nomuser, REPLACE(hashtag, '#',''));
+
+        IF pos_final = 0 THEN
+            SET desc_restant = '';
+        ELSE
+            SET desc_restant = SUBSTRING(desc_restant, pos_final);
+        END IF;
+    END WHILE;
 
 END $$
 
 DELIMITER ;
 
 
-INSERT INTO photouser(nomuser, lloc, descripcio)
-VALUES ('Dale', 'Providence', '#sild');
+DROP TRIGGER IF EXISTS after_update_photo;
 
--- SELECT LOCATE('#', descripcio) INTO pos_ini
--- SELECT LOCATE('', descripcio) INTO pos_final
+DELIMITER $$
+
+CREATE TRIGGER after_update_photo
+AFTER UPDATE ON photouser
+FOR EACH ROW
+BEGIN
+    DECLARE pos_ini INT DEFAULT 0;
+    DECLARE pos_final INT DEFAULT 0;
+    DECLARE hashtag VARCHAR(255);
+    DECLARE desc_restant VARCHAR(255);
+
+    DELETE FROM tagphoto WHERE idphoto = NEW.idphoto;
+
+    SET desc_restant = NEW.descripcio;
+
+    WHILE LOCATE('#', desc_restant) > 0 DO
+        SET pos_ini = LOCATE('#', desc_restant);
+        SET pos_final = LOCATE(' ', desc_restant, pos_ini);
+
+        IF pos_final = 0 THEN
+            SET hashtag = SUBSTRING(desc_restant, pos_ini);
+        ELSE
+            SET hashtag = SUBSTRING(desc_restant, pos_ini, pos_final - pos_ini);
+        END IF;
+
+        INSERT INTO tagphoto(idphoto, nomuser, tag)
+        VALUES (NEW.idphoto, NEW.nomuser, REPLACE(hashtag, '#',''));
+
+        IF pos_final = 0 THEN
+            SET desc_restant = '';
+        ELSE
+            SET desc_restant = SUBSTRING(desc_restant, pos_final);
+        END IF;
+    END WHILE;
+
+END $$
+
+DELIMITER ;
+
+
