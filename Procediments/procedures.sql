@@ -4,40 +4,31 @@ DROP PROCEDURE IF EXISTS ciutat3;
 
 DELIMITER $$
 
-CREATE PROCEDURE IF NOT EXISTS ciutats()
+CREATE PROCEDURE ciutats()
 BEGIN
-	
-  SELECT Name, Population FROM City;
-
+    SELECT Name, Population FROM City;
 END $$
-
-DELIMITER ;
-
 
 DELIMITER $$
 
-CREATE PROCEDURE IF NOT EXISTS ciutats_lim(IN lon INT)
+CREATE PROCEDURE ciutats_lim(IN lon INT)
 BEGIN
-
-  SELECT Name, Population FROM City ORDER BY Name LIMIT lon;
-
+    SELECT Name, Population 
+    FROM City 
+    ORDER BY Name 
+    LIMIT lon;
 END $$
-
-
-DELIMITER ;
 
 DELIMITER $$
 
-
+CREATE PROCEDURE ciutat3(IN pais VARCHAR(50), OUT numciutats INT)
 BEGIN
-
-CREATE PROCEDURE IF NOT EXISTS ciutats_lim(IN lon INT)
-  SELECT COUNT(*) INTO numciutats
-  FROM City WHERE CountryCode = (
-    SELECT Code FROM Country WHERE Name = pais
-  );
-
+    SELECT COUNT(*) INTO numciutats
+    FROM City 
+    WHERE CountryCode = (
+        SELECT Code FROM Country WHERE Name = pais
+    );
 END $$
 
-
 DELIMITER ;
+
