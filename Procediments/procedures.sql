@@ -1,0 +1,43 @@
+DROP PROCEDURE IF EXISTS ciutats;
+DROP PROCEDURE IF EXISTS ciutats_lim;
+DROP PROCEDURE IF EXISTS ciutat3;
+
+DELIMITER $$
+
+CREATE PROCEDURE IF NOT EXISTS ciutats()
+BEGIN
+	
+  SELECT Name, Population FROM City;
+
+END $$
+
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE PROCEDURE IF NOT EXISTS ciutats_lim(IN lon INT)
+BEGIN
+
+  SELECT Name, Population FROM City ORDER BY Name LIMIT lon;
+
+END $$
+
+
+DELIMITER ;
+
+DELIMITER $$
+
+
+BEGIN
+
+CREATE PROCEDURE IF NOT EXISTS ciutats_lim(IN lon INT)
+  SELECT COUNT(*) INTO numciutats
+  FROM City WHERE CountryCode = (
+    SELECT Code FROM Country WHERE Name = pais
+  );
+
+END $$
+
+
+DELIMITER ;
