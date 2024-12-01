@@ -310,3 +310,4 @@ Un cursor es útil en este caso porque necesitamos procesar cada secuencia de AD
     - Usa condiciones dentro del bucle (`IF`) para decidir si procesar una fila.
     - Abre múltiples cursores con diferentes condiciones, si es necesario.
 
+
