@@ -208,8 +208,105 @@ SELECT * FROM adn_auditoria;
 
 ---
 
+En un cursor estándar, las filas se **extraen una a una**, en el orden en que se obtienen de la consulta `SELECT` asociada al cursor. No puedes extraer directamente una fila específica al momento de abrir el cursor, ya que este opera como un puntero que avanza fila por fila.
+
+### Flujo básico del cursor
+
+1. El cursor devuelve todas las filas que cumplen la condición del `SELECT`.
+2. Con cada operación `FETCH`, se extrae la **siguiente fila** de los resultados, moviendo el puntero hacia adelante.
+3. Si necesitas trabajar con una fila específica, debes incluir una **condición en la consulta del cursor** (`WHERE`) antes de abrirlo.
+
+---
+
+### ¿Cómo trabajar con filas específicas?
+
+#### Opción 1: Filtrar las filas en el `DECLARE CURSOR`
+
+Si sabes que solo necesitas filas específicas, usa un `WHERE` en la definición del cursor para limitar el conjunto de datos. Ejemplo:
+
+```sql
+DECLARE cur CURSOR FOR 
+    SELECT idgen, nomgen, adn 
+    FROM adn 
+    WHERE idgen = 5; -- Solo selecciona la fila con idgen = 5
+```
+
+Cuando uses este cursor, solo procesará las filas que cumplan con esa condición.
+
+---
+
+#### Opción 2: Usar lógica condicional dentro del bucle
+
+Si el conjunto de datos que necesitas es amplio, pero quieres realizar operaciones solo sobre filas específicas, puedes usar un `IF` dentro del bucle para filtrar filas. Ejemplo:
+
+```sql
+DECLARE cur CURSOR FOR 
+    SELECT idgen, nomgen, adn 
+    FROM adn; -- Selecciona todas las filas
+
+read_loop: LOOP
+    FETCH cur INTO seq_id, seq_nom, seq_adn;
+
+    IF done THEN
+        LEAVE read_loop;
+    END IF;
+
+    -- Filtrar por condiciones específicas
+    IF seq_id = 5 THEN
+        -- Operaciones específicas para la fila con idgen = 5
+        INSERT INTO adn_auditoria (idgen, nomgen, longitud_adn, nucleotido_g_count)
+        VALUES (seq_id, seq_nom, LENGTH(seq_adn), 
+                LENGTH(seq_adn) - LENGTH(REPLACE(seq_adn, 'G', '')));
+    END IF;
+END LOOP;
+```
+
+En este caso, aunque el cursor procesa todas las filas, el código solo ejecuta las operaciones sobre las filas que cumplen con `seq_id = 5`.
+
+---
+
+#### Opción 3: Usar múltiples cursores
+
+Si necesitas trabajar con varias filas específicas, pero de forma separada, puedes abrir varios cursores, cada uno con su propia condición. Ejemplo:
+
+```sql
+DECLARE cur1 CURSOR FOR 
+    SELECT idgen, nomgen, adn 
+    FROM adn 
+    WHERE idgen = 1;
+
+DECLARE cur2 CURSOR FOR 
+    SELECT idgen, nomgen, adn 
+    FROM adn 
+    WHERE idgen = 2;
+
+-- Procesar el primer cursor
+OPEN cur1;
+FETCH cur1 INTO seq_id, seq_nom, seq_adn;
+-- Procesa los datos de la fila con idgen = 1
+CLOSE cur1;
+
+-- Procesar el segundo cursor
+OPEN cur2;
+FETCH cur2 INTO seq_id, seq_nom, seq_adn;
+-- Procesa los datos de la fila con idgen = 2
+CLOSE cur2;
+```
+
+Este enfoque es útil si tienes que trabajar de manera independiente con diferentes filas específicas.
+
+---
+
 ### ¿Por qué usar un cursor aquí?
 
 Un cursor es útil en este caso porque necesitamos procesar cada secuencia de ADN de manera individual y realizar cálculos específicos para cada fila. Aunque este problema podría resolverse con una sola consulta SQL utilizando funciones agregadas, el uso de cursores permite lógica más compleja y flexible.
 
-¿Te gustaría practicar más ejemplos o necesitas ayuda con un caso específico?
+
+### Resumen
+
+- **Por defecto**: Los cursores extraen las filas **en orden**, una a una.
+- **Para filas específicas**:
+    - Filtra las filas con un `WHERE` en la consulta del cursor.
+    - Usa condiciones dentro del bucle (`IF`) para decidir si procesar una fila.
+    - Abre múltiples cursores con diferentes condiciones, si es necesario.
+
