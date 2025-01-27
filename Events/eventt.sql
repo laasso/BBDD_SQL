@@ -1,0 +1,15 @@
+SET GLOBAL event_scheduler = ON;
+DROP EVENT IF EXISTS ex_event;
+
+DELIMITER //
+
+CREATE EVENT ex_event
+ON schedule
+    EVERY 2 SECOND
+    STARTS CURRENT_TIMESTAMP
+    ENDS CURRENT_TIMESTAMP + INTERVAL 30 SECOND
+DO
+    BEGIN
+        INSERT INTO test.chk VALUES();
+    END //
+Delimiter ;
